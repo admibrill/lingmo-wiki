@@ -2,7 +2,7 @@
 > [LingmoOS Official Website](https://lingmo.org/)
 
 ### Introduction
-![LingmoOS](../img/desktop.png)
+![LingmoOS](../../img/desktop.png)
 
 `Lingmo GNU/Linux (Lingmo OS)` is a Linux operating system primarily focused on desktop environments. It is developed based on the open-source `Linux` kernel and is compatible with the `amd64` architecture. It features an attractive desktop environment, includes software adapted for this desktop environment, and has a unified `UI` style.
 
