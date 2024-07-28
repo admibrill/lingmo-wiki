@@ -1,1 +1,0 @@
-This is the English page of `Lingmo Wiki`. Welcome to explore.
