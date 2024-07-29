@@ -238,11 +238,11 @@ export default defineConfig({
               },
               {
                 text: '安装教程',
-                link: '/LingmoOS/安装教程'
+                link: '/LingmoOS/installation'
               },
               {
                 text: '关于',
-                link: '/LingmoOS/关于'
+                link: '/LingmoOS/about'
               }
             ]
           }
@@ -260,13 +260,13 @@ export default defineConfig({
                 link: '/en/LingmoOS/index'
               },
               {
-                text: 'about',
-                link: '/en/LingmoOS/about'
+                text: 'installation',
+                link: '/en/LingmoOS/installation'
               },
               {
-                text: 'disk_space',
-                link: '/en/LingmoOS/disk_space'
-              }
+                text: 'aboute',
+                link: '/en/LingmoOS/about'
+              },
             ]
           }
         ]
