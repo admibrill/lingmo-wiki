@@ -1,0 +1,1 @@
+欢迎访问 `Lingmo OS` 的官方 `Wiki`！

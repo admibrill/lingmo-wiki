@@ -15,7 +15,7 @@ hero:
   actions:
     - theme: brand
       text: 进入Wiki
-      link: /LingmoOS/about
+      link: /LingmoOS
     # - theme: alt
     #   text: 加入 Discord 服务器
     #   link: https://discord.gg/XuNFDcDZGj

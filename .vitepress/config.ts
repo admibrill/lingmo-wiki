@@ -221,10 +221,58 @@ export default defineConfig({
     },
     nav: [
       { text: '主页', link: '/' },
-      { text: 'Wiki', link: '/Wiki/' },
+      { text: 'Wiki', link: '/LingmoOS/' },
       { text: '最近更新', link: '/toc' },
     ],
-    sidebar,
+    sidebar: [
+      {
+        text: '简体中文',
+        items: [
+          {
+            text: 'LingmoOS',
+            collapsed: true,
+            items: [
+              {
+                text: 'index',
+                link: '/LingmoOS/index'
+              },
+              {
+                text: '安装教程',
+                link: '/LingmoOS/安装教程'
+              },
+              {
+                text: '关于',
+                link: '/LingmoOS/关于'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        text: 'English',
+        items: [
+          {
+            text: 'LingmoOS',
+            collapsed: true,
+            items: [
+              {
+                text: 'index',
+                link: '/en/LingmoOS/index'
+              },
+              {
+                text: 'about',
+                link: '/en/LingmoOS/about'
+              },
+              {
+                text: 'disk_space',
+                link: '/en/LingmoOS/disk_space'
+              }
+            ]
+          }
+        ]
+      }
+    ]
+
   },
   markdown: {
     theme: {
