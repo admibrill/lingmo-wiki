@@ -264,7 +264,7 @@ export default defineConfig({
                 link: '/en/LingmoOS/installation'
               },
               {
-                text: 'aboute',
+                text: 'about',
                 link: '/en/LingmoOS/about'
               },
             ]
