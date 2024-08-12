@@ -3,10 +3,6 @@ prev: false
 next: false
 ---
 
----
-sidebar_position: 1
----
-
 # User Install Guide for LingmoOS
 
 ## WARNING: Lingmo GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law.

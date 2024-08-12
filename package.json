@@ -8,8 +8,8 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "d": "vitepress dev docs",
-    "b": "vitepress build docs",
-    "p": "vitepress preview docs"
+    "d": "vitepress dev",
+    "b": "vitepress build",
+    "p": "vitepress preview"
   }
 }

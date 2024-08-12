@@ -29,16 +29,16 @@ export default defineConfig({
             {
               text: 'Debian Lingmo',
               items: [
-                { text: '关于', link: '/Wiki/debian/about/' },
+                { text: '关于', link: '/Wiki/debian/about' },
                 {
                   text: '系统相关',
                   collapsed: true,
                   items:[
-                    { text: '安装教程', link: '/Wiki/debian/installation/' },
+                    { text: '安装教程', link: '/Wiki/debian/installation' },
                     { text: '初探界面', link: '/Wiki/debian/UI-1'}
                   ]
                 },
-                { text: '常见问题', link: '/Wiki/debian/faq/' }
+                { text: '常见问题', link: '/Wiki/debian/faq' }
               ],
             },
           ],
@@ -46,7 +46,7 @@ export default defineConfig({
             {
               text: 'Arch Lingmo',
               items: [
-                { text: '关于', link: '/Wiki/arch/about/' },
+                { text: '关于', link: '/Wiki/arch/about' },
                 {
                   text: '系统相关',
                   collapsed: true,
@@ -54,7 +54,7 @@ export default defineConfig({
                     { text: '系统安装', link: '/Wiki/arch/installation' }
                   ]
                 },
-                { text: '常见问题', link: '/Wiki/arch/faq/' }
+                { text: '常见问题', link: '/Wiki/arch/faq' }
               ],
             },
           ],
@@ -94,7 +94,7 @@ export default defineConfig({
             {
               text: 'Debian Lingmo',
               items: [
-                { text: 'About', link: '/en/Wiki/debian/zh/about/' },
+                { text: 'About', link: '/en/Wiki/debian/about' },
                 {
                   text: 'System',
                   collapsed: true,
@@ -102,7 +102,7 @@ export default defineConfig({
                     { text: 'Installation', link: '/en/Wiki/debian/installation' }
                   ]
                 },
-                { text: 'F&Q', link: '/Wiki/debian/zh/faq/' }
+                { text: 'F&Q', link: '/en/Wiki/debian/faq' }
               ],
             },
           ],
@@ -110,7 +110,7 @@ export default defineConfig({
             {
               text: 'Arch Lingmo',
               items: [
-                { text: 'About', link: '/en/Wiki/arch/zh/about/' },
+                { text: 'About', link: '/en/Wiki/arch/zh/about' },
                 {
                   text: 'System',
                   collapsed: true,
@@ -118,7 +118,7 @@ export default defineConfig({
                     { text: 'Installation', link: '/en/Wiki/arch/installation' }
                   ]
                 },
-                { text: 'F&Q', link: '/Wiki/arch/zh/faq/' }
+                { text: 'F&Q', link: '/en/Wiki/arch/faq' }
               ],
             },
           ],

@@ -9,10 +9,10 @@ hero:
     alt: 背景图
   actions:
     - theme: brand
-      text: Debian Lingmo Wiki
+      text: Debian版Wiki
       link: /Wiki/debian/about
     - theme: alt
-      text: Arch Lingmo Wiki
+      text: Arch版Wiki
       link: /Wiki/arch/about
 
 features:
