@@ -10,10 +10,10 @@ hero:
   actions:
     - theme: brand
       text: Debian版Wiki
-      link: /zh/Wiki/debian/about
+      link: /zh/debian/about
     - theme: alt
       text: Arch版Wiki
-      link: /zh/Wiki/arch/about
+      link: /zh/arch/about
 
 features:
   - title: 更好的交互

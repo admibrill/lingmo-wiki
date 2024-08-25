@@ -9,7 +9,7 @@ next: false
 :::
 
 ### 介绍
-![LingmoOS](/zh/Wiki/img/desktop.png)
+![LingmoOS](/zh/img/desktop.png)
 Lingmo GNU/Linux（Lingmo OS）是一个以桌面环境为主的Linux操作系统，它基于开源 Linux 内核开发，适配 `x86_64` 架构。它拥有美观的桌面环境、包含适配该桌面环境的软件、统一的 UI 风格。
 
 Lingmo GNU/Linux 的目标 是让用户在低性能硬件上拥有华丽且实用的桌面环境以及流畅的体验。

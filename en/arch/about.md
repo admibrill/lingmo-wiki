@@ -7,7 +7,7 @@ next: false
 > [LingmoOS Official Website](https://lingmo.org/)
 
 ### Introduction
-![LingmoOS](../img/desktop.png)
+![LingmoOS](/en/img/desktop.png)
 
 `Lingmo GNU/Linux (Lingmo OS)` is a Linux operating system primarily focused on desktop environments. It is developed based on the open-source `Linux` kernel and is compatible with the `amd64` architecture. It features an attractive desktop environment, includes software adapted for this desktop environment, and has a unified `UI` style.
 
@@ -21,6 +21,3 @@ The goal of `Lingmo GNU/Linux` is to provide users with a beautiful and practica
 
 ### Built-in Spark Store
 To improve the experience for Linux users, we have integrated the [Spark Store](https://gitee.com/deepin-community-store/spark-store/). Users can download needed software from the store, eliminating the need to use command lines every time to install software. Of course, you can also use the sudo command to install directly.
-
-### Reference Documentation
->[Lingmo OS Reference Documentation](../en/index.md)

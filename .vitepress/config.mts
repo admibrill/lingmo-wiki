@@ -19,42 +19,42 @@ export default defineConfig({
           {
             text: 'Wiki',
             items: [
-              { text: 'Debian Lingmo', link: '/zh/Wiki/debian/about' },
-              { text: 'Arch Lingmo', link: '/zh/Wiki/arch/about' },
+              { text: 'Debian Lingmo', link: '/zh/debian/about' },
+              { text: 'Arch Lingmo', link: '/zh/arch/about' },
             ]
           },
         ],
         sidebar: {
-          '/zh/Wiki/debian/': [
+          '/zh/debian/': [
             {
               text: 'Debian Lingmo',
               items: [
-                { text: '关于', link: '/zh/Wiki/debian/about' },
+                { text: '关于', link: '/zh/debian/about' },
                 {
                   text: '系统相关',
                   collapsed: true,
                   items:[
-                    { text: '安装教程', link: '/zh/Wiki/debian/system/installation' },
-                    { text: '日期和时间', link: '/zh/Wiki/debian/system/time' }
+                    { text: '安装教程', link: '/zh/debian/system/installation' },
+                    { text: '日期和时间', link: '/zh/debian/system/time' }
                   ]
                 },
-                { text: '常见问题', link: '/zh/Wiki/debian/faq' }
+                { text: '常见问题', link: '/zh/debian/faq' }
               ],
             },
           ],
-          '/zh/Wiki/arch/': [
+          '/zh/arch/': [
             {
               text: 'Arch Lingmo',
               items: [
-                { text: '关于', link: '/zh/Wiki/arch/about' },
+                { text: '关于', link: '/zh/arch/about' },
                 {
                   text: '系统相关',
                   collapsed: true,
                   items: [
-                    { text: '系统安装', link: '/zh/Wiki/arch/system/installation' }
+                    { text: '系统安装', link: '/zh/arch/system/installation' }
                   ]
                 },
-                { text: '常见问题', link: '/zh/Wiki/arch/faq' }
+                { text: '常见问题', link: '/zh/arch/faq' }
               ],
             },
           ],
@@ -84,41 +84,41 @@ export default defineConfig({
           {
             text: 'Wiki',
             items: [
-              { text: 'Debian Lingmo', link: '/en/Wiki/debian/about' },
-              { text: 'Arch Lingmo', link: '/en/Wiki/arch/about' },
+              { text: 'Debian Lingmo', link: '/en/debian/about' },
+              { text: 'Arch Lingmo', link: '/en/arch/about' },
             ]
           },
         ],
         sidebar: {
-          '/en/Wiki/debian/': [
+          '/en/debian/': [
             {
               text: 'Debian Lingmo',
               items: [
-                { text: 'About', link: '/en/Wiki/debian/about' },
+                { text: 'About', link: '/en/debian/about' },
                 {
                   text: 'System',
                   collapsed: true,
                   items: [
-                    { text: 'Installation', link: '/en/Wiki/debian/system/installation' }
+                    { text: 'Installation', link: '/en/debian/system/installation' }
                   ]
                 },
-                { text: 'F&Q', link: '/en/Wiki/debian/faq' }
+                { text: 'F&Q', link: '/en/debian/faq' }
               ],
             },
           ],
-          '/en/Wiki/arch/': [
+          '/en/arch/': [
             {
               text: 'Arch Lingmo',
               items: [
-                { text: 'About', link: '/en/Wiki/arch/zh/about' },
+                { text: 'About', link: '/en/arch/zh/about' },
                 {
                   text: 'System',
                   collapsed: true,
                   items: [
-                    { text: 'Installation', link: '/en/Wiki/system/arch/installation' }
+                    { text: 'Installation', link: '/en/system/arch/installation' }
                   ]
                 },
-                { text: 'F&Q', link: '/en/Wiki/arch/faq' }
+                { text: 'F&Q', link: '/en/arch/faq' }
               ],
             },
           ],

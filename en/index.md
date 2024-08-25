@@ -10,10 +10,10 @@ hero:
   actions:
     - theme: brand
       text: Debian Lingmo Wiki
-      link: /en/Wiki/debian/about
+      link: /en/debian/about
     - theme: alt
       text: Arch Lingmo Wiki
-      link: /en/Wiki/arch/about
+      link: /en/arch/about
 
 features:
   - title: Better Interaction
