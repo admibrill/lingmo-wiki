@@ -1,5 +1,1 @@
-redirecting to /zh/ ...
-
-正在重定向到/zh/……
-
-<meta http-equiv="refresh" content="1; url=/zh/" />
+<meta http-equiv="refresh" content="0; url=/zh/" />
