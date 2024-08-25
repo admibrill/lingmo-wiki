@@ -17,12 +17,12 @@ hero:
 
 features:
   - title: Better Interaction
-    details: Lingmo OS has redesigned the entire system to optimize the visual effects and enhance the user experience
+    details: Lingmo OS has redesigned the entire system to optimize the visual effects and enhance the user experience.
   - title: Safe and Stable
-    details: Lingmo OS bases on extremely stable Debian GNU/Linux, which is not only safe but reliable
+    details: Lingmo OS bases on extremely stable Debian GNU/Linux, which is not only safe but also reliable.
   - title: Fluent Interface
-    details: Lingmo OS has relatively low hardware configuration requirements, allowing for a smooth experience even on less configured hardware
+    details: Lingmo OS has relatively lower hardware requirements, allowing for a smooth experience.
   - title: Ban-new Global Menu
-    details: Lingmo OS features a top global menu design that saves screen space while providing many features
+    details: Lingmo OS features a top global menu design that saves screen space while providing many features.
 ---
 
