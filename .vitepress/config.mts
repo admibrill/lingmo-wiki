@@ -9,52 +9,52 @@ export default defineConfig({
   ],
   ignoreDeadLinks: true,
   locales: {
-    root: {
+    zh: {
       label: '简体中文',
       lang: 'Zh_CN',
-      link: '/',
+      link: '/zh/',
       themeConfig: {
         nav: [
-          { text: '主页', link: '/' },
+          { text: '主页', link: '/zh/' },
           {
             text: 'Wiki',
             items: [
-              { text: 'Debian Lingmo', link: '/Wiki/debian/about' },
-              { text: 'Arch Lingmo', link: '/Wiki/arch/about' },
+              { text: 'Debian Lingmo', link: '/zh/Wiki/debian/about' },
+              { text: 'Arch Lingmo', link: '/zh/Wiki/arch/about' },
             ]
           },
         ],
         sidebar: {
-          '/Wiki/debian/': [
+          '/zh/Wiki/debian/': [
             {
               text: 'Debian Lingmo',
               items: [
-                { text: '关于', link: '/Wiki/debian/about' },
+                { text: '关于', link: '/zh/Wiki/debian/about' },
                 {
                   text: '系统相关',
                   collapsed: true,
                   items:[
-                    { text: '安装教程', link: '/Wiki/debian/installation' },
-                    { text: '初探界面', link: '/Wiki/debian/UI-1'}
+                    { text: '安装教程', link: '/zh/Wiki/debian/system/installation' },
+                    { text: '日期和时间', link: '/zh/Wiki/debian/system/time' }
                   ]
                 },
-                { text: '常见问题', link: '/Wiki/debian/faq' }
+                { text: '常见问题', link: '/zh/Wiki/debian/faq' }
               ],
             },
           ],
-          '/Wiki/arch/': [
+          '/zh/Wiki/arch/': [
             {
               text: 'Arch Lingmo',
               items: [
-                { text: '关于', link: '/Wiki/arch/about' },
+                { text: '关于', link: '/zh/Wiki/arch/about' },
                 {
                   text: '系统相关',
                   collapsed: true,
                   items: [
-                    { text: '系统安装', link: '/Wiki/arch/installation' }
+                    { text: '系统安装', link: '/zh/Wiki/arch/system/installation' }
                   ]
                 },
-                { text: '常见问题', link: '/Wiki/arch/faq' }
+                { text: '常见问题', link: '/zh/Wiki/arch/faq' }
               ],
             },
           ],
@@ -99,7 +99,7 @@ export default defineConfig({
                   text: 'System',
                   collapsed: true,
                   items: [
-                    { text: 'Installation', link: '/en/Wiki/debian/installation' }
+                    { text: 'Installation', link: '/en/Wiki/debian/system/installation' }
                   ]
                 },
                 { text: 'F&Q', link: '/en/Wiki/debian/faq' }
@@ -115,7 +115,7 @@ export default defineConfig({
                   text: 'System',
                   collapsed: true,
                   items: [
-                    { text: 'Installation', link: '/en/Wiki/arch/installation' }
+                    { text: 'Installation', link: '/en/Wiki/system/arch/installation' }
                   ]
                 },
                 { text: 'F&Q', link: '/en/Wiki/arch/faq' }

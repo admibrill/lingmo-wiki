@@ -10,6 +10,7 @@
     "docs:preview": "vitepress preview docs",
     "d": "vitepress dev",
     "b": "vitepress build",
-    "p": "vitepress preview"
+    "p": "vitepress preview",
+    "bp": "vitepress build && vitepress preview"
   }
 }
