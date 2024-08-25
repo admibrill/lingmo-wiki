@@ -1,3 +1,3 @@
 # Lingmo Wiki
 
-`Lingmo` 的官方 `Wiki`，使用 `Vitepress` 构建。
+Official Wiki of Lingmo，powered by [Vitepress](https://vitepress.dev).
