@@ -38,6 +38,15 @@ export default defineConfig({
                     { text: '日期和时间', link: '/zh/debian/system/time' }
                   ]
                 },
+                {
+                  text: '软件管理',
+                  collapsed: true,
+                  items: [
+                    { text: '应用商店', link: '/zh/debian/software/app-store' },
+                    //{ text: 'lpm包管理工具', link: '/zh/debian/software/lpm' },
+                    //{ text: 'apt和dpkg', link: '/zh/debian/software/apt-dpkg' }
+                  ]
+                },
                 { text: '常见问题', link: '/zh/debian/faq' }
               ],
             },
