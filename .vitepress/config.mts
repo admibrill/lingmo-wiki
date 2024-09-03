@@ -69,7 +69,7 @@ export default defineConfig({
           ],
         },
         footer: {
-          message: '遵循CC BY-NC-SA协议',
+          message: '遵循CC BY-SA协议',
           copyright: 'Copyright © 2024 Lingmo OS',
         },
         lastUpdatedText: '上次更新',
@@ -133,7 +133,7 @@ export default defineConfig({
           ],
         },
         footer: {
-          message: 'Released under the CC BY-NC-SA License.',
+          message: 'Released under the CC BY-SA License.',
           copyright: 'Copyright © 2024 Lingmo OS',
         }
       },
