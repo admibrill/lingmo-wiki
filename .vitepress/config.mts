@@ -92,12 +92,11 @@ export default defineConfig({
       link: '/en/',
       themeConfig: {
         nav: [
-          { text: 'Home', link: '/en/' },
+          { text: 'Home', link: '/' },
           {
             text: 'Wiki',
             items: [
-              { text: 'Debian Lingmo', link: '/en/debian/about' },
-              { text: 'Arch Lingmo', link: '/en/arch/about' },
+              { text: 'LingmoOS Docs', link: '/docs/about' },
             ]
           },
         ],

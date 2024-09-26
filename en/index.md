@@ -9,11 +9,11 @@ hero:
     alt: Background Image
   actions:
     - theme: brand
-      text: Debian Lingmo Wiki
-      link: /en/debian/about
+      text: About LingmoOS
+      link: /docs/about
     - theme: alt
-      text: Arch Lingmo Wiki
-      link: /en/arch/about
+      text: GitHub Organization
+      link: https://github.com/LingmoOS
 
 features:
   - title: Better Interaction
