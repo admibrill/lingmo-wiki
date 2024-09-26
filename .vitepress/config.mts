@@ -3,6 +3,9 @@ export default defineConfig({
   lang: 'zh-CN',
   title: 'Lingmo Wiki',
   description: 'Lingmo OS Wiki',
+  rewrites: {
+    'en/:rest*': ':rest*'
+  },
   appearance:'dark',
   head: [
     ['link',{ rel: 'icon', href: '/favicon.ico'}],
@@ -83,7 +86,7 @@ export default defineConfig({
         returnToTopLabel: '返回顶部',
       }
     },
-    en: {
+    root: {
       label: 'English',
       lang: 'en',
       link: '/en/',
