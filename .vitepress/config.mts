@@ -25,24 +25,6 @@ export default defineConfig({
             ]
           },
         ],
-        sidebar: {
-          '/en/debian/': [
-            {
-              text: 'Debian Lingmo',
-              items: [
-                { text: 'About', link: '/en/debian/about' },
-                {
-                  text: 'System',
-                  collapsed: true,
-                  items: [
-                    { text: 'Installation', link: '/en/debian/system/installation' }
-                  ]
-                },
-                { text: 'F&Q', link: '/en/debian/faq' }
-              ],
-            },
-          ],
-        },
         footer: {
           message: 'Released under the CC BY-SA License.',
           copyright: 'Copyright © 2024 Lingmo OS',
