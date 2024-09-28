@@ -1,17 +1,10 @@
----
-prev: false
-next: false
----
-
-# User Install Guide for LingmoOS
-
-## WARNING: Lingmo GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law.
+# Installation Guide
 
 Fast, free and full of new features. The latest release of LingmoOS delivers new tools and enhancements for developers, creators, gamers and administrators. 
 
-Let's discover **LingmoOS in less than 5 minutes**.
-
+::: warning
 Please be aware that LingmoOS is in **BETA** - what this means is that LingmoOS is under heavy development and therefore **NOT** ready for every day use.
+:::
 
 ## 1. Overview
 
@@ -29,7 +22,7 @@ In this tutorial, we will guide you through the steps required to install Lingmo
 
 You can download a LingmoOS image [here](https://lingmo.org/download). Make sure to save it to a memorable location on your PC! For this tutorial, we will use the LingmoOS 2.0 beta version which uses the new Lingmo installer that will be included in all future LingmoOS releases.
 
-![LingmoOS ISO Download](/en/img/1.jpg)
+![LingmoOS ISO Download](/en/img/handbook/installation-guide/1.jpg)
 
 ## 3. Create a Bootable USB stick
 
@@ -37,11 +30,11 @@ To install LingmoOS, you need to write your downloaded ISO to a USB stick to cre
 
 For this tutorial, we’ll use [balenaEtcher](https://etcher.balena.io/), as it runs on Linux, Windows and macOS. Choose the version that corresponds to your current operating system, download and install the tool.
 
-![Download balenaEtcher](/en/img/2.jpg)
+![Download balenaEtcher](/en/img/handbook/installation-guide/2.jpg)
 
 Select your downloaded ISO, choose your USB flash drive, and then click `Flash!` to install your image.
 
-![Flash to Disk](/en/img/3.jpg)
+![Flash to Disk](/en/img/handbook/installation-guide/3.jpg)
 
 ## 4. Boot from USB flash drive
 
@@ -51,15 +44,15 @@ Insert the USB flash drive into the laptop or PC you want to use to install Ubun
 
 On some older images, you will be required to enter a password to enter the live session. If you enconter this, enter the password `live` and press `Enter`.
 
-![Enter password](/en/img/4.jpg)
+![Enter password](/en/img/handbook/installation-guide/4.jpg)
 
 Once logged into the live system, you can start the installer by clicking `Install Lingmo`.
 
-![Start installer](/en/img/5.jpg)
+![Start installer](/en/img/handbook/installation-guide/5.jpg)
 
 Once the installer has initialised you will be invited to choose your language
 
-![Choose language](/en/img/6.jpg)
+![Choose language](/en/img/handbook/installation-guide/6.jpg)
 
 > You can preview LingmoOS without making any changes to your PC. You can return to the installer menu at any time by clicking the Install Lingmo shortcut on the desktop.
 
@@ -69,13 +62,13 @@ To proceed, click `Next`.
 
 Select your location and timezone from the map screen and click `Next`. This information will be detected automatically if you are connected to the internet.
 
-![Choose location](/en/img/7.jpg)
+![Choose location](/en/img/handbook/installation-guide/7.jpg)
 
 ## 6. Choose your Keyboard Layout
 
 You will be asked to select your keyboard layout. Once you’ve chosen one, click `Next`.
 
-![Choose keyboard layout](/en/img/8.jpg)
+![Choose keyboard layout](/en/img/handbook/installation-guide/8.jpg)
 
 ## 7. Choose your Partitioning
 
@@ -83,7 +76,7 @@ This screen allows you to configure your installation. If you would like LingmoO
 
 If your device currently has another operating system installed, you will receive additional options to install LingmoOS alongside that OS rather than replacing it.
 
-![Choose partitioning](/en/img/9.jpg)
+![Choose partitioning](/en/img/handbook/installation-guide/9.jpg)
 
 ### Manual
 
@@ -103,17 +96,17 @@ On this screen, you will be prompted to enter your name and the name of your com
 
 You can choose to log in automatically or require a password. If you are using your device whilst travelling, it’s **not** recommended to keep “Log in automatically” enabled.
 
-![Create your login details](/en/img/10.jpg)
+![Create your login details](/en/img/handbook/installation-guide/10.jpg)
 
 ## 9. Confirm the Installation
 
 You will now be asked to review the settings you have chosen. If you are happy with them, click `Install`.
 
-![Confirm the installation](/en/img/11.jpg)
+![Confirm the installation](/en/img/handbook/installation-guide/11.jpg)
 
 And then sit back and enjoy the slideshow as LingmoOS installs in the background! 🙂:
 
-![Installation in progress](/en/img/12.jpg)
+![Installation in progress](/en/img/handbook/installation-guide/12.jpg)
 
 After reboot, you can enter your new system!
 

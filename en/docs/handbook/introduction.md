@@ -1,13 +1,7 @@
----
-prev: false
-next: false
----
-
-# Lingmo OS - Lingmo Operating System
 > [LingmoOS Official Website](https://lingmo.org/)
 
-### Introduction
-![LingmoOS](../img/desktop.png)
+# Introduction
+![LingmoOS](../img/handbook/introduction/desktop.png)
 
 Lingmo GNU/Linux (Lingmo OS) is a operating system based on Debian GNU/Linux. It offers a beautiful Desktop environment, includes software tailored for this environment, and features a unified UI style. Lingmo OS aims to provide a smooth and visually appealing desktop experience.
 

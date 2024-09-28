@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /docs/about
+      link: /docs/handbook/introduction
     - theme: alt
       text: Official Website
       link: https://www.lingmo.org
@@ -20,7 +20,9 @@ hero:
 
 features:
   - title: Installation Guide
-    icon: 
     details: Guide through the process of installing Lingmo OS.
-    link: /docs/system/installation
+    link: /docs/handbook/installation-guide
+  - title: FAQ
+    details: Notable questions and facts about the distribution.
+    link: /docs/handbook/faq
 ---
