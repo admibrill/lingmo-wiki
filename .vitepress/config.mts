@@ -1,8 +1,7 @@
 import { defineConfig } from 'vitepress'
 export default defineConfig({
-  lang: 'zh-CN',
+  lang: 'en',
   title: 'Lingmo Wiki',
-  description: 'Lingmo OS Wiki',
   rewrites: {
     'en/:rest*': ':rest*'
   },
@@ -12,80 +11,6 @@ export default defineConfig({
   ],
   ignoreDeadLinks: true,
   locales: {
-    zh: {
-      label: '简体中文',
-      lang: 'Zh_CN',
-      link: '/zh/',
-      themeConfig: {
-        nav: [
-          { text: '主页', link: '/zh/' },
-          {
-            text: 'Wiki',
-            items: [
-              { text: 'Debian Lingmo', link: '/zh/debian/about' },
-              { text: 'Arch Lingmo', link: '/zh/arch/about' },
-            ]
-          },
-        ],
-        sidebar: {
-          '/zh/debian/': [
-            {
-              text: 'Debian Lingmo',
-              items: [
-                { text: '关于', link: '/zh/debian/about' },
-                {
-                  text: '系统相关',
-                  collapsed: true,
-                  items:[
-                    { text: '安装教程', link: '/zh/debian/system/installation' },
-                    { text: '日期和时间', link: '/zh/debian/system/time' }
-                  ]
-                },
-                {
-                  text: '软件管理',
-                  collapsed: true,
-                  items: [
-                    { text: '应用商店', link: '/zh/debian/software/app-store' },
-                    //{ text: 'lpm包管理工具', link: '/zh/debian/software/lpm' },
-                    //{ text: 'apt和dpkg', link: '/zh/debian/software/apt-dpkg' }
-                  ]
-                },
-                { text: '常见问题', link: '/zh/debian/faq' }
-              ],
-            },
-          ],
-          '/zh/arch/': [
-            {
-              text: 'Arch Lingmo',
-              items: [
-                { text: '关于', link: '/zh/arch/about' },
-                {
-                  text: '系统相关',
-                  collapsed: true,
-                  items: [
-                    { text: '系统安装', link: '/zh/arch/system/installation' }
-                  ]
-                },
-                { text: '常见问题', link: '/zh/arch/faq' }
-              ],
-            },
-          ],
-        },
-        footer: {
-          message: '遵循CC BY-SA协议',
-          copyright: 'Copyright © 2024 Lingmo OS',
-        },
-        lastUpdatedText: '上次更新',
-        editLink: {
-          pattern: 'https://github.com/lingmoOS/lingmo-wiki/edit/main/docs/:path',
-          text: '在 GitHub 上编辑此页'
-        },
-        darkModeSwitchLabel: '外观',
-        outlineTitle: '页面导航',
-        sidebarMenuLabel: '目录',
-        returnToTopLabel: '返回顶部',
-      }
-    },
     root: {
       label: 'English',
       lang: 'en',
@@ -114,22 +39,6 @@ export default defineConfig({
                   ]
                 },
                 { text: 'F&Q', link: '/en/debian/faq' }
-              ],
-            },
-          ],
-          '/en/arch/': [
-            {
-              text: 'Arch Lingmo',
-              items: [
-                { text: 'About', link: '/en/arch/zh/about' },
-                {
-                  text: 'System',
-                  collapsed: true,
-                  items: [
-                    { text: 'Installation', link: '/en/system/arch/installation' }
-                  ]
-                },
-                { text: 'F&Q', link: '/en/arch/faq' }
               ],
             },
           ],
