@@ -1,20 +1,18 @@
 import { defineConfig } from 'vitepress'
 export default defineConfig({
-  lang: 'en',
   title: 'Lingmo Wiki',
   rewrites: {
     'en/:rest*': ':rest*'
   },
-  appearance:'dark',
+  cleanUrls: true,
   head: [
-    ['link',{ rel: 'icon', href: '/favicon.ico'}],
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
   ],
   ignoreDeadLinks: true,
   locales: {
     root: {
       label: 'English',
       lang: 'en',
-      link: '/en/',
       themeConfig: {
         nav: [
           { text: 'Home', link: '/' },
@@ -26,8 +24,8 @@ export default defineConfig({
           },
         ],
         footer: {
-          message: 'Released under the CC BY-SA License.',
-          copyright: 'Copyright © 2024 Lingmo OS',
+          message: 'Licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.zh\" class=\"grabient-text\">CC BY-SA 4.0</a>.',
+          copyright: 'Copyright © 2024-present Lingmo OS Team',
         }
       },
     },

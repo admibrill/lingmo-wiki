@@ -137,3 +137,10 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+.grabient-text {
+  color: transparent;
+  background-color: #bd34fe;
+  background-image: var(--vp-home-hero-name-background);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
