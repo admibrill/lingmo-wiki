@@ -14,7 +14,7 @@ export default defineConfig({
     logo: '/logo.png',
     siteTitle: false,
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/LingmoOS/Lingmo-Wiki' }
+      { icon: 'github', link: 'https://github.com/LingmoOS/lingmo-wiki' }
     ],
     search: {
       provider: 'local'
