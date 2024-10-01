@@ -42,10 +42,12 @@ function sidebarItems(): DefaultTheme.Sidebar[] {
           text: 'Historical Archive',
           link: 'historical-archive',
           collapsed: false,
-          items: {
-            text: 'How to Install Lingmo OS without CD or USB: A Step-by-Step Guide',
-            link: 'harddisk-install'
-          }
+          items: [
+            {
+              text: 'How to Install Lingmo OS without CD or USB: A Step-by-Step Guide',
+              link: 'historical-archive/harddisk-install'
+            }
+          ]
         },
       ]
     },
