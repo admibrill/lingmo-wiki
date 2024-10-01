@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /docs/introduction
+      link: /wiki/about
     - theme: alt
       text: Official Website
       link: https://www.lingmo.org
@@ -21,18 +21,19 @@ hero:
 features:
   - title: About Lingmo OS
     details: Overview of Lingmo OS describing what to expect from a Lingmo OS system.
+    link: /wiki/about
   - title: FAQ
     details: Notable questions and facts about the distribution.
   - title: Installation Guide
     details: Guide through the process of installing Lingmo OS.
-    link: /docs/handbook/installation-guide
+    link: /wiki/installation-guide
   - title: Tutorials & Howtos
     details: Basic and advanced configuration tasks.
   - title: Glossary
     details: An extensive list of terms releated to Lingmo OS with definitions and explanations.
   - title: Contributors' Guide
     details: The starting point for those willing to contribute to Lingmo OS.
-    link: /docs/handbook/faq
+    link: /wiki/faq
   - title: Developer Documentation
     details: Getting involved in Lingmo OS development.
   - title: History
