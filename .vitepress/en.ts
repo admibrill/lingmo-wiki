@@ -29,7 +29,24 @@ function sidebarItems(): DefaultTheme.Sidebar[] {
         {
           text: 'About',
           link: 'about'
-        }
+        },
+        {
+          text: 'Installation Guide',
+          link: 'installation-guide'
+        },
+        {
+          text: 'FAQ',
+          link: 'faq'
+        },
+        {
+          text: 'Historical Archive',
+          link: 'historical-archive',
+          collapsed: false,
+          items: {
+            text: 'How to Install Lingmo OS without CD or USB: A Step-by-Step Guide',
+            link: 'harddisk-install'
+          }
+        },
       ]
     },
   }
