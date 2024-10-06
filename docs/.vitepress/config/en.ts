@@ -39,6 +39,10 @@ function sidebarItems(): DefaultTheme.Sidebar[] {
           link: 'faq'
         },
         {
+          text: 'Glossary',
+          link: 'glossary'
+        },
+        {
           text: 'Historical Archive',
           link: 'historical-archive',
           collapsed: false,
@@ -46,6 +50,10 @@ function sidebarItems(): DefaultTheme.Sidebar[] {
             {
               text: 'How to Install Lingmo OS without CD or USB: A Step-by-Step Guide',
               link: 'historical-archive/harddisk-install'
+            },
+            {
+              text: 'Install LingmoOS using command line method from Windows',
+              link: 'historical-archive/cli-install-from-windows'
             }
           ]
         },
