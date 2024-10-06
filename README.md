@@ -1,5 +1,5 @@
 # lingmo-wiki
-Official Wiki of Lingmo, powered by [Vitepress](https://vitepress.dev).
+[Official Wiki of Lingmo](https://wiki.lingmo.org), powered by [Vitepress](https://vitepress.dev).
 
 ## Running locally
 ### pnpm
