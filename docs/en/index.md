@@ -32,6 +32,7 @@ features:
     details: Basic and advanced configuration tasks.
   - title: Glossary
     details: An extensive list of terms releated to Lingmo OS with definitions and explanations.
+    link: wiki/glossary
   - title: Contributors' Guide
     details: The starting point for those willing to contribute to Lingmo OS.
   - title: Developer Documentation
@@ -40,6 +41,6 @@ features:
     details: The History of Lingmo OS.
 ---
 > [!IMPORTANT]
-> The entire Wiki is WIP, which means that it's incomplete and contains errors!
+> The entire Wiki is WIP (and you can see that some articles are not available), which means that it's incomplete and contains errors!
 >
 > Help us improve and expand this wiki by submitting a pull request in [the GitHub repository](https://github.com/LingmoOS/lingmo-wiki).
