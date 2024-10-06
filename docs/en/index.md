@@ -32,6 +32,7 @@ features:
     details: Basic and advanced configuration tasks.
   - title: Glossary
     details: An extensive list of terms releated to Lingmo OS with definitions and explanations.
+    link: wiki/glossary
   - title: Contributors' Guide
     details: The starting point for those willing to contribute to Lingmo OS.
   - title: Developer Documentation
