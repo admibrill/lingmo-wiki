@@ -40,7 +40,7 @@ features:
   - title: History
     details: The History of Lingmo OS.
 ---
-> [!IMPORTANT]
+> [!Important]
 > The entire Wiki is WIP (and you can see that some articles are not available), which means that it's incomplete and contains errors!
 >
 > Help us improve and expand this wiki by submitting a pull request in [the GitHub repository](https://github.com/LingmoOS/lingmo-wiki).
