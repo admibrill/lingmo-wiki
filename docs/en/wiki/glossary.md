@@ -9,12 +9,14 @@ Related Projects:
 - <https://github.com/Lingmo-Archive/archlingmo-pkg>
 
 ## Lingmo Desktop Environment (or LingmoDE)
-The default desktop environment for Lingmo OS, modified from [CutefishDE](https://github.com/cutefishos).
+The default desktop environment for Lingmo OS, modified from the Cutefish Desktop Environment for [CutefishOS](https://github.com/cutefishos).
 
 ## Lingmo OS
-Lingmo OS can be referred to as:
-- Lingmo OS
-- LingmoOS
+See [About Lingmo OS](about).
+
+It can be referred to as:
+- `Lingmo OS`
+- `LingmoOS`
 
 However, it's recommended to use `Lingmo OS` instead of `LingmoOS`.
 
