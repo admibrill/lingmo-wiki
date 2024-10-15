@@ -1,4 +1,4 @@
-# Glossary(WIP)
+# Glossary
 
 ## ArchLingmo
 A branch of Lingmo OS which is based on Arch Linux. No longer maintained.
