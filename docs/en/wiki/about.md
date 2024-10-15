@@ -3,6 +3,8 @@
 # About
 ![LingmoOS](../assets/about/desktop.png)
 
+Fast, free and full of new features. The latest release of Lingmo OS delivers new tools and enhancements for developers, creators, gamers and administrators.
+
 Lingmo GNU/Linux (Lingmo OS) is a operating system based on Debian GNU/Linux. It offers a beautiful Desktop environment, includes software tailored for this environment, and features a unified UI style. Lingmo OS aims to provide a smooth and visually appealing desktop experience.
 
 ## Lightweight and Smooth Experience
