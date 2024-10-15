@@ -1,9 +1,9 @@
 # Installation Guide
 
 > [!Warning]
-> Please be aware that LingmoOS is in **BETA** - what this means is that LingmoOS is under heavy development and therefore **NOT** ready for every day use.
+> Please be aware that Lingmo OS is in **BETA** - what this means is that Lingmo OS is under heavy development and therefore **NOT** ready for every day use.
 
-In this tutorial, we will guide you through the steps required to install LingmoOS on your PC. It would be advised to view the [FAQ](faq) before installing.
+In this tutorial, we will guide you through the steps required to install Lingmo OS on your PC. It would be advised to view the [FAQ](faq) before installing.
 
 ## *1* Preparation
 
