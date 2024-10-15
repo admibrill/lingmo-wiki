@@ -1,10 +1,7 @@
 # Installation Guide
 
-Fast, free and full of new features. The latest release of LingmoOS delivers new tools and enhancements for developers, creators, gamers and administrators. 
-
-::: warning
-Please be aware that LingmoOS is in **BETA** - what this means is that LingmoOS is under heavy development and therefore **NOT** ready for every day use.
-:::
+> [!Warning]
+> Please be aware that LingmoOS is in **BETA** - what this means is that LingmoOS is under heavy development and therefore **NOT** ready for every day use.
 
 ## 1. Overview
 
