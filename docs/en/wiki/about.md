@@ -1,7 +1,7 @@
-> [LingmoOS Official Website](https://lingmo.org/)
-
 # About
 ![LingmoOS](../assets/about/desktop.png)
+
+> [Lingmo OS Official Website](https://lingmo.org/)
 
 Fast, free and full of new features. The latest release of Lingmo OS delivers new tools and enhancements for developers, creators, gamers and administrators.
 
