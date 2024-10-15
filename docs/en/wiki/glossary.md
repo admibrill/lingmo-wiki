@@ -12,9 +12,11 @@ Related Projects:
 The default desktop environment for Lingmo OS, modified from [CutefishDE](https://github.com/cutefishos).
 
 ## Lingmo OS
-Lingmo OS should referred to as:
+Lingmo OS can be referred to as:
 - Lingmo OS
 - LingmoOS
+
+However, it's recommended to use `Lingmo OS` instead of `LingmoOS`.
 
 ## LingmoNix
 See <https://github.com/LingmoOS-Testing/lingmo-nix>.
