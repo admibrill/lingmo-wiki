@@ -17,7 +17,7 @@ You can download a LingmoOS image [here](https://lingmo.org/download). Make sure
 
 ![LingmoOS ISO Download](../assets/installation-guide/1.jpg)
 
-## *3* C*reate a Bootable USB stick
+## *3* Create a Bootable USB stick
 
 To install LingmoOS, you need to write your downloaded ISO to a USB stick to create the installation media. This is not the same as copying the ISO, and requires some bespoke software.
 
