@@ -30,7 +30,7 @@ features:
     icon: ❓
     details: Notable questions and facts about Lingmo OS.
     link: wiki/faq
-  - title: Install Lingmo OS
+  - title: Installation Guide
     icon: 💾
     details: Guide through the process of installing Lingmo OS.
     link: wiki/installation-guide
@@ -51,4 +51,4 @@ features:
 > [!Important]
 > The entire Wiki is WIP (and you can see that some articles are not available), which means that it's incomplete and contains errors!
 >
-> Help us improve and expand this wiki by submitting a pull request in the [lingmo-wiki repository](https://github.com/LingmoOS/lingmo-wiki) on GitHub.
+> Help us improve and expand this wiki by submitting a pull request in the [lingmo-wiki repository on GitHub](https://github.com/LingmoOS/lingmo-wiki).
