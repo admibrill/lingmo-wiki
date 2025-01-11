@@ -1,0 +1,23 @@
+# LingmoDE应用列表
+这里有一个LingmoDE提供的应用列表。
+- lingmo-core
+- lingmoui
+- liblingmo
+- [lingmo-filemanager](lingmo-filemanager)
+- lingmo-settings
+- [lingmo-terminal](lingmo-terminal)
+- lingmo-dock
+- lingmo-launcher
+- lingmo-statusbar
+- lingmo-qt-plugins
+- lingmo-kwin-plugins
+- lingmo-gtk-themes
+- lingmo-systemicons
+- lingmo-wallpapers
+- lingmo-texteditor
+- lingmo-calculator
+- lingmo-screenshots
+- lingmo-screenlocker
+- lingmo-ocr
+- lingmo-sddm-theme
+- lingmo-plymouth-theme
