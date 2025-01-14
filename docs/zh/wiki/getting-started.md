@@ -3,27 +3,24 @@
 ## 关于Lingmo OS
 > [Lingmo OS官网](https://lingmo.org/)
 
-速度快、免费、并且特性丰富，最新版的 Lingmo OS 为开发者、创作者、游戏玩家提供了新的工具和增强。
+Lingmo OS 速度快、免费、且包含许多特性。Lingmo OS 最新版本为开发人员、创作者、游戏玩家和管理人员提供新工具和增强功能。
 
-Lingmo GNU/Linux (Lingmo OS)是一个基于Debian GNU/Linux操作系统。它提供了一个优雅的桌面环境，并包括为这种环境量身定制的软件和同一的界面风格。Lingmo OS旨在提供流畅的、引人注目的桌面体验。
+Lingmo GNU/Linux (Lingmo OS) 是一个基于 Debian GNU/Linux 操作系统。它提供了一个漂亮的桌面环境，包括为这个环境量身定制的软件，且具有统一的UI风格。Lingmo OS 旨在提供一个流畅的、视觉上吸引人的桌面体验。
 
-### 轻量而流畅的体验
-Lingmo OS可以运行在性能较低的硬件上，提供比像Windows11这种重型操作系统更轻量、更流畅的体验。它的轻量自然地确保了流畅而令人愉悦的体验，让其成为一个对新人和Linux发烧友来说都理想的选择。
-
-### 内置Spark应用商店
-为了增强使用的容易度, Lingmo OS内置[Spark商店](https://gitee.com/deepin-community-store/spark-store/), 使得用户无需使用命令行就可以更轻松地发现和安装必要的应用。这一用户友好的特性简化了软件管理，使得系统更容易保持最新且安装了必需的工具。
+### 轻量且流畅的体验
+Lingmo OS 可运行在低配设备上，提供比 Windows 11 这种重型操作系统更轻量、更流畅的体验。而这种轻量级的特性也确保了快速及愉快的用户体验，使其成为新手和经验丰富的 Linux 爱好者的理想选择。
 
 ### 预览
 ![LingmoOS](../assets/about/desktop.webp)
 
-## 安装LingmoOS
+## 安装 LingmoOS
 见[安装指南](installation-guide).
 
-## 在其他Linux分发上安装LingmoDE
+## 在其他 Linux 发行版安装 LingmoDE
 - [Debian](faq#are-there-any-lingmode-packages-for-debian-12)
 - [Arch](https://aur.archlinux.org/packages?SeB=m&K=chun-awa)
 
-## 接下来还有什么?
-此处有一份关于调试Lingmo OS的详细笔记（仅中文）：<https://samwhelp.github.io/note-about-lingmo/>
+## 还有什么?
+这里有一个关于调试 Lingmo OS 的很大的笔记（仅中文）：<https://samwhelp.github.io/note-about-lingmo/>
 
-如果你在使用Lingmo OS时遇到了问题（如硬件不兼容或者有漏洞），你可以访问[FAQ](faq)或者前往[Lingmo OS讨论区](https://github.com/orgs/LingmoOS/discussions)寻求帮助。
+如果你在使用 Lingmo OS 时遇到了一些问题（比如配置不兼容或者遇到bug），你可以访问[FAQ](faq)，或者前往 [Lingmo OS讨论区](https://github.com/orgs/LingmoOS/discussions) 寻求帮助。

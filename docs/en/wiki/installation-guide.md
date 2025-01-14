@@ -77,7 +77,7 @@ The home ( /home ) directory needs as much space as you will need for your files
 
 Swap space of at least half of the available RAM is recommended. For instance, with 8 GBs, make the swap with at least 4 GBs.
 
-> If you have a Windows 8 sticker on your machine you might need to make a separate EFI partition with a FAT32 filesystem.
+> If your computer uses UEFI boot, you might need to make a separate EFI partition with a FAT32 filesystem.
 
 ## *8* Create Your Login Details
 

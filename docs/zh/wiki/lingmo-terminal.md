@@ -1,4 +1,4 @@
 # lingmo-terminal
-> 在LingmoOS上使用LingmoUI作为界面样式的终端模拟器——来自lingmo终端GitHub仓库描述
+> 在 LingmoOS 上使用 Lingmo UI 作为界面样式的终端模拟器 ——来自 Lingmo 终端 GitHub 仓库描述
 ## 效果预览
 *WIP*
