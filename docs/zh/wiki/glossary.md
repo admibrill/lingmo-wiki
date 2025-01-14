@@ -2,7 +2,7 @@
 
 ## ArchLingmo
 Lingmo OS Arch Linux. No longer maintained.
-一个基于Arch Linux的LingmoOS分支。我们不再维护它。
+一个基于 Arch Linux 的 LingmoOS 分支。已停止维护。
 
 相关仓库:
 - <https://github.com/Lingmo-Archive/archlingmo-archiso-config>
