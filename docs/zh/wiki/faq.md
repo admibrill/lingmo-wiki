@@ -7,7 +7,7 @@
 ## Lingmo OS 基于什么 Linux？
 [Debian](https://debian.org)。
 
-## 为什么不用 Debian 12（稳定的），而是使用 Debian 13（不稳定的）？
+## 为什么不用 Debian 12（稳定版），而是使用 Debian 13（不稳定版）？
 我们计划把LingmoDE迁移到Qt6，因为 Debian 12 没有我们必需的包，我们不得不用Debian 13。
 
 ## 为什么不用 Arch ？
