@@ -27,7 +27,7 @@ Follow this tutorial to install Ventoy to your USB stick and copy the ISO image:
 
 ## *4* Boot from USB flash drive
 
-Insert the USB flash drive into the laptop or PC you want to use to install Ubuntu and boot or restart the device. It should recognize the installation media automatically. If not, try holding `F12` (according to your motherboard manufacturer) during startup and selecting the USB device from the system-specific boot menu.
+Insert the USB flash drive into the laptop or PC you want to use to install LingmoOS and boot or restart the device. It should recognize the installation media automatically. If not, try holding `F12` (according to your motherboard manufacturer) during startup and selecting the USB device from the system-specific boot menu.
 
 > F12 is the most common key for bringing up your system’s boot menu, but Escape, F2 and F10 are common alternatives. If you’re unsure, look for a brief message when your system starts – this will often inform you of which key to press to bring up the boot menu.
 

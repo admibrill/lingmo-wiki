@@ -21,7 +21,7 @@ Lingmo OS默认的桌面环境, 基于Cutefish桌面环境（[CutefishOS](https:
 - `Lingmo OS`
 - `LingmoOS`
 
-然而, 更推荐使用`Lingmo OS`而不用`LingmoOS`。
+然而, 更推荐使用`Lingmo OS`而非`LingmoOS`。
 
 ## LingmoNix
 见<https://github.com/LingmoOS-Testing/lingmo-nix>.
