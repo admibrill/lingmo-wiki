@@ -3,12 +3,12 @@
 ## 关于Lingmo OS
 > [Lingmo OS官网](https://lingmo.org/)
 
-Lingmo OS 速度快、免费、且有着许多特性。Lingmo OS 最新版本为开发人员、创作者、游戏玩家和管理员提供新的工具和增强功能。
+Lingmo OS 速度快、免费、且包含许多特性。Lingmo OS 最新版本为开发人员、创作者、游戏玩家和管理人员提供新工具和增强功能。
 
-Lingmo GNU/Linux (Lingmo OS) 是一个基于 Debian GNU/Linux 操作系统。它提供了一个漂亮的桌面环境，包括为这个环境量身定制的软件，并且具有统一的UI风格。Lingmo OS 旨在提供一个流畅的、视觉上吸引人的桌面体验。
+Lingmo GNU/Linux (Lingmo OS) 是一个基于 Debian GNU/Linux 操作系统。它提供了一个漂亮的桌面环境，包括为这个环境量身定制的软件，且具有统一的UI风格。Lingmo OS 旨在提供一个流畅的、视觉上吸引人的桌面体验。
 
 ### 轻量且流畅的体验
-Lingmo OS 可运行在低配设备上，提供比 Windows 11 这种重型操作系统更轻量、更流畅的体验。而这种轻量级的特性也确保了快速和愉快的用户体验，使其成为新手和经验丰富的 Linux 爱好者的理想选择。
+Lingmo OS 可运行在低配设备上，提供比 Windows 11 这种重型操作系统更轻量、更流畅的体验。而这种轻量级的特性也确保了快速及愉快的用户体验，使其成为新手和经验丰富的 Linux 爱好者的理想选择。
 
 ### 预览
 ![LingmoOS](../assets/about/desktop.webp)
