@@ -33,15 +33,15 @@ Insert the USB flash drive into the laptop or PC you want to use to install Ubun
 
 On some older images, you will be required to enter a password to enter the live session. If you enconter this, enter the password `live` and press `Enter`.
 
-![Enter password](../assets/installation-guide/4.webp)
+![Enter password](../assets/installation-guide/2.webp)
 
 Once logged into the live system, you can start the installer by clicking `Install Lingmo`.
 
-![Start installer](../assets/installation-guide/5.webp)
+![Start installer](../assets/installation-guide/3.webp)
 
 Once the installer has initialised you will be invited to choose your language
 
-![Choose language](../assets/installation-guide/6.webp)
+![Choose language](../assets/installation-guide/4.webp)
 
 > You can preview LingmoOS without making any changes to your PC. You can return to the installer menu at any time by clicking the Install Lingmo shortcut on the desktop.
 
@@ -51,13 +51,13 @@ To proceed, click `Next`.
 
 Select your location and timezone from the map screen and click `Next`. This information will be detected automatically if you are connected to the internet.
 
-![Choose location](../assets/installation-guide/7.webp)
+![Choose location](../assets/installation-guide/5.webp)
 
 ## *6* Choose your Keyboard Layout
 
 You will be asked to select your keyboard layout. Once you’ve chosen one, click `Next`.
 
-![Choose keyboard layout](../assets/installation-guide/8.webp)
+![Choose keyboard layout](../assets/installation-guide/6.webp)
 
 ## *7* Choose your Partitioning Layout
 
@@ -65,7 +65,7 @@ This screen allows you to configure your installation. If you would like LingmoO
 
 If your device currently has another operating system installed, you will receive additional options to install LingmoOS alongside that OS rather than replacing it.
 
-![Choose partitioning](../assets/installation-guide/9.webp)
+![Choose partitioning](../assets/installation-guide/7.webp)
 
 ### Manual
 
@@ -85,17 +85,17 @@ On this screen, you will be prompted to enter your name and the name of your com
 
 You can choose to log in automatically or require a password. If you are using your device whilst travelling, it’s **not** recommended to keep “Log in automatically” enabled.
 
-![Create your login details](../assets/installation-guide/10.webp)
+![Create your login details](../assets/installation-guide/8.webp)
 
 ## *9* Confirm the Installation
 
 You will now be asked to review the settings you have chosen. If you are happy with them, click `Install`.
 
-![Confirm the installation](../assets/installation-guide/11.webp)
+![Confirm the installation](../assets/installation-guide/9.webp)
 
 And then sit back and enjoy the slideshow as LingmoOS installs in the background! 🙂:
 
-![Installation in progress](../assets/installation-guide/12.webp)
+![Installation in progress](../assets/installation-guide/10.webp)
 
 After reboot, you can enter your new system!
 
