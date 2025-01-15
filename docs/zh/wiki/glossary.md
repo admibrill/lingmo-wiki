@@ -1,7 +1,6 @@
 # 术语表
 
 ## ArchLingmo
-Lingmo OS Arch Linux. No longer maintained.
 一个基于 Arch Linux 的 LingmoOS 分支。已停止维护。
 
 相关仓库:
@@ -22,7 +21,7 @@ Lingmo OS 的默认桌面环境, 由 Cutefish 桌面环境（[CutefishOS](https:
 - `Lingmo OS`
 - `LingmoOS`
 
-然而, 更推荐使用 `Lingmo OS` 而不用`LingmoOS`。
+然而, 更推荐使用 `Lingmo OS` 而不用 `LingmoOS` 。
 
 ## LingmoNix
 见<https://github.com/LingmoOS-Testing/lingmo-nix>.
