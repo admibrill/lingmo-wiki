@@ -11,15 +11,15 @@ In this tutorial, we will guide you through the steps required to install Lingmo
 
 - A USB stick (4GB or above is recommended).
 
-## *2* Download a LingmoOS Image
+## *2* Download a Lingmo OS Image
 
-You can download a LingmoOS image [here](https://lingmo.org/download). Make sure to save it to a memorable location on your PC! For this tutorial, we will use the LingmoOS 2.0 beta version which uses the new Lingmo installer that will be included in all future LingmoOS releases.
+You can download a Lingmo OS image [here](https://lingmo.org/download). Make sure to save it to a memorable location on your PC! For this tutorial, we will use the LingmoOS 2.0 beta version which uses the new Lingmo installer that will be included in all future LingmoOS releases.
 
-![LingmoOS ISO Download](../assets/installation-guide/1.webp)
+![Lingm oOS ISO Download](../assets/installation-guide/1.webp)
 
 ## *3* Create a Bootable USB stick
 
-To install LingmoOS, you need to write your downloaded ISO to a USB stick to create the installation media.
+To install Lingmo OS, you need to write your downloaded ISO to a USB stick to create the installation media.
 
 For this tutorial, we’ll use [Ventoy](https://ventoy.net), as it runs on Linux, Windows and macOS and it's so simple that you just need to copy the ISO image to the USB stick after installing Ventoy. Choose the version that corresponds to your current operating system, download and install the tool.
 
@@ -43,7 +43,7 @@ Once the installer has initialised you will be invited to choose your language
 
 ![Choose language](../assets/installation-guide/4.webp)
 
-> You can preview LingmoOS without making any changes to your PC. You can return to the installer menu at any time by clicking the Install Lingmo shortcut on the desktop.
+> You can preview Lingmo OS without making any changes to your PC. You can return to the installer menu at any time by clicking the Install Lingmo shortcut on the desktop.
 
 To proceed, click `Next`.
 
@@ -61,9 +61,9 @@ You will be asked to select your keyboard layout. Once you’ve chosen one, clic
 
 ## *7* Choose your Partitioning Layout
 
-This screen allows you to configure your installation. If you would like LingmoOS to be the only operating system on your hard drive, select `Erase disk` and install LingmoOS.
+This screen allows you to configure your installation. If you would like Lingmo OS to be the only operating system on your hard drive, select `Erase disk` and install Lingmo OS.
 
-If your device currently has another operating system installed, you will receive additional options to install LingmoOS alongside that OS rather than replacing it.
+If your device currently has another operating system installed, you will receive additional options to install Lingmo OS alongside that OS rather than replacing it.
 
 ![Choose partitioning](../assets/installation-guide/7.webp)
 
@@ -93,7 +93,7 @@ You will now be asked to review the settings you have chosen. If you are happy w
 
 ![Confirm the installation](../assets/installation-guide/9.webp)
 
-And then sit back and enjoy the slideshow as LingmoOS installs in the background! 🙂:
+And then sit back and enjoy the slideshow as Lingmo OS installs in the background! 🙂:
 
 ![Installation in progress](../assets/installation-guide/10.webp)
 
