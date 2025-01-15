@@ -17,3 +17,6 @@
 
 ## 有适用于 Debian 12 的 LingmoDE 包吗？
 有。见<https://download.opensuse.org/repositories/home:/elysia:/LingmoOS/Debian_12/>.
+
+## 我在执行 `apt update` 时遇到了404错误！
+我们现在已经将 `hydrogen` 从 <https://packages.lingmo.org> 移除了。 编辑你的 apt 的 sources.list 文件，然后将 `hydrogen` 替换成 `helium`。
