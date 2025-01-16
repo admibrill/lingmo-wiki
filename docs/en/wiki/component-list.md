@@ -12,7 +12,11 @@ This index provides a structured overview of the components of Lingmo OS, organi
   Enhances application launch speed in Lingmo OS by preloading libraries and caching resources using a daemon (applauncherd). It improves performance by enabling shared resources among applications.
   
   **Dependencies:**  
-  cmake, qtbase5-dev, qtdeclarative5-dev, qtquickcontrols2-5-dev, libsystemd-dev, libcap-dev, libdbus-1-dev
+  For Debian/Ubuntu:
+
+  ```bash
+  sudo apt install cmake qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev libsystemd-dev libcap-dev libdbus-1-dev
+  ```
   
   **Build Instructions:**  
 
@@ -27,10 +31,51 @@ This index provides a structured overview of the components of Lingmo OS, organi
   **Note:**  
   Applications must be compiled as position-independent executables (PIE) or shared libraries with an exported `main()` function.
 
-- **lingmo-core**  
-  - Path: `shell/CoreComponents/CoreServer`  
-  - Revision: `refs/tags/2.0.2`  
+- **lingmo-core**
+  - Path: `shell/CoreComponents/CoreServer`
+  - Revision: `refs/tags/2.0.2`
   - URL: [https://github.com/LingmoOS/lingmo-core](https://github.com/LingmoOS/lingmo-core)
+  
+  **Description:**  
+  Core system backend responsible for managing system sessions and providing essential services in Lingmo OS.
+
+  **Dependencies:**  
+  For Arch:
+
+  ```bash
+  sudo pacman -S extra-cmake-modules pkgconf qt5-base qt5-quickcontrols2 qt5-x11extras qt5-tools\
+    kwindowsystem polkit polkit-qt5 xorg-server-devel xf86-input-libinput xf86-input-synaptics
+  ```
+
+  For Ubuntu:
+
+  ```bash
+  sudo apt install libpolkit-agent-1-dev libpolkit-qt5-1-dev libsm-dev libxtst-dev\
+    libxcb-randr0-dev libxcb-shape0-dev libxcb-xfixes0-dev libxcb-composite0-dev libxcb-damage0-dev libxcb-image0-dev libxcb-util0-dev libkf5idletime-dev
+  ```
+
+  For Debian:
+
+  ```bash
+  sudo apt install extra-cmake-modules pkg-config xserver-xorg-input-libinput-dev libx11-xcb-dev libxcb1-dev libxcb-randr0-dev\
+    libxcb-keysyms1-dev libxcursor-dev libxcb-xfixes0-dev libxcb-damage0-dev libxcb-composite0-dev libxcb-shm0-dev libxcb-util-dev\
+    libxcb-image0-dev libxcb-dpms0-dev libxcb-dri2-0-dev libxcb-dri3-dev libxcb-ewmh-dev libxcb-glx0-dev libxcb-record0-dev xserver-xorg-dev\
+    xserver-xorg-input-synaptics-dev libxtst-dev libsm-dev libpolkit-qt5-1-dev libpolkit-agent-1-dev libkf5windowsystem-dev libkf5globalaccel-dev\
+    libkf5coreaddons-dev libkf5idletime-dev libqt5x11extras5-dev qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev qttools5-dev qttools5-dev-tools
+  ```
+
+  **Build Instructions:**  
+
+  ```bash
+  mkdir build
+  cd build
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
+  make
+  sudo make install
+  ```
+
+  **Note:**  
+  This project is licensed under GPLv3. Installing the numerous xcb packages can be cumbersome; consider creating a script to automate the installation process.
 
 - **lingmo-daemon**  
   - Path: `shell/CoreComponents/Daemon`  
