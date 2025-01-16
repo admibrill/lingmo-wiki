@@ -37,6 +37,7 @@ features:
     icon: 📝
   - title: Developers and Contributors' Guide
     icon: 🌱
+    link: wiki/develop-guide
   - title: History
     icon: 📖
 ---

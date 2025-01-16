@@ -2,13 +2,7 @@
 
 Welcome to the developer documentation for Lingmo OS! This guide provide you with the necessary tools and resources to get started with Lingmo OS development.
 
-## Table of Contents
-
-1. [Introduction](## 1. Get source code)
-2. [Component Guides](#component-guides)
-3. [Contributing to Lingmo OS](#contributing-to-lingmo-os)
-
-## 1. Get source code
+## Get source code
 
 We use the [repo](https://source.android.com/setup/develop/repo) tool to manage the source code. Of course, you can clone every component separately, but it's recommended to get all the source code at once.
 
@@ -47,13 +41,13 @@ repo init -u https://github.com/LingmoOS/manifest.git -m manifest.xml
 repo sync
 ```
 
-## 2. Component Guides
+## Component Guides
 
 For a comprehensive list of Lingmo OS components, including core components, basic components, libraries, plugins, system, and tools, please refer to the [Component List](component-list.md).
 
 This list provides detailed information on each component, including their paths and corresponding GitHub repositories. It is maintained separately for ease of updates and readability.
 
-## 3. Contributing to Lingmo OS
+## Contributing to Lingmo OS
 
 ### Contribution Workflow
 
