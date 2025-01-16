@@ -101,10 +101,46 @@ This index provides a structured overview of the components of Lingmo OS, organi
   sudo make install
   ```
 
-- **lingmo-filemanager**  
-  - Path: `shell/CoreComponents/Filemanager`  
-  - Revision: `dev`  
+- [**lingmo-filemanager**](lingmo-filemanager.md)
+  - Path: `shell/CoreComponents/Filemanager`
+  - Revision: `dev`
   - URL: [https://github.com/LingmoOS/lingmo-filemanager](https://github.com/LingmoOS/lingmo-filemanager)
+  
+  **Description:**  
+  Lingmo File Manager is a simple, beautiful file manager that retains the classic PC interactive design, offering a familiar and intuitive experience for users.
+
+  **Dependencies:**  
+  - **Ubuntu:**
+
+    ```bash
+    sudo apt install equivs curl git devscripts lintian build-essential automake autotools-dev --no-install-recommends
+    sudo mk-build-deps -i -t "apt-get --yes" -r
+    ```
+
+  - **Debian:**
+
+    ```bash
+    sudo apt install build-essential cmake extra-cmake-modules libkf5kio-dev libkf5solid-dev libkf5windowsystem-dev libkf5config-dev qtbase5-dev qtbase5-private-dev qtdeclarative5-dev qtquickcontrols2-5-dev qttools5-dev qttools5-dev-tools
+    ```
+
+  - **ArchLinux:**
+
+    ```bash
+    sudo pacman -S extra-cmake-modules qt5-base qt5-quickcontrols2 taglib kio
+    ```
+  
+  **Build Instructions:**  
+
+  ```bash
+  mkdir build
+  cd build
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
+  make
+  sudo make install
+  ```
+  
+  **Notes:**  
+  - The 'mk-build-deps' command might require the 'devscripts' package.
 
 - **lingmo-kwin-plugins**  
   - Path: `shell/CoreComponents/KWinPlugins`  
