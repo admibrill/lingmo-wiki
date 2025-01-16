@@ -147,7 +147,7 @@ This index provides a structured overview of the components of Lingmo OS, organi
   - URL: [https://github.com/LingmoOS/lingmo-kwin-plugins](https://github.com/LingmoOS/lingmo-kwin-plugins)
   
   **Description:**  
-  A collection of KWin plugins tailored for LingmoOS, enhancing window management and desktop experience.
+  A collection of KWin plugins tailored for LingmoOS, enhancing window management and desktop experience,which is a necessary component of LingmoOS.
   
   **Dependencies:**  
   - **Arch Linux:**
@@ -175,7 +175,88 @@ This index provides a structured overview of the components of Lingmo OS, organi
 - **lingmo-kwin-plugins-roundedwindow**  
   - Path: `shell/CoreComponents/KWinRoundedWindow`  
   - Revision: `refs/tags/1.0.2`  
-  - URL: [https://github.com/LingmoOS/lingmo-kwin-plugins-roundedwindow](https://github.com/LingmoOS/lingmo-kwin-plugins-roundedwindow)
+  - URL: [https://github.com/LingmoOS/lingmo-kwin-plugins-roundedwindow](https://github.com/LingmoOS/lingmo-kwin-plugins-roundedwindow)  
+
+  **Description:**  
+  A KWin plugin for LingmoOS that adds rounded corners to application windows, enhancing the visual aesthetics of the desktop environment.  
+
+  **Dependencies:**  
+  - **Arch Linux:**  
+
+    ```bash  
+    sudo pacman -S extra-cmake-modules qt5-base qt5-declarative kconfig5 kdecoration5 kguiaddons5 kcoreaddons5 kconfigwidgets5 kwindowsystem5 kwayland kwin  
+    ```  
+
+  - **Ubuntu/Debian:**  
+
+    ```bash  
+    sudo apt install extra-cmake-modules qtbase5-dev qtdeclarative5-dev kconfig5 kdecoration5 kguiaddons5 kcoreaddons5 kconfigwidgets5 kwindowsystem5 kwayland kwin  
+    ```  
+
+  **Build Instructions:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake ..  
+  make  
+  sudo make install  
+  ```  
+
+  **Load & Unload:**  
+  - To activate the effect:  
+
+    ```bash  
+    sh ../tools/load.sh  
+    ```  
+
+  - To uninstall the effect:  
+
+    ```bash  
+    sh ../tools/unload.sh  
+    sudo make uninstall  
+    ```  
+
+  **Auto-install After KWin Update:**  
+  After each KWin update, the plugin may become incompatible. To automate reinstallation:  
+
+  ```bash  
+  sh ../tools/install-autorun-test.sh  
+  ```  
+
+  This adds a desktop file to the autorun directory, ensuring the plugin is rebuilt and reinstalled if necessary.  
+
+  **Tips:**  
+  - **Disable Conflicting Native Window Outline:**  
+    To avoid visual glitches with Breeze window decorations:  
+    - Go to `System settings -> Themes -> Window Decorations -> Breeze -> Edit icon -> Shadows and Outline tab -> Outline intensity (Off)`.  
+
+  - **Add Shadow to Windows Without Decoration (e.g., Steam):**  
+    Use the following steps:  
+    1. In `System settings -> Window management -> Window rules -> Appearance & Fixes`:  
+       - Add `[steam]` and set `No titlebar` and frame to `No`.  
+    2. In `System settings -> Application Style -> Window decoration -> Breeze theme setting -> Window specific overrides`:  
+       - Add `[steam]` and set `Hide Window title bar` to `Yes`.  
+
+  - **Add Debug Messages:**  
+    For troubleshooting, enable debug logs during build:  
+
+    ```bash  
+    cmake .. -DCMAKE_BUILD_TYPE=Debug  
+    cmake --build . -j  
+    ```  
+
+    View debug messages with:  
+
+    ```bash  
+    journalctl -f | grep kwin  
+    ```  
+
+    Or use colorful logs:  
+
+    ```bash  
+    sh ../tools/show-kwin-logs.sh  
+    ```  
 
 ## Basic Components
 
