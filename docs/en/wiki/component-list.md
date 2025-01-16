@@ -142,9 +142,35 @@ This index provides a structured overview of the components of Lingmo OS, organi
   **Notes:**  
   - The 'mk-build-deps' command might require the 'devscripts' package.
 
-- **lingmo-kwin-plugins**  
-  - Path: `shell/CoreComponents/KWinPlugins`  
+- **lingmo-kwin-plugins**
+  - Path: `shell/CoreComponents/KWinPlugins`
   - URL: [https://github.com/LingmoOS/lingmo-kwin-plugins](https://github.com/LingmoOS/lingmo-kwin-plugins)
+  
+  **Description:**  
+  A collection of KWin plugins tailored for LingmoOS, enhancing window management and desktop experience.
+  
+  **Dependencies:**  
+  - **Arch Linux:**
+
+    ```bash
+    sudo pacman -S extra-cmake-modules qt5-base qt5-declarative kconfig5 kdecoration5 kguiaddons5 kcoreaddons5 kconfigwidgets5 kwindowsystem5 kwayland kwin
+    ```
+
+  - **Ubuntu/Debian:**
+
+    ```bash
+    sudo apt install extra-cmake-modules qtbase5-dev qtdeclarative5-dev kconfig5 kdecoration5 kguiaddons5 kcoreaddons5 kconfigwidgets5 kwindowsystem5 kwayland kwin
+    ```
+  
+  **Build Instructions:**  
+
+  ```bash
+  mkdir build
+  cd build
+  cmake ..
+  make
+  sudo make install
+  ```
 
 - **lingmo-kwin-plugins-roundedwindow**  
   - Path: `shell/CoreComponents/KWinRoundedWindow`  
