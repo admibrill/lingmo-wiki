@@ -75,11 +75,31 @@ This index provides a structured overview of the components of Lingmo OS, organi
   ```
 
   **Note:**  
-  This project is licensed under GPLv3. Installing the numerous xcb packages can be cumbersome; consider creating a script to automate the installation process.
+  Installing the numerous xcb packages can be cumbersome; consider creating a script to automate the installation process.
 
-- **lingmo-daemon**  
-  - Path: `shell/CoreComponents/Daemon`  
+- **lingmo-daemon**
+  - Path: `shell/CoreComponents/Daemon`
   - URL: [https://github.com/LingmoOS/lingmo-daemon](https://github.com/LingmoOS/lingmo-daemon)
+  
+  **Description:**
+  LingmoOS backend.
+  
+  **Dependencies:**
+  For Debian/Ubuntu:
+
+  ```bash
+  sudo apt install cmake libqapt-dev
+  ```
+  
+  **Build Instructions:**
+
+  ```bash
+  mkdir build
+  cd build
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
+  make
+  sudo make install
+  ```
 
 - **lingmo-filemanager**  
   - Path: `shell/CoreComponents/Filemanager`  
