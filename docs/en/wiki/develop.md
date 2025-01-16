@@ -61,7 +61,10 @@ This list provides detailed information on each component, including their paths
 2. **Create a Feature Branch**: Develop your changes in a new branch.
 3. **Make Changes**: Implement the desired features or fixes.
 4. **Write Tests**: Ensure your changes are tested thoroughly.
-5. **Submit a Pull Request**: Follow the guidelines in the [Pull Request Documentation](pull-request-guide.md).
+5. **Commit Changes**: Commit your changes with clear and descriptive messages.
+6. **Push Changes**: Push your branch to your forked repository.
+7. **Create a Pull Request**: Submit a pull request to the original repository.
+8. **Review and Merge**: Wait for the maintainers to review your pull request and merge it into the main branch.
 
 ### Code of Conduct
 
