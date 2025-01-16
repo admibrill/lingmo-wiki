@@ -2,22 +2,30 @@
 
 This index provides a structured overview of the components of Lingmo OS, organized into categories for easy navigation. Each component is linked to its corresponding GitHub repository and includes its path from the manifest.xml.
 
-## Table of Contents
-
-1. [Core Components](#core-components)
-2. [Basic Components](#basic-components)
-3. [Libraries](#libraries)
-4. [Plugins](#plugins)
-5. [System](#system)
-6. [Tools](#tools)
-
----
-
 ## Core Components
 
-- **lingmo-appmotor**  
-  - Path: `shell/CoreComponents/Appmotor`  
+- **lingmo-appmotor**
+  - Path: `shell/CoreComponents/Appmotor`
   - URL: [https://github.com/LingmoOS/lingmo-appmotor](https://github.com/LingmoOS/lingmo-appmotor)
+  
+  **Description:**  
+  Enhances application launch speed in Lingmo OS by preloading libraries and caching resources using a daemon (applauncherd). It improves performance by enabling shared resources among applications.
+  
+  **Dependencies:**  
+  cmake, qtbase5-dev, qtdeclarative5-dev, qtquickcontrols2-5-dev, libsystemd-dev, libcap-dev, libdbus-1-dev
+  
+  **Build Instructions:**  
+
+  ```bash
+  mkdir build
+  cd build
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
+  make
+  sudo make install
+  ```
+  
+  **Note:**  
+  Applications must be compiled as position-independent executables (PIE) or shared libraries with an exported `main()` function.
 
 - **lingmo-core**  
   - Path: `shell/CoreComponents/CoreServer`  
