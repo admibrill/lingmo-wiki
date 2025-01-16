@@ -1,5 +1,7 @@
 # LingmoDE 应用列表
+
 以下为 LingmoDE 提供的应用列表。
+
 - lingmo-core
 - lingmoui
 - liblingmo
@@ -23,6 +25,7 @@
 - lingmo-plymouth-theme
 
 以下为提供 LingmoDE 基础桌面需要的组件。
+
 - lingmo-core
 - lingmoui
 - liblingmo

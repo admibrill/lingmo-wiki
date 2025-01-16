@@ -3,6 +3,7 @@
 This index provides a structured overview of the components of Lingmo OS, organized into categories for easy navigation. Each component is linked to its corresponding GitHub repository and includes its path from the manifest.xml.
 
 ## Table of Contents
+
 1. [Core Components](#core-components)
 2. [Basic Components](#basic-components)
 3. [Libraries](#libraries)
