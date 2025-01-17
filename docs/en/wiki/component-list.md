@@ -1040,6 +1040,22 @@ This index provides a structured overview of the components of Lingmo OS, organi
   - Path: `init`  
   - URL: [https://github.com/LingmoOS/lingmo-base-common](https://github.com/LingmoOS/lingmo-base-common)
 
+  **Description:**  
+  This package contains the basic filesystem hierarchy and miscellaneous files for Lingmo OS. It includes essential configuration files and directories necessary for the proper functioning of the operating system.  
+
+  **Dependencies:**  
+  - **Debian/Ubuntu:**  
+
+    ```bash  
+    sudo apt-get install debhelper-compat debhelper dpkg-dev
+    ```  
+
+  **Build:**  
+
+  ```bash  
+  dpkg-buildpackage -us -uc
+  ```  
+
 - **lingmo-live**  
   - Path: `system/installer`  
   - Revision: `helium`  
