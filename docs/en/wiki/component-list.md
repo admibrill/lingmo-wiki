@@ -785,7 +785,56 @@ This index provides a structured overview of the components of Lingmo OS, organi
 - **LingmoUI**  
   - Path: `lib/SystemUI_Library`  
   - Revision: `refs/tags/2.3.0`  
-  - URL: [https://github.com/LingmoOS/LingmoUI](https://github.com/LingmoOS/LingmoUI)
+  - URL: [https://github.com/LingmoOS/LingmoUI](https://github.com/LingmoOS/LingmoUI)  
+
+  **Description:**  
+  LingmoUI is a GUI library based on QQC (Qt Quick Controls) and Qt 6, providing a unified and modern user interface for all LingmoOS applications. It includes features like light and dark mode, borderless windows, blurred windows, window shadows, and desktop-level menus.  
+
+  **Features:**  
+  - Light and Dark Mode  
+  - Borderless window (Wayland & XCB Window move & resize)  
+  - Blurred window  
+  - Window shadow  
+  - Desktop-level menu  
+  - QQC Style  
+  - ...  
+
+  **Structures:**  
+  - **Compatible:** This folder stores the old version of LingmoUI 1.0 (will be removed in the future).  
+
+  **Dependencies:**  
+  - **Debian/Ubuntu:** (Outdated, needs update here)
+
+    ```bash  
+    sudo apt install libqt5x11extras5-dev libkf5windowsystem-dev qtbase5-private-dev libxcb1-dev libxcb-shape0-dev libxcb-icccm4-dev -y
+    ```  
+
+  **Build:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
+  make  
+  sudo make install  
+  ```  
+
+  **Packaging (Debian/Ubuntu):**  
+  - Install compile dependencies:  
+
+    ```bash  
+    sudo apt install equivs devscripts --no-install-recommends  
+    sudo mk-build-deps -i -t "apt --yes" -r  
+    ```  
+
+  - Start packaging:  
+
+    ```bash  
+    dpkg-buildpackage -b -uc -us -tc  
+    ```  
+
+  **License:**  
+  LingmoUI is licensed under the **GPLv3** license.
 
 - **lingmo-qt-plugins**  
   - Path: `lib/SystemLibrary_Qt`  
