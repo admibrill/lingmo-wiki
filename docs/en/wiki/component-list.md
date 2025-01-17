@@ -263,7 +263,33 @@ This index provides a structured overview of the components of Lingmo OS, organi
 - **lingmo-calculator**  
   - Path: `shell/BasicComponents/Calculator`  
   - Revision: `refs/tags/0.6.3`  
-  - URL: [https://github.com/LingmoOS/lingmo-calculator](https://github.com/LingmoOS/lingmo-calculator)
+  - URL: [https://github.com/LingmoOS/lingmo-calculator](https://github.com/LingmoOS/lingmo-calculator)  
+
+  **Description:**  
+  A simple and intuitive calculator application for LingmoOS, designed for basic arithmetic operations with a clean and user-friendly interface.  
+
+  **Dependencies:**  
+  - **Ubuntu/Debian:**  
+
+    ```bash  
+    sudo apt-get install cmake gcc qtbase5-dev qtdeclarative5-dev qml-module-qtquick2 qml-module-qtquick-controls2  
+    ```  
+
+  - **Arch Linux:**  
+
+    ```bash  
+    sudo pacman -S cmake gcc qt5-base qt5-declarative qt5-quickcontrols2  
+    ```  
+
+  **Build Instructions:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake ..  
+  make  
+  sudo make install  
+  ```  
 
 - **lingmo-cursor-themes**  
   - Path: `shell/BasicComponents/Cursor`  
