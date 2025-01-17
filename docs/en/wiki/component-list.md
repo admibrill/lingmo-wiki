@@ -838,7 +838,30 @@ This index provides a structured overview of the components of Lingmo OS, organi
 
 - **lingmo-qt-plugins**  
   - Path: `lib/SystemLibrary_Qt`  
-  - URL: [https://github.com/LingmoOS/lingmo-qt-plugins](https://github.com/LingmoOS/lingmo-qt-plugins)
+  - URL: [https://github.com/LingmoOS/lingmo-qt-plugins](https://github.com/LingmoOS/lingmo-qt-plugins)  
+
+  **Description:**  
+  A collection of Qt plugins designed to unify the style and behavior of Qt applications on LingmoOS, ensuring a consistent and seamless user experience across the system.  
+
+  **Dependencies:**  
+  - **Arch Linux:**  
+
+    ```bash  
+    sudo pacman -S gcc extra-cmake-modules qt5-base qt5-tools qt5-x11extras libqtxdg libdbusmenu-qt5 libxcb
+    ```  
+
+  **Build:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake ..  
+  make  
+  sudo make install  
+  ```  
+
+  **License:**  
+  lingmo-qt-plugins is licensed under the **GPLv3** license.
 
 - **libqtxdg**  
   - Path: `lib/SystemLibrary_QtXdg`  
