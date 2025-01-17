@@ -743,12 +743,44 @@ This index provides a structured overview of the components of Lingmo OS, organi
   - Path: `shell/BasicComponents/Wallpapers`  
   - URL: [https://github.com/LingmoOS/lingmo-wallpapers](https://github.com/LingmoOS/lingmo-wallpapers)
 
+  **License:**  
+  This project is licensed under the [**Unsplash**](https://unsplash.com/license) license.
+
 ## Libraries
 
 - **lib_lingmo**  
   - Path: `lib/SystemLibrary`  
   - Revision: `qt5`  
-  - URL: [https://github.com/LingmoOS/lib_lingmo](https://github.com/LingmoOS/lib_lingmo)
+  - URL: [https://github.com/LingmoOS/lib_lingmo](https://github.com/LingmoOS/lib_lingmo)  
+
+  **Description:**  
+  A core system library for LingmoOS, providing essential functionalities and integrations for system management.  
+
+  **Dependencies:**  
+  - **Arch Linux:**  
+
+    ```bash  
+    sudo pacman -S gcc cmake qt5-base qt5-quickcontrols2 networkmanager-qt modemmanager-qt
+    ```  
+
+  - **Debian/Ubuntu:**  
+
+    ```bash  
+    sudo apt install qtbase5-dev qtquickcontrols2-5-dev modemmanager-qt-dev libqt5sensors5-dev libkf5networkmanagerqt-dev libkf5screen-dev libkf5bluezqt-dev libkf5kio-dev cmake qtdeclarative5-dev libcanberra-dev libpulse-dev libcanberra-pulse extra-cmake-modules qttools5-dev qttools5-dev-tools
+    ```  
+
+  **Build and Install:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake ..  
+  make  
+  sudo make install  
+  ```  
+
+  **License:**  
+  This project is licensed under the **GPLv3** license.
 
 - **LingmoUI**  
   - Path: `lib/SystemUI_Library`  
