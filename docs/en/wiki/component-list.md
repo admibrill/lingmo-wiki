@@ -364,7 +364,37 @@ This index provides a structured overview of the components of Lingmo OS, organi
 - **lingmo-dock**  
   - Path: `shell/BasicComponents/DockPanel`  
   - Revision: `helium_dev`  
-  - URL: [https://github.com/LingmoOS/lingmo-dock](https://github.com/LingmoOS/lingmo-dock)
+  - URL: [https://github.com/LingmoOS/lingmo-dock](https://github.com/LingmoOS/lingmo-dock)  
+
+  **Description:**  
+  The LingmoOS application dock provides a sleek and functional panel for quick access to frequently used applications, enhancing the desktop experience with intuitive navigation.  
+
+  **Dependencies:**  
+  - **Arch Linux:**  
+
+    ```bash  
+    sudo pacman -S gcc cmake qt5-base qt5-quickcontrols2 kwindowsystem  
+    ```  
+
+  - **Ubuntu/Debian:**  
+
+    ```bash  
+    sudo apt install gcc cmake qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev libkf5windowsystem-dev  
+    ```  
+
+  - **Additional Dependencies:**  
+    - LingmoUI  
+    - liblingmo  
+
+  **Build Instructions:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
+  make  
+  sudo make install  
+  ```  
 
 - **lingmo-gtk-themes**  
   - Path: `shell/BasicComponents/GtkStyle`  
