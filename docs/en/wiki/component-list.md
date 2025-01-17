@@ -690,7 +690,27 @@ This index provides a structured overview of the components of Lingmo OS, organi
 
 - **lingmo-updator**  
   - Path: `shell/BasicComponents/UpdateTool`  
-  - URL: [https://github.com/LingmoOS/lingmo-updator](https://github.com/LingmoOS/lingmo-updator)
+  - URL: [https://github.com/LingmoOS/lingmo-updator](https://github.com/LingmoOS/lingmo-updator)  
+
+  **Description:**  
+  The official system update tool for LingmoOS, designed to provide a seamless and user-friendly experience for managing system updates.  
+
+  **Dependencies:**  
+  - **Debian/Ubuntu:**  
+
+    ```bash  
+    sudo apt install cmake libqapt-dev
+    ```  
+
+  **Build:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
+  make  
+  sudo make install  
+  ```  
 
 - **lingmo-videoplayer**  
   - Path: `shell/BasicComponents/VideoPlayer`  
