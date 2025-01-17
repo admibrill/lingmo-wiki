@@ -606,7 +606,36 @@ This index provides a structured overview of the components of Lingmo OS, organi
 
 - **lingmo-screenlocker**  
   - Path: `shell/BasicComponents/ScreenLocker`  
-  - URL: [https://github.com/LingmoOS/lingmo-screenlocker](https://github.com/LingmoOS/lingmo-screenlocker)
+  - URL: [https://github.com/LingmoOS/lingmo-screenlocker](https://github.com/LingmoOS/lingmo-screenlocker)  
+
+  **Description:**  
+  A screen locker for LingmoOS, designed to secure the system by locking the screen when inactive. It integrates with the system's authentication mechanisms and provides a seamless locking experience.  
+
+  **Third-Party Code:**  
+  - **kcheckpass:** Used for authentication.  
+
+  **Dependencies:**  
+  - **Debian/Ubuntu:**  
+
+    ```bash  
+    sudo apt install libpam0g-dev libx11-dev cmake extra-cmake-modules qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev  
+    ```  
+
+  - **Arch Linux:**  
+
+    ```bash  
+    sudo pacman -S pam libx11 extra-cmake-modules qt5-base qt5-declarative qt5-quickcontrols2  
+    ```  
+
+  **Build Instructions:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
+  make  
+  sudo make install  
+  ```  
 
 - **lingmo-terminal**  
   - Path: `shell/BasicComponents/Terminal`  
