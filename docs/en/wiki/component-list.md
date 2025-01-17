@@ -666,7 +666,27 @@ This index provides a structured overview of the components of Lingmo OS, organi
 
 - **lingmo-texteditor**  
   - Path: `shell/BasicComponents/Texteditor`  
-  - URL: [https://github.com/LingmoOS/lingmo-texteditor](https://github.com/LingmoOS/lingmo-texteditor)
+  - URL: [https://github.com/LingmoOS/lingmo-texteditor](https://github.com/LingmoOS/lingmo-texteditor)  
+
+  **Description:**  
+  An elegant and lightweight text editor for LingmoOS, designed for simplicity and ease of use while providing essential text editing features.  
+
+  **Dependencies:**  
+  - **Debian/Ubuntu:**  
+
+    ```bash  
+    sudo apt install equivs curl git devscripts lintian build-essential automake autotools-dev --no-install-recommends
+    ```  
+
+  **Build:**  
+
+  ```bash  
+    mkdir build  
+    cd build  
+    cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
+    make
+    sudo make install  
+  ```  
 
 - **lingmo-updator**  
   - Path: `shell/BasicComponents/UpdateTool`  
