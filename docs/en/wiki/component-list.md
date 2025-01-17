@@ -967,15 +967,26 @@ This index provides a structured overview of the components of Lingmo OS, organi
 
 ## Plugins
 
-- **lingmo-kwin-plugins**  
-  - Path: `shell/CoreComponents/KWinPlugins`  
-  - URL: [https://github.com/LingmoOS/lingmo-kwin-plugins](https://github.com/LingmoOS/lingmo-kwin-plugins)
-
 ## System
 
 - **linux**  
   - Path: `kernel`  
-  - URL: [https://github.com/LingmoOS/linux](https://github.com/LingmoOS/linux)
+  - URL: [https://github.com/LingmoOS/linux](https://github.com/LingmoOS/linux)  
+
+  **Description:**  
+  The Linux kernel is the core of the LingmoOS operating system, responsible for managing system resources, hardware communication, and providing essential services for applications.  
+
+  **Documentation:**  
+  - The formatted documentation can be read online at:  
+    [https://www.kernel.org/doc/html/latest/](https://www.kernel.org/doc/html/latest/)  
+
+  **License:**  
+  The Linux Kernel is provided under:  
+  - **SPDX-License-Identifier:** `GPL-2.0 WITH Linux-syscall-note`  
+  - The kernel is licensed under the terms of the GNU General Public License version 2 (`GPL-2.0`), with an explicit syscall exception as stated in `LICENSES/exceptions/Linux-syscall-note`.  
+
+  **Notes:**  
+  - For build instructions, please refer to the official documentation.
 
 - **linux-package**  
   - Path: `kernel/debian`  
