@@ -990,7 +990,54 @@ This index provides a structured overview of the components of Lingmo OS, organi
 
 - **linux-package**  
   - Path: `kernel/debian`  
-  - URL: [https://github.com/LingmoOS/linux-package](https://github.com/LingmoOS/linux-package)
+  - URL: [https://github.com/LingmoOS/linux-package](https://github.com/LingmoOS/linux-package)  
+
+  **Description:**  
+  The Linux kernel package for Debian, including patches, configuration files, and tools for building and customizing the kernel.  
+
+  **Patches:**  
+  - Debian applies small changes to the kernel source, split into individual patches.  
+  - Patches can be found in the source package or at:  
+    [https://sources.debian.org/src/linux/<version>/debian/patches/](https://sources.debian.org/src/linux/<version>/debian/patches/)  
+
+  **Config Files:**  
+  - The `.config` files used to build various `linux-image` packages are dynamically generated during the build process.  
+  - Each `linux-image-*` package provides the complete `.config` file used for its build, installed in `/boot`.  
+
+  **Scope of Security Support:**  
+  - Security support is provided for both binary builds and the full source package.  
+  - Kernel options not enabled in official Debian builds are given lower priority for security support.  
+
+  **Notes:**  
+  - For build instructions, please refer to the official documentation.
+
+  **Non-Free Bits Removed:**  
+  - See the `Files-Excluded` field in `debian/copyright`. (note: I can't find it 😅)  
+
+  **Changelog:**  
+  - Older Debian changelog entries are no longer included in binary packages but can be found in `debian/changelog.old` in the source package.  
+
+  **Further Information:**  
+  - Debian Linux Kernel Handbook:  
+    [https://kernel-team.pages.debian.net/kernel-handbook/](https://kernel-team.pages.debian.net/kernel-handbook/)  
+  - Debian Wiki:  
+    [https://wiki.debian.org/DebianKernel](https://wiki.debian.org/DebianKernel)  
+
+  **License:**  
+  - Format: [https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/](https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/)  
+  - Upstream-Name: Linux kernel  
+  - Source: [https://www.kernel.org/pub/linux/kernel/](https://www.kernel.org/pub/linux/kernel/)  
+  - Files-Excluded: See `debian/copyright`.  
+  - License Texts:  
+    - `GPL-2`: [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)  
+    - `LGPL-2.1`: [https://www.gnu.org/licenses/lgpl-2.1.html](https://www.gnu.org/licenses/lgpl-2.1.html)  
+    - `BSD-2-clause`: [https://opensource.org/licenses/BSD-2-Clause](https://opensource.org/licenses/BSD-2-Clause)  
+
+---
+
+**Notes:**  
+- For detailed build instructions, refer to the official documentation.  
+- Contributions to the kernel must comply with the licensing terms and guidelines.
 
 - **lingmo-base-common**  
   - Path: `init`  
