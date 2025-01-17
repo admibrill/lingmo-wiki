@@ -290,7 +290,7 @@ This index provides a structured overview of the components of Lingmo OS, organi
   - **Ubuntu/Debian:**  
 
     ```bash  
-    sudo apt-get install cmake gcc qtbase5-dev qtdeclarative5-dev qml-module-qtquick2 qml-module-qtquick-controls2  
+    sudo apt install cmake gcc qtbase5-dev qtdeclarative5-dev qml-module-qtquick2 qml-module-qtquick-controls2  
     ```  
 
   - **Arch Linux:**  
@@ -501,7 +501,7 @@ This index provides a structured overview of the components of Lingmo OS, organi
   - **Ubuntu/Debian:**  
 
     ```bash  
-    sudo apt-get install equivs curl git devscripts lintian build-essential automake autotools-dev cmake g++  
+    sudo apt install equivs curl git devscripts lintian build-essential automake autotools-dev cmake g++  
     ```  
 
   - **Arch Linux:**  
@@ -1047,7 +1047,7 @@ This index provides a structured overview of the components of Lingmo OS, organi
   - **Debian/Ubuntu:**  
 
     ```bash  
-    sudo apt-get install debhelper-compat debhelper dpkg-dev
+    sudo apt install debhelper-compat debhelper dpkg-dev
     ```  
 
   **Build:**  
@@ -1068,7 +1068,7 @@ This index provides a structured overview of the components of Lingmo OS, organi
   - **Debian/Ubuntu:**  
 
     ```bash  
-    sudo apt-get install build-essential debhelper dpkg-dev
+    sudo apt install build-essential debhelper dpkg-dev
     ```
 
   **Build:**  
@@ -1083,6 +1083,29 @@ This index provides a structured overview of the components of Lingmo OS, organi
 - **lingmo-first-setup**  
   - Path: `guide`  
   - URL: [https://github.com/LingmoOS/lingmo-first-setup](https://github.com/LingmoOS/lingmo-first-setup)
+
+  **Description:**  
+  An application designed to guide users through the initial setup and configuration of Lingmo OS, including user account creation and system customization.
+
+  **Dependencies:**  
+  - **Ubuntu/Debian:**  
+
+    ```bash  
+    sudo apt install cmake libqapt-dev qtbase5-dev qtdeclarative5-dev qml-module-qtwebview qtquickcontrols2-5-dev qttools5-dev qttools5-dev-tools debhelper
+    ```
+
+  **Build Instructions:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake ..  
+  make  
+  sudo make install
+  ```
+
+  **License:**  
+  lingmo-first-setup is licensed under the **GPLv3** license.
 
 ## Tools
 
