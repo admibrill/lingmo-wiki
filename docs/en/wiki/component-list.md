@@ -458,7 +458,34 @@ This index provides a structured overview of the components of Lingmo OS, organi
 
 - **lingmo-ocr**  
   - Path: `shell/BasicComponents/OCRServer`  
-  - URL: [https://github.com/LingmoOS/lingmo-ocr](https://github.com/LingmoOS/lingmo-ocr)
+  - Revision: `refs/tags/v1.2.4`  
+  - URL: [https://github.com/LingmoOS/lingmo-ocr](https://github.com/LingmoOS/lingmo-ocr)  
+
+  **Description:**  
+  An OCR (Optical Character Recognition) server developed for LingmoOS, designed to accurately recognize text from images and support multiple languages.
+
+  **Dependencies:**  
+  - **Ubuntu/Debian:**  
+
+    ```bash  
+    sudo apt-get install equivs curl git devscripts lintian build-essential automake autotools-dev cmake g++  
+    ```  
+
+  - **Arch Linux:**  
+
+    ```bash  
+    sudo pacman -S base-devel cmake  
+    ```  
+
+  **Build Instructions:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake ..
+  make
+  sudo make install
+  ```  
 
 - **lingmo-sddm-theme**  
   - Path: `shell/BasicComponents/LoginManagerStyle`  
