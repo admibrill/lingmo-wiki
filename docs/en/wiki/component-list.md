@@ -1033,11 +1033,8 @@ This index provides a structured overview of the components of Lingmo OS, organi
     - `LGPL-2.1`: [https://www.gnu.org/licenses/lgpl-2.1.html](https://www.gnu.org/licenses/lgpl-2.1.html)  
     - `BSD-2-clause`: [https://opensource.org/licenses/BSD-2-Clause](https://opensource.org/licenses/BSD-2-Clause)  
 
----
-
-**Notes:**  
-- For detailed build instructions, refer to the official documentation.  
-- Contributions to the kernel must comply with the licensing terms and guidelines.
+  **Notes:**  
+  - For build instructions, refer to the official documentation.  
 
 - **lingmo-base-common**  
   - Path: `init`  
