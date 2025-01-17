@@ -521,7 +521,33 @@ This index provides a structured overview of the components of Lingmo OS, organi
 - **lingmo-settings**  
   - Path: `shell/BasicComponents/Settings`  
   - Revision: `helium`  
-  - URL: [https://github.com/LingmoOS/lingmo-settings](https://github.com/LingmoOS/lingmo-settings)
+  - URL: [https://github.com/LingmoOS/lingmo-settings](https://github.com/LingmoOS/lingmo-settings)  
+
+  **Description:**  
+  The system settings application for LingmoOS, providing a centralized interface for configuring system preferences. It utilizes LingmoUI as the interface style, offering a modern and user-friendly experience.  
+
+  **Dependencies:**  
+  - **Arch/Manjaro:**  
+
+    ```bash  
+    sudo pacman -S extra-cmake-modules qt5-base qt5-quickcontrols2 freetype2 fontconfig networkmanager-qt modemmanager-qt  
+    ```  
+
+  - **Debian/Ubuntu:**  
+
+    ```bash  
+    sudo apt install cmake debhelper extra-cmake-modules libicu-dev libcrypt-dev libfreetype6-dev libfontconfig1-dev libkf5networkmanagerqt-dev libkf5config-dev modemmanager-qt-dev qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev qttools5-dev qttools5-dev-tools qml-module-qtquick-controls2 qml-module-qtquick2 qml-module-qtquick-layouts qml-module-qt-labs-platform qml-module-qt-labs-settings qml-module-qtqml qml-module-qtquick-window2 qml-module-qtquick-shapes qml-module-qtquick-dialogs qml-module-qtquick-particles2  
+    ```  
+
+  **Build Instructions:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
+  make  
+  sudo make install  
+  ```  
 
 - **lingmo-statusbar**  
   - Path: `shell/BasicComponents/StatusBar`  
