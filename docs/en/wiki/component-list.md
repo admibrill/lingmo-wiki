@@ -1113,6 +1113,69 @@ This index provides a structured overview of the components of Lingmo OS, organi
   - Path: `build`  
   - URL: [https://github.com/LingmoOS/LingmoOS](https://github.com/LingmoOS/LingmoOS)
 
+  **Description:**  
+  This repository contains the build configuration and scripts for Lingmo OS. It utilizes the `repo` tool to manage multiple submodules and dependencies.
+
+  **Build Requirements:**  
+  - **Operating System:** Debian GNU/Linux 12 (Bookworm), 13 (Trixie), or later
+  - **Disk Space:** > 50GB
+  - **Processor:** Multi-core multi-threaded
+  - **Memory:** Minimum 8GB RAM
+
+  **Tool Preparation:**
+
+  ```bash
+  git clone https://github.com/LingmoOS/LingmoOS.git
+  mkdir -p ~/bin
+  cp -v LingmoOS/repo ~/bin/
+  chmod a+x ~/bin/repo
+  echo 'export PATH="$PATH:$HOME/bin"' >> ~/.bashrc
+  source ~/.bashrc
+  ```
+
+  **Build Instructions:**
+
+  1. **Clone the Repository:**
+
+     ```bash
+     git clone https://github.com/LingmoOS/LingmoOS.git
+     ```
+
+  2. **Set Up the Repo Tool:**
+
+     ```bash
+     mkdir -p ~/bin
+     cp -v LingmoOS/repo ~/bin/
+     chmod a+x ~/bin/repo
+     echo 'export PATH="$PATH:$HOME/bin"' >> ~/.bashrc
+     source ~/.bashrc
+     ```
+
+  3. **Initialize and Sync the Repo:**
+
+     ```bash
+     mkdir -p workdir
+     cd workdir
+     repo init -u https://github.com/LingmoOS/manifest.git
+     repo sync
+     ```
+
+  4. **Build:**
+
+    ***TODO***
+
+  **Dependencies:**
+
+  - **Build Tools:**
+    - `git`
+    - `python3` (for repo)
+
+  - **Install Dependencies:**
+
+    ```bash
+    sudo apt install git python3
+    ```
+
 - **manifest**  
   - Path: `tools`  
   - URL: [https://github.com/LingmoOS/manifest](https://github.com/LingmoOS/manifest)
