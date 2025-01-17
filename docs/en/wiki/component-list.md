@@ -428,7 +428,33 @@ This index provides a structured overview of the components of Lingmo OS, organi
 
 - **lingmo-launcher**  
   - Path: `shell/BasicComponents/Launcher`  
-  - URL: [https://github.com/LingmoOS/lingmo-launcher](https://github.com/LingmoOS/lingmo-launcher)
+  - URL: [https://github.com/LingmoOS/lingmo-launcher](https://github.com/LingmoOS/lingmo-launcher)  
+
+  **Description:**  
+  A full-screen application launcher for LingmoOS, designed to provide quick and intuitive access to installed applications, enhancing productivity and user experience.  
+
+  **Dependencies:**  
+  - **Arch Linux/Manjaro:**  
+
+    ```bash  
+    sudo pacman -S gcc cmake qt5-base qt5-quickcontrols2 kwindowsystem  
+    ```  
+
+  - **Debian/Ubuntu:**  
+
+    ```bash  
+    sudo apt install gcc cmake qtbase5-dev qml-module-qtquick-controls2 qml-module-org-kde-kwindowsystem qtdeclarative5-dev qtquickcontrols2-5-dev qttools5-dev libkf5windowsystem-dev  
+    ```  
+
+  **Build Instructions:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
+  make  
+  sudo make install  
+  ```  
 
 - **lingmo-ocr**  
   - Path: `shell/BasicComponents/OCRServer`  
