@@ -398,7 +398,25 @@ This index provides a structured overview of the components of Lingmo OS, organi
 
 - **lingmo-gtk-themes**  
   - Path: `shell/BasicComponents/GtkStyle`  
-  - URL: [https://github.com/LingmoOS/lingmo-gtk-themes](https://github.com/LingmoOS/lingmo-gtk-themes)
+  - URL: [https://github.com/LingmoOS/lingmo-gtk-themes](https://github.com/LingmoOS/lingmo-gtk-themes)  
+
+  **Description:**  
+  A collection of GTK themes designed for LingmoOS, providing a consistent and visually appealing look across applications. These themes enhance the user interface by offering modern and customizable styling options.  
+
+  **Dependencies:**  
+  - **Build Tools:**  
+    - `cmake`  
+    - `gcc`  
+
+  **Build Instructions:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
+  make  
+  sudo make install  
+  ```  
 
 - **lingmo-grub-config**  
   - Path: `shell/BasicComponents/GrubBoot`  
