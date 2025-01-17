@@ -637,9 +637,32 @@ This index provides a structured overview of the components of Lingmo OS, organi
   sudo make install  
   ```  
 
-- **lingmo-terminal**  
+- [**lingmo-terminal**](lingmo-terminal.md)
   - Path: `shell/BasicComponents/Terminal`  
-  - URL: [https://github.com/LingmoOS/lingmo-terminal](https://github.com/LingmoOS/lingmo-terminal)
+  - URL: [https://github.com/LingmoOS/lingmo-terminal](https://github.com/LingmoOS/lingmo-terminal)  
+
+  **Description:**  
+  A terminal emulator for LingmoOS, using LingmoUI as the interface style to provide a modern and user-friendly terminal experience.  
+
+  **Third-Party Code:**  
+  - [**qmltermwidget**](https://github.com/Swordfish90/qmltermwidget)
+
+  **Dependencies:**  
+  - **Debian/Ubuntu:**  
+
+    ```bash  
+    sudo apt install extra-cmake-modules qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev qttools5-dev  
+    ```  
+
+  **Build and Install:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake ..  
+  make  
+  sudo make install  
+  ```  
 
 - **lingmo-texteditor**  
   - Path: `shell/BasicComponents/Texteditor`  
