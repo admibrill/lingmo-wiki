@@ -1059,7 +1059,26 @@ This index provides a structured overview of the components of Lingmo OS, organi
 - **lingmo-live**  
   - Path: `system/installer`  
   - Revision: `helium`  
-  - URL: [https://github.com/LingmoOS/lingmo-live](https://github.com/LingmoOS/lingmo-live)
+  - URL: [https://github.com/LingmoOS/lingmo-live](https://github.com/LingmoOS/lingmo-live)  
+
+  **Description:**  
+  A repository containing configurations and settings for the Lingmo OS live image, including Calamares installer configurations to streamline the installation process.
+
+  **Dependencies:**  
+  - **Debian/Ubuntu:**  
+
+    ```bash  
+    sudo apt-get install build-essential debhelper dpkg-dev
+    ```
+
+  **Build:**  
+
+  ```bash  
+  dpkg-buildpackage -us -uc
+  ```
+
+  **License:**  
+  lingmo-live is licensed under the **ISC** License, which permits use, copying, modification, and distribution with the condition of including the copyright notice and permission notice in all copies.
 
 - **lingmo-first-setup**  
   - Path: `guide`  
