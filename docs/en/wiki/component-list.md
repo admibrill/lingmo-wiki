@@ -31,6 +31,9 @@ This index provides a structured overview of the components of Lingmo OS, organi
   **Note:**  
   Applications must be compiled as position-independent executables (PIE) or shared libraries with an exported `main()` function.
 
+  **License:**  
+  lingmo-appmotor is licensed under the **LGPL-2.1** license.
+
 - **lingmo-core**
   - Path: `shell/CoreComponents/CoreServer`
   - Revision: `refs/tags/2.0.2`
@@ -77,6 +80,9 @@ This index provides a structured overview of the components of Lingmo OS, organi
   **Note:**  
   Installing the numerous xcb packages can be cumbersome; consider creating a script to automate the installation process.
 
+  **License:**  
+  lingmo-core is licensed under the **GPLv3** license.
+
 - **lingmo-daemon**
   - Path: `shell/CoreComponents/Daemon`
   - URL: [https://github.com/LingmoOS/lingmo-daemon](https://github.com/LingmoOS/lingmo-daemon)
@@ -100,6 +106,9 @@ This index provides a structured overview of the components of Lingmo OS, organi
   make
   sudo make install
   ```
+
+  **License:**  
+  lingmo-daemon is licensed under the **GPLv3** license.
 
 - [**lingmo-filemanager**](lingmo-filemanager.md)
   - Path: `shell/CoreComponents/Filemanager`
@@ -142,6 +151,9 @@ This index provides a structured overview of the components of Lingmo OS, organi
   **Notes:**  
   - The 'mk-build-deps' command might require the 'devscripts' package.
 
+  **License:**  
+  lingmo-filemanager is licensed under the **GPLv3** license.
+
 - **lingmo-kwin-plugins**
   - Path: `shell/CoreComponents/KWinPlugins`
   - URL: [https://github.com/LingmoOS/lingmo-kwin-plugins](https://github.com/LingmoOS/lingmo-kwin-plugins)
@@ -171,6 +183,9 @@ This index provides a structured overview of the components of Lingmo OS, organi
   make
   sudo make install
   ```
+
+  **License:**  
+  lingmo-kwin-plugins is licensed under the **GPLv3** license.
 
 - **lingmo-kwin-plugins-roundedwindow**  
   - Path: `shell/CoreComponents/KWinRoundedWindow`  
@@ -258,6 +273,9 @@ This index provides a structured overview of the components of Lingmo OS, organi
     sh ../tools/show-kwin-logs.sh  
     ```  
 
+  **License:**  
+  lingmo-kwin-plugins-roundedwindow is licensed under the **GPLv3** license.
+
 ## Basic Components
 
 - **lingmo-calculator**  
@@ -290,6 +308,9 @@ This index provides a structured overview of the components of Lingmo OS, organi
   make  
   sudo make install  
   ```  
+
+  **License:**  
+  lingmo-calculator is licensed under the **GPLv3** license.
 
 - **lingmo-cursor-themes**  
   - Path: `shell/BasicComponents/Cursor`  
@@ -361,6 +382,9 @@ This index provides a structured overview of the components of Lingmo OS, organi
   - Test cursor behavior using tools like [Cursor-Test](https://cursor-test.netlify.app/) or [Mozilla CSS Cursor](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor).  
   - For package installations, check the [Bibata Cursor Release Page](https://github.com/ful1e5/Bibata_Cursor/releases) or platform-specific repositories (e.g., AUR for Arch Linux).
 
+  **License:**  
+  lingmo-cursor-themes is licensed under the **GPLv3** license.
+
 - **lingmo-dock**  
   - Path: `shell/BasicComponents/DockPanel`  
   - Revision: `helium_dev`  
@@ -396,6 +420,9 @@ This index provides a structured overview of the components of Lingmo OS, organi
   sudo make install  
   ```  
 
+  **License:**  
+  lingmo-dock is licensed under the **GPLv3** license.
+
 - **lingmo-gtk-themes**  
   - Path: `shell/BasicComponents/GtkStyle`  
   - URL: [https://github.com/LingmoOS/lingmo-gtk-themes](https://github.com/LingmoOS/lingmo-gtk-themes)  
@@ -417,6 +444,9 @@ This index provides a structured overview of the components of Lingmo OS, organi
   make  
   sudo make install  
   ```  
+
+  **License:**  
+  lingmo-gtk-themes is licensed under the **GPLv3** license.
 
 - **lingmo-grub-config**  
   - Path: `shell/BasicComponents/GrubBoot`  
@@ -456,6 +486,9 @@ This index provides a structured overview of the components of Lingmo OS, organi
   sudo make install  
   ```  
 
+  **License:**  
+  lingmo-gtk-themes is licensed under the **GPLv3** license.
+
 - **lingmo-ocr**  
   - Path: `shell/BasicComponents/OCRServer`  
   - Revision: `refs/tags/v1.2.4`  
@@ -486,6 +519,9 @@ This index provides a structured overview of the components of Lingmo OS, organi
   make
   sudo make install
   ```  
+
+  **License:**  
+  lingmo-ocr is licensed under the **GPLv3** license.
 
 - **lingmo-sddm-theme**  
   - Path: `shell/BasicComponents/LoginManagerStyle`  
@@ -518,6 +554,9 @@ This index provides a structured overview of the components of Lingmo OS, organi
   sudo make install  
   ```  
 
+  **License:**  
+  lingmo-sddm-theme is licensed under the **GPLv3** license.
+
 - **lingmo-settings**  
   - Path: `shell/BasicComponents/Settings`  
   - Revision: `helium`  
@@ -549,6 +588,9 @@ This index provides a structured overview of the components of Lingmo OS, organi
   sudo make install  
   ```  
 
+  **License:**  
+  lingmo-settings is licensed under the **GPLv3** license.
+
 - **lingmo-statusbar**  
   - Path: `shell/BasicComponents/StatusBar`  
   - Revision: `refs/tags/2.0.1`  
@@ -573,6 +615,9 @@ This index provides a structured overview of the components of Lingmo OS, organi
   make  
   sudo make install  
   ```  
+
+  **License:**  
+  lingmo-statusbar is licensed under the **GPLv3** license.
 
 - **lingmo-screenshots**  
   - Path: `shell/BasicComponents/ScreenShots`  
@@ -603,6 +648,9 @@ This index provides a structured overview of the components of Lingmo OS, organi
   make  
   sudo make install  
   ```  
+
+  **License:**  
+  lingmo-screenshots is licensed under the **GPLv3** license.
 
 - **lingmo-screenlocker**  
   - Path: `shell/BasicComponents/ScreenLocker`  
@@ -637,6 +685,9 @@ This index provides a structured overview of the components of Lingmo OS, organi
   sudo make install  
   ```  
 
+  **License:**  
+  lingmo-screenlocker is licensed under the **GPLv3** license.
+
 - [**lingmo-terminal**](lingmo-terminal.md)
   - Path: `shell/BasicComponents/Terminal`  
   - URL: [https://github.com/LingmoOS/lingmo-terminal](https://github.com/LingmoOS/lingmo-terminal)  
@@ -664,6 +715,9 @@ This index provides a structured overview of the components of Lingmo OS, organi
   sudo make install  
   ```  
 
+  **License:**  
+  lingmo-terminal is licensed under the **GPLv3** license.
+
 - **lingmo-texteditor**  
   - Path: `shell/BasicComponents/Texteditor`  
   - URL: [https://github.com/LingmoOS/lingmo-texteditor](https://github.com/LingmoOS/lingmo-texteditor)  
@@ -688,6 +742,9 @@ This index provides a structured overview of the components of Lingmo OS, organi
     sudo make install  
   ```  
 
+  **License:**  
+  lingmo-texteditor is licensed under the **GPLv3** license.
+
 - **lingmo-updator**  
   - Path: `shell/BasicComponents/UpdateTool`  
   - URL: [https://github.com/LingmoOS/lingmo-updator](https://github.com/LingmoOS/lingmo-updator)  
@@ -711,6 +768,9 @@ This index provides a structured overview of the components of Lingmo OS, organi
   make  
   sudo make install  
   ```  
+
+  **License:**  
+  lingmo-updator is licensed under the **GPLv3** license.
 
 - **lingmo-videoplayer**  
   - Path: `shell/BasicComponents/VideoPlayer`  
@@ -739,12 +799,15 @@ This index provides a structured overview of the components of Lingmo OS, organi
   sudo make install  
   ```  
 
+  **License:**  
+  lingmo-videoplayer is licensed under the **GPLv3** license.
+
 - **lingmo-wallpapers**  
   - Path: `shell/BasicComponents/Wallpapers`  
   - URL: [https://github.com/LingmoOS/lingmo-wallpapers](https://github.com/LingmoOS/lingmo-wallpapers)
 
   **License:**  
-  This project is licensed under the [**Unsplash**](https://unsplash.com/license) license.
+  lingmo-wallpapers is licensed under the [**Unsplash**](https://unsplash.com/license) license.
 
 ## Libraries
 
@@ -780,7 +843,7 @@ This index provides a structured overview of the components of Lingmo OS, organi
   ```  
 
   **License:**  
-  This project is licensed under the **GPLv3** license.
+  lib_lingmo is licensed under the **GPLv3** license.
 
 - **LingmoUI**  
   - Path: `lib/SystemUI_Library`  
