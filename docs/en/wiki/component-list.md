@@ -452,6 +452,18 @@ This index provides a structured overview of the components of Lingmo OS, organi
   - Path: `shell/BasicComponents/GrubBoot`  
   - URL: [https://github.com/LingmoOS/lingmo-grub-config](https://github.com/LingmoOS/lingmo-grub-config)
 
+  **Description:**  
+  This repository contains the configuration files and resources for customizing the GRUB bootloader in Lingmo OS. It includes themes, background images, and scripts to enhance the bootloader's appearance and functionality.
+
+  **Build Instructions:**
+
+     ```bash
+     mkdir build
+     cd build
+     cmake ..
+     sudo make install
+     ```
+
 - **lingmo-systemicons**  
   - Path: `shell/BasicComponents/Icons`  
   - URL: [https://github.com/LingmoOS/lingmo-systemicons](https://github.com/LingmoOS/lingmo-systemicons)
