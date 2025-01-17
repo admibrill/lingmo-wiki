@@ -1179,3 +1179,14 @@ This index provides a structured overview of the components of Lingmo OS, organi
 - **manifest**  
   - Path: `tools`  
   - URL: [https://github.com/LingmoOS/manifest](https://github.com/LingmoOS/manifest)
+
+  **Description:**  
+  This repository contains the manifest files used by the `repo` tool to manage multiple submodules and dependencies for Lingmo OS. It defines the structure and versions of the repositories required to build Lingmo OS.
+
+  **Usage with Repo Tool:**
+
+  Refer to the `Tools/LingmoOS/Initialize and Sync the Repo` for more information.
+
+  **Notes:**
+  - The manifest is essential for setting up the build environment for Lingmo OS.
+  - It ensures that all necessary components are fetched and synchronized correctly before the build process begins.
