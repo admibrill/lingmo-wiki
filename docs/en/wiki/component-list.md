@@ -490,7 +490,33 @@ This index provides a structured overview of the components of Lingmo OS, organi
 - **lingmo-sddm-theme**  
   - Path: `shell/BasicComponents/LoginManagerStyle`  
   - Revision: `refs/tags/2.7.0`  
-  - URL: [https://github.com/LingmoOS/lingmo-sddm-theme](https://github.com/LingmoOS/lingmo-sddm-theme)
+  - URL: [https://github.com/LingmoOS/lingmo-sddm-theme](https://github.com/LingmoOS/lingmo-sddm-theme)  
+
+  **Description:**  
+  A modern and visually appealing SDDM (Simple Desktop Display Manager) theme designed specifically for LingmoOS, providing a seamless and elegant login experience.  
+
+  **Dependencies:**  
+  - **Ubuntu/Debian:**  
+
+    ```bash  
+    sudo apt install build-essential cmake extra-cmake-modules qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev qttools5-dev qttools5-dev-tools  
+    ```  
+
+  - **Arch Linux:**  
+
+    ```bash  
+    sudo pacman -S base-devel cmake extra-cmake-modules qt5-base qt5-declarative qt5-quickcontrols2 qt5-tools  
+    ```  
+
+  **Build Instructions:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake ..  
+  make  
+  sudo make install  
+  ```  
 
 - **lingmo-settings**  
   - Path: `shell/BasicComponents/Settings`  
