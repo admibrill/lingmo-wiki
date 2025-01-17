@@ -552,11 +552,57 @@ This index provides a structured overview of the components of Lingmo OS, organi
 - **lingmo-statusbar**  
   - Path: `shell/BasicComponents/StatusBar`  
   - Revision: `refs/tags/2.0.1`  
-  - URL: [https://github.com/LingmoOS/lingmo-statusbar](https://github.com/LingmoOS/lingmo-statusbar)
+  - URL: [https://github.com/LingmoOS/lingmo-statusbar](https://github.com/LingmoOS/lingmo-statusbar)  
+
+  **Description:**  
+  The status bar at the top of the LingmoOS desktop displays the current status of the system, including time, system tray, and other essential information. It provides a clean and intuitive interface for monitoring system activities.  
+
+  **Dependencies:**  
+  - **Ubuntu/Debian:**  
+
+    ```bash  
+    sudo apt install libkf5windowsystem-dev
+    ```  
+
+  **Build Instructions:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
+  make  
+  sudo make install  
+  ```  
 
 - **lingmo-screenshots**  
   - Path: `shell/BasicComponents/ScreenShots`  
-  - URL: [https://github.com/LingmoOS/lingmo-screenshots](https://github.com/LingmoOS/lingmo-screenshots)
+  - URL: [https://github.com/LingmoOS/lingmo-screenshots](https://github.com/LingmoOS/lingmo-screenshots)  
+
+  **Description:**  
+  A screenshot tool for LingmoOS, designed to capture and save screen images with ease. It provides a simple and intuitive interface for taking full-screen, window, or region-based screenshots.  
+
+  **Dependencies:**  
+  - **Arch/Manjaro:**  
+
+    ```bash  
+    sudo pacman -S extra-cmake-modules qt5-base qt5-quickcontrols2  
+    ```  
+
+  - **Debian/Ubuntu:**  
+
+    ```bash  
+    sudo apt install cmake qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev qttools5-dev qttools5-dev-tools qml-module-qtquick-controls2 qml-module-qtquick2 qml-module-qtquick-layouts qml-module-qt-labs-platform qml-module-qt-labs-settings qml-module-qtqml qml-module-qtquick-window2 qml-module-qtquick-shapes qml-module-qtquick-dialogs qml-module-qtquick-particles2  
+    ```  
+
+  **Build Instructions:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
+  make  
+  sudo make install  
+  ```  
 
 - **lingmo-screenlocker**  
   - Path: `shell/BasicComponents/ScreenLocker`  
