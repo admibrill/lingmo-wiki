@@ -714,7 +714,30 @@ This index provides a structured overview of the components of Lingmo OS, organi
 
 - **lingmo-videoplayer**  
   - Path: `shell/BasicComponents/VideoPlayer`  
-  - URL: [https://github.com/LingmoOS/lingmo-videoplayer](https://github.com/LingmoOS/lingmo-videoplayer)
+  - URL: [https://github.com/LingmoOS/lingmo-videoplayer](https://github.com/LingmoOS/lingmo-videoplayer)  
+
+  **Description:**  
+  An open-source video player for LingmoOS, built using Qt/QML and libmpv, providing a smooth and feature-rich video playback experience.  
+
+  **Third-Party Code:**  
+  - [**haruna:**](https://invent.kde.org/multimedia/haruna)
+
+  **Dependencies:**  
+  - **Debian/Ubuntu:**  
+
+    ```bash  
+    sudo apt install extra-cmake-modules qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev libmpv-dev
+    ```  
+
+  **Build:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
+  make
+  sudo make install  
+  ```  
 
 - **lingmo-wallpapers**  
   - Path: `shell/BasicComponents/Wallpapers`  
