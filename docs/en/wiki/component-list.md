@@ -866,7 +866,41 @@ This index provides a structured overview of the components of Lingmo OS, organi
 - **libqtxdg**  
   - Path: `lib/SystemLibrary_QtXdg`  
   - Remote: nebula  
-  - URL: [https://nebula.lingmo.org/lingmo-os/libqtxdg](https://nebula.lingmo.org/lingmo-os/libqtxdg)
+  - URL: [https://nebula.lingmo.org/lingmo-os/libqtxdg](https://nebula.lingmo.org/lingmo-os/libqtxdg)  
+
+  **Description:**  
+  libqtxdg is a Qt 5 implementation of freedesktop.org XDG specifications. It is maintained by the LXQt project and is used by nearly all LXQt components. However, it can also be used independently of the LXQt desktop environment. The library supports GTK+ icon theme caches for faster icon lookup, with fallback to normal lookup if the cache is missing or outdated.  
+
+  **Installation:**  
+  - **Runtime Dependencies:**  
+    - `qtbase`  
+    - (Optional) `gtk-update-icon-cache` for faster icon lookup.  
+
+  - **Build Dependencies:**  
+    - `CMake`  
+    - `qtsvg`  
+    - `qttools`  
+    - `lxqt-build-tools`  
+    - (Optional) `Git` for pulling the latest VCS checkouts.  
+
+  **Build Instructions:**  
+  - Configure the build using CMake. Specific CMake variables include:  
+    - `BUILD_TESTS`: Enable building tests (default: `OFF`).  
+    - `BUILD_DEV_UTILS`: Enable building and installing development utilities (default: `OFF`).  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake ..  
+  make  
+  sudo make install  
+  ```  
+
+  **Binary Packages:**  
+  The library is available in major Linux distributions such as Arch Linux, Debian, Fedora, and openSUSE. Use your distribution's package manager to install it by searching for `libqtxdg`.  
+
+  **License:**  
+  libqtxdg is licensed under the **LGPLv2.1** license.  
 
 ## Plugins
 
