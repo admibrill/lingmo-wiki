@@ -456,6 +456,18 @@ This index provides a structured overview of the components of Lingmo OS, organi
   - Path: `shell/BasicComponents/Icons`  
   - URL: [https://github.com/LingmoOS/lingmo-systemicons](https://github.com/LingmoOS/lingmo-systemicons)
 
+  **Description:**  
+  A collection of icon themes for Lingmo OS, including Crule and Crule-dark themes, designed to provide a consistent and aesthetically pleasing user interface.
+
+  **Build Instructions:**
+
+     ```bash
+     mkdir build
+     cd build
+     cmake ..
+     sudo make install
+     ```
+
 - **lingmo-launcher**  
   - Path: `shell/BasicComponents/Launcher`  
   - URL: [https://github.com/LingmoOS/lingmo-launcher](https://github.com/LingmoOS/lingmo-launcher)  
