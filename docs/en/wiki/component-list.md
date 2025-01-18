@@ -27,6 +27,54 @@ The Kernel and System Services category forms the foundation of Lingmo OS, manag
 
   **Notes:**  
   - For build instructions, please refer to the official documentation.
+
+- **linux-package**  
+  - Path: `kernel/debian`  
+  - URL: [https://github.com/LingmoOS/linux-package](https://github.com/LingmoOS/linux-package)  
+
+  **Description:**  
+  The Linux kernel package for Debian, including patches, configuration files, and tools for building and customizing the kernel.  
+
+  **Patches:**  
+  - Debian applies small changes to the kernel source, split into individual patches.  
+  - Patches can be found in the source package or at:  
+    `https://sources.debian.org/src/linux/<version>/debian/patches/`
+
+  **Config Files:**  
+  - The `.config` files used to build various `linux-image` packages are dynamically generated during the build process.  
+  - Each `linux-image-*` package provides the complete `.config` file used for its build, installed in `/boot`.  
+
+  **Scope of Security Support:**  
+  - Security support is provided for both binary builds and the full source package.  
+  - Kernel options not enabled in official Debian builds are given lower priority for security support.  
+
+  **Notes:**  
+  - For build instructions, please refer to the official documentation.
+
+  **Non-Free Bits Removed:**  
+  - See the `Files-Excluded` field in `debian/copyright`. (note: I can't find it 😅)  
+
+  **Changelog:**  
+  - Older Debian changelog entries are no longer included in binary packages but can be found in `debian/changelog.old` in the source package.  
+
+  **Further Information:**  
+  - Debian Linux Kernel Handbook:  
+    [https://kernel-team.pages.debian.net/kernel-handbook/](https://kernel-team.pages.debian.net/kernel-handbook/)  
+  - Debian Wiki:  
+    [https://wiki.debian.org/DebianKernel](https://wiki.debian.org/DebianKernel)  
+
+  **License:**  
+  - Format: [https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/](https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/)  
+  - Upstream-Name: Linux kernel  
+  - Source: [https://www.kernel.org/pub/linux/kernel/](https://www.kernel.org/pub/linux/kernel/)  
+  - Files-Excluded: See `debian/copyright`.  
+  - License Texts:  
+    - `GPL-2`: [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)  
+    - `LGPL-2.1`: [https://www.gnu.org/licenses/lgpl-2.1.html](https://www.gnu.org/licenses/lgpl-2.1.html)  
+    - `BSD-2-clause`: [https://opensource.org/licenses/BSD-2-Clause](https://opensource.org/licenses/BSD-2-Clause)  
+
+  **Notes:**  
+  - For build instructions, refer to the official documentation.  
   
 - **lingmo-core**
   - Path: `shell/CoreComponents/CoreServer`
@@ -133,6 +181,144 @@ The Kernel and System Services category forms the foundation of Lingmo OS, manag
 
   **License:**  
   lingmo-appmotor is licensed under the **LGPL-2.1** license.
+
+- **lingmo-kwin-plugins**
+  - Path: `shell/CoreComponents/KWinPlugins`
+  - URL: [https://github.com/LingmoOS/lingmo-kwin-plugins](https://github.com/LingmoOS/lingmo-kwin-plugins)
+  
+  **Description:**  
+  A collection of KWin plugins tailored for LingmoOS, enhancing window management and desktop experience,which is a necessary component of LingmoOS.
+  
+  **Dependencies:**  
+  - **Arch Linux:**
+
+    ```bash
+    sudo pacman -S extra-cmake-modules qt5-base qt5-declarative kconfig5 kdecoration5 kguiaddons5 kcoreaddons5 kconfigwidgets5 kwindowsystem5 kwayland kwin
+    ```
+
+  - **Ubuntu/Debian:**
+
+    ```bash
+    sudo apt install extra-cmake-modules qtbase5-dev qtdeclarative5-dev kconfig5 kdecoration5 kguiaddons5 kcoreaddons5 kconfigwidgets5 kwindowsystem5 kwayland kwin
+    ```
+  
+  **Build Instructions:**  
+
+  ```bash
+  mkdir build
+  cd build
+  cmake ..
+  make
+  sudo make install
+  ```
+
+  **License:**  
+  lingmo-kwin-plugins is licensed under the **GPLv3** license.
+
+- **lingmo-kwin-plugins-roundedwindow**  
+  - Path: `shell/CoreComponents/KWinRoundedWindow`  
+  - Revision: `refs/tags/1.0.2`  
+  - URL: [https://github.com/LingmoOS/lingmo-kwin-plugins-roundedwindow](https://github.com/LingmoOS/lingmo-kwin-plugins-roundedwindow)  
+
+  **Description:**  
+  A KWin plugin for LingmoOS that adds rounded corners to application windows, enhancing the visual aesthetics of the desktop environment.  
+
+  **Dependencies:**  
+  - **Arch Linux:**  
+
+    ```bash  
+    sudo pacman -S extra-cmake-modules qt5-base qt5-declarative kconfig5 kdecoration5 kguiaddons5 kcoreaddons5 kconfigwidgets5 kwindowsystem5 kwayland kwin  
+    ```  
+
+  - **Ubuntu/Debian:**  
+
+    ```bash  
+    sudo apt install extra-cmake-modules qtbase5-dev qtdeclarative5-dev kconfig5 kdecoration5 kguiaddons5 kcoreaddons5 kconfigwidgets5 kwindowsystem5 kwayland kwin  
+    ```  
+
+  **Build Instructions:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake ..  
+  make  
+  sudo make install  
+  ```  
+
+  **Load & Unload:**  
+  - To activate the effect:  
+
+    ```bash  
+    sh ../tools/load.sh  
+    ```  
+
+  - To uninstall the effect:  
+
+    ```bash  
+    sh ../tools/unload.sh  
+    sudo make uninstall  
+    ```  
+
+  **Auto-install After KWin Update:**  
+  After each KWin update, the plugin may become incompatible. To automate reinstallation:  
+
+  ```bash  
+  sh ../tools/install-autorun-test.sh  
+  ```  
+
+  This adds a desktop file to the autorun directory, ensuring the plugin is rebuilt and reinstalled if necessary.  
+
+  **Tips:**  
+  - **Disable Conflicting Native Window Outline:**  
+    To avoid visual glitches with Breeze window decorations:  
+    - Go to `System settings -> Themes -> Window Decorations -> Breeze -> Edit icon -> Shadows and Outline tab -> Outline intensity (Off)`.  
+
+  - **Add Shadow to Windows Without Decoration (e.g., Steam):**  
+    Use the following steps:  
+    1. In `System settings -> Window management -> Window rules -> Appearance & Fixes`:  
+       - Add `[steam]` and set `No titlebar` and frame to `No`.  
+    2. In `System settings -> Application Style -> Window decoration -> Breeze theme setting -> Window specific overrides`:  
+       - Add `[steam]` and set `Hide Window title bar` to `Yes`.  
+
+  - **Add Debug Messages:**  
+    For troubleshooting, enable debug logs during build:  
+
+    ```bash  
+    cmake .. -DCMAKE_BUILD_TYPE=Debug  
+    cmake --build . -j  
+    ```  
+
+    View debug messages with:  
+
+    ```bash  
+    journalctl -f | grep kwin  
+    ```  
+
+    Or use colorful logs:  
+
+    ```bash  
+    sh ../tools/show-kwin-logs.sh  
+    ```  
+
+  **License:**  
+  lingmo-kwin-plugins-roundedwindow is licensed under the **GPLv3** license.
+
+- **lingmo-grub-config**  
+  - Path: `shell/BasicComponents/GrubBoot`  
+  - URL: [https://github.com/LingmoOS/lingmo-grub-config](https://github.com/LingmoOS/lingmo-grub-config)
+
+  **Description:**  
+  This repository contains the configuration files and resources for customizing the GRUB bootloader in Lingmo OS. It includes themes, background images, and scripts to enhance the bootloader's appearance and functionality.
+
+  **Build Instructions:**
+
+     ```bash
+     mkdir build
+     cd build
+     cmake ..
+     sudo make install
+     ```
 
 ## User Interface
 
@@ -300,6 +486,22 @@ The User Interface category focuses on the visual and interactive elements that 
 
   **License:**  
   lingmo-sddm-theme is licensed under the **GPLv3** license.
+
+- **lingmo-systemicons**  
+  - Path: `shell/BasicComponents/Icons`  
+  - URL: [https://github.com/LingmoOS/lingmo-systemicons](https://github.com/LingmoOS/lingmo-systemicons)
+
+  **Description:**  
+  A collection of icon themes for Lingmo OS, including Crule and Crule-dark themes, designed to provide a consistent and aesthetically pleasing user interface.
+
+  **Build Instructions:**
+
+     ```bash
+     mkdir build
+     cd build
+     cmake ..
+     sudo make install
+     ```
 
 ## User Applications
 
@@ -864,304 +1066,6 @@ System Tools encompass utilities that aid in managing and maintaining Lingmo OS.
 **Introduction:**
 The Build and Configuration category is dedicated to developers who want to compile and customize Lingmo OS from source. It includes build scripts, manifests, and configuration files that allow for tailored OS deployments. This section is essential for those who need flexibility in setting up their development environment or customizing the OS to specific requirements.
 
-   - **LingmoOS** (build configuration)
-   - **manifest**
-   - **lingmo-base-common**
-   - **lingmo-live**
-
-## Core Components
-
-- **lingmo-kwin-plugins**
-  - Path: `shell/CoreComponents/KWinPlugins`
-  - URL: [https://github.com/LingmoOS/lingmo-kwin-plugins](https://github.com/LingmoOS/lingmo-kwin-plugins)
-  
-  **Description:**  
-  A collection of KWin plugins tailored for LingmoOS, enhancing window management and desktop experience,which is a necessary component of LingmoOS.
-  
-  **Dependencies:**  
-  - **Arch Linux:**
-
-    ```bash
-    sudo pacman -S extra-cmake-modules qt5-base qt5-declarative kconfig5 kdecoration5 kguiaddons5 kcoreaddons5 kconfigwidgets5 kwindowsystem5 kwayland kwin
-    ```
-
-  - **Ubuntu/Debian:**
-
-    ```bash
-    sudo apt install extra-cmake-modules qtbase5-dev qtdeclarative5-dev kconfig5 kdecoration5 kguiaddons5 kcoreaddons5 kconfigwidgets5 kwindowsystem5 kwayland kwin
-    ```
-  
-  **Build Instructions:**  
-
-  ```bash
-  mkdir build
-  cd build
-  cmake ..
-  make
-  sudo make install
-  ```
-
-  **License:**  
-  lingmo-kwin-plugins is licensed under the **GPLv3** license.
-
-- **lingmo-kwin-plugins-roundedwindow**  
-  - Path: `shell/CoreComponents/KWinRoundedWindow`  
-  - Revision: `refs/tags/1.0.2`  
-  - URL: [https://github.com/LingmoOS/lingmo-kwin-plugins-roundedwindow](https://github.com/LingmoOS/lingmo-kwin-plugins-roundedwindow)  
-
-  **Description:**  
-  A KWin plugin for LingmoOS that adds rounded corners to application windows, enhancing the visual aesthetics of the desktop environment.  
-
-  **Dependencies:**  
-  - **Arch Linux:**  
-
-    ```bash  
-    sudo pacman -S extra-cmake-modules qt5-base qt5-declarative kconfig5 kdecoration5 kguiaddons5 kcoreaddons5 kconfigwidgets5 kwindowsystem5 kwayland kwin  
-    ```  
-
-  - **Ubuntu/Debian:**  
-
-    ```bash  
-    sudo apt install extra-cmake-modules qtbase5-dev qtdeclarative5-dev kconfig5 kdecoration5 kguiaddons5 kcoreaddons5 kconfigwidgets5 kwindowsystem5 kwayland kwin  
-    ```  
-
-  **Build Instructions:**  
-
-  ```bash  
-  mkdir build  
-  cd build  
-  cmake ..  
-  make  
-  sudo make install  
-  ```  
-
-  **Load & Unload:**  
-  - To activate the effect:  
-
-    ```bash  
-    sh ../tools/load.sh  
-    ```  
-
-  - To uninstall the effect:  
-
-    ```bash  
-    sh ../tools/unload.sh  
-    sudo make uninstall  
-    ```  
-
-  **Auto-install After KWin Update:**  
-  After each KWin update, the plugin may become incompatible. To automate reinstallation:  
-
-  ```bash  
-  sh ../tools/install-autorun-test.sh  
-  ```  
-
-  This adds a desktop file to the autorun directory, ensuring the plugin is rebuilt and reinstalled if necessary.  
-
-  **Tips:**  
-  - **Disable Conflicting Native Window Outline:**  
-    To avoid visual glitches with Breeze window decorations:  
-    - Go to `System settings -> Themes -> Window Decorations -> Breeze -> Edit icon -> Shadows and Outline tab -> Outline intensity (Off)`.  
-
-  - **Add Shadow to Windows Without Decoration (e.g., Steam):**  
-    Use the following steps:  
-    1. In `System settings -> Window management -> Window rules -> Appearance & Fixes`:  
-       - Add `[steam]` and set `No titlebar` and frame to `No`.  
-    2. In `System settings -> Application Style -> Window decoration -> Breeze theme setting -> Window specific overrides`:  
-       - Add `[steam]` and set `Hide Window title bar` to `Yes`.  
-
-  - **Add Debug Messages:**  
-    For troubleshooting, enable debug logs during build:  
-
-    ```bash  
-    cmake .. -DCMAKE_BUILD_TYPE=Debug  
-    cmake --build . -j  
-    ```  
-
-    View debug messages with:  
-
-    ```bash  
-    journalctl -f | grep kwin  
-    ```  
-
-    Or use colorful logs:  
-
-    ```bash  
-    sh ../tools/show-kwin-logs.sh  
-    ```  
-
-  **License:**  
-  lingmo-kwin-plugins-roundedwindow is licensed under the **GPLv3** license.
-
-## Basic Components
-
-
-
-
-
-
-
-
-- **lingmo-grub-config**  
-  - Path: `shell/BasicComponents/GrubBoot`  
-  - URL: [https://github.com/LingmoOS/lingmo-grub-config](https://github.com/LingmoOS/lingmo-grub-config)
-
-  **Description:**  
-  This repository contains the configuration files and resources for customizing the GRUB bootloader in Lingmo OS. It includes themes, background images, and scripts to enhance the bootloader's appearance and functionality.
-
-  **Build Instructions:**
-
-     ```bash
-     mkdir build
-     cd build
-     cmake ..
-     sudo make install
-     ```
-
-- **lingmo-systemicons**  
-  - Path: `shell/BasicComponents/Icons`  
-  - URL: [https://github.com/LingmoOS/lingmo-systemicons](https://github.com/LingmoOS/lingmo-systemicons)
-
-  **Description:**  
-  A collection of icon themes for Lingmo OS, including Crule and Crule-dark themes, designed to provide a consistent and aesthetically pleasing user interface.
-
-  **Build Instructions:**
-
-     ```bash
-     mkdir build
-     cd build
-     cmake ..
-     sudo make install
-     ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Libraries
-
-
-
-
-
-
-
-
-## Plugins
-
-## System
-
-
-- **linux-package**  
-  - Path: `kernel/debian`  
-  - URL: [https://github.com/LingmoOS/linux-package](https://github.com/LingmoOS/linux-package)  
-
-  **Description:**  
-  The Linux kernel package for Debian, including patches, configuration files, and tools for building and customizing the kernel.  
-
-  **Patches:**  
-  - Debian applies small changes to the kernel source, split into individual patches.  
-  - Patches can be found in the source package or at:  
-    [https://sources.debian.org/src/linux/<version>/debian/patches/](https://sources.debian.org/src/linux/<version>/debian/patches/)  
-
-  **Config Files:**  
-  - The `.config` files used to build various `linux-image` packages are dynamically generated during the build process.  
-  - Each `linux-image-*` package provides the complete `.config` file used for its build, installed in `/boot`.  
-
-  **Scope of Security Support:**  
-  - Security support is provided for both binary builds and the full source package.  
-  - Kernel options not enabled in official Debian builds are given lower priority for security support.  
-
-  **Notes:**  
-  - For build instructions, please refer to the official documentation.
-
-  **Non-Free Bits Removed:**  
-  - See the `Files-Excluded` field in `debian/copyright`. (note: I can't find it 😅)  
-
-  **Changelog:**  
-  - Older Debian changelog entries are no longer included in binary packages but can be found in `debian/changelog.old` in the source package.  
-
-  **Further Information:**  
-  - Debian Linux Kernel Handbook:  
-    [https://kernel-team.pages.debian.net/kernel-handbook/](https://kernel-team.pages.debian.net/kernel-handbook/)  
-  - Debian Wiki:  
-    [https://wiki.debian.org/DebianKernel](https://wiki.debian.org/DebianKernel)  
-
-  **License:**  
-  - Format: [https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/](https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/)  
-  - Upstream-Name: Linux kernel  
-  - Source: [https://www.kernel.org/pub/linux/kernel/](https://www.kernel.org/pub/linux/kernel/)  
-  - Files-Excluded: See `debian/copyright`.  
-  - License Texts:  
-    - `GPL-2`: [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)  
-    - `LGPL-2.1`: [https://www.gnu.org/licenses/lgpl-2.1.html](https://www.gnu.org/licenses/lgpl-2.1.html)  
-    - `BSD-2-clause`: [https://opensource.org/licenses/BSD-2-Clause](https://opensource.org/licenses/BSD-2-Clause)  
-
-  **Notes:**  
-  - For build instructions, refer to the official documentation.  
-
-- **lingmo-base-common**  
-  - Path: `init`  
-  - URL: [https://github.com/LingmoOS/lingmo-base-common](https://github.com/LingmoOS/lingmo-base-common)
-
-  **Description:**  
-  This package contains the basic filesystem hierarchy and miscellaneous files for Lingmo OS. It includes essential configuration files and directories necessary for the proper functioning of the operating system.  
-
-  **Dependencies:**  
-  - **Debian/Ubuntu:**  
-
-    ```bash  
-    sudo apt install debhelper-compat debhelper dpkg-dev
-    ```  
-
-  **Build:**  
-
-  ```bash  
-  dpkg-buildpackage -us -uc
-  ```  
-
-- **lingmo-live**  
-  - Path: `system/installer`  
-  - Revision: `helium`  
-  - URL: [https://github.com/LingmoOS/lingmo-live](https://github.com/LingmoOS/lingmo-live)  
-
-  **Description:**  
-  A repository containing configurations and settings for the Lingmo OS live image, including Calamares installer configurations to streamline the installation process.
-
-  **Dependencies:**  
-  - **Debian/Ubuntu:**  
-
-    ```bash  
-    sudo apt install build-essential debhelper dpkg-dev
-    ```
-
-  **Build:**  
-
-  ```bash  
-  dpkg-buildpackage -us -uc
-  ```
-
-  **License:**  
-  lingmo-live is licensed under the **ISC** License, which permits use, copying, modification, and distribution with the condition of including the copyright notice and permission notice in all copies.
-
-
-## Tools
-
 - **LingmoOS**  
   - Path: `build`  
   - URL: [https://github.com/LingmoOS/LingmoOS](https://github.com/LingmoOS/LingmoOS)
@@ -1243,3 +1147,47 @@ The Build and Configuration category is dedicated to developers who want to comp
   **Notes:**
   - The manifest is essential for setting up the build environment for Lingmo OS.
   - It ensures that all necessary components are fetched and synchronized correctly before the build process begins.
+
+- **lingmo-base-common**  
+  - Path: `init`  
+  - URL: [https://github.com/LingmoOS/lingmo-base-common](https://github.com/LingmoOS/lingmo-base-common)
+
+  **Description:**  
+  This package contains the basic filesystem hierarchy and miscellaneous files for Lingmo OS. It includes essential configuration files and directories necessary for the proper functioning of the operating system.  
+
+  **Dependencies:**  
+  - **Debian/Ubuntu:**  
+
+    ```bash  
+    sudo apt install debhelper-compat debhelper dpkg-dev
+    ```  
+
+  **Build:**  
+
+  ```bash  
+  dpkg-buildpackage -us -uc
+  ```  
+
+- **lingmo-live**  
+  - Path: `system/installer`  
+  - Revision: `helium`  
+  - URL: [https://github.com/LingmoOS/lingmo-live](https://github.com/LingmoOS/lingmo-live)  
+
+  **Description:**  
+  A repository containing configurations and settings for the Lingmo OS live image, including Calamares installer configurations to streamline the installation process.
+
+  **Dependencies:**  
+  - **Debian/Ubuntu:**  
+
+    ```bash  
+    sudo apt install build-essential debhelper dpkg-dev
+    ```
+
+  **Build:**  
+
+  ```bash  
+  dpkg-buildpackage -us -uc
+  ```
+
+  **License:**  
+  lingmo-live is licensed under the **ISC** License, which permits use, copying, modification, and distribution with the condition of including the copyright notice and permission notice in all copies.
