@@ -306,52 +306,39 @@ The User Interface category focuses on the visual and interactive elements that 
 **Introduction:**
 User Applications are the tools that users interact with daily, providing essential functionalities like file management, text editing, and system settings. This category includes applications such as calculators, file managers, terminals, and more. It is designed to meet the everyday needs of users, while also offering developers insights into how these applications are built and integrated into Lingmo OS.
 
-   - **lingmo-calculator**
-   - **lingmo-filemanager**
-   - **lingmo-settings**
-   - **lingmo-terminal**
-   - **lingmo-texteditor**
-   - **lingmo-updator**
-   - **lingmo-videoplayer**
-   - **lingmo-launcher**
-   - **lingmo-screenlocker**
+- **lingmo-calculator**  
+  - Path: `shell/BasicComponents/Calculator`  
+  - Revision: `refs/tags/0.6.3`  
+  - URL: [https://github.com/LingmoOS/lingmo-calculator](https://github.com/LingmoOS/lingmo-calculator)  
 
-## Development Libraries
+  **Description:**  
+  A simple and intuitive calculator application for LingmoOS, designed for basic arithmetic operations with a clean and user-friendly interface.  
 
-**Introduction:**
-Development Libraries are the building blocks for developers, offering essential functions, styles, and tools to create applications that seamlessly integrate with Lingmo OS. Libraries like lib_lingmo, LingmoUI, and others simplify the development process, ensuring consistency and ease of use across applications. This section is a must-read for developers aiming to create high-quality, integrated software.
+  **Dependencies:**  
+  - **Ubuntu/Debian:**  
 
-   - **lib_lingmo**
-   - **LingmoUI**
-   - **lingmo-qt-plugins**
-   - **libqtxdg**
+    ```bash  
+    sudo apt install cmake gcc qtbase5-dev qtdeclarative5-dev qml-module-qtquick2 qml-module-qtquick-controls2  
+    ```  
 
-## System Tools
+  - **Arch Linux:**  
 
-**Introduction:**
-System Tools encompass utilities that aid in managing and maintaining Lingmo OS. This includes setup tools, screenlockers, and other system-wide utilities. Whether you're a power user looking to tweak system settings or a developer automating tasks, this category provides the necessary tools to enhance your experience with Lingmo OS.
+    ```bash  
+    sudo pacman -S cmake gcc qt5-base qt5-declarative qt5-quickcontrols2  
+    ```  
 
-   - **lingmo-first-setup**
-   - **lingmo-ocr**
-   - **lingmo-screenshots** (if tool-related)
+  **Build Instructions:**  
 
-## Build and Configuration
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake ..  
+  make  
+  sudo make install  
+  ```  
 
-**Introduction:**
-The Build and Configuration category is dedicated to developers who want to compile and customize Lingmo OS from source. It includes build scripts, manifests, and configuration files that allow for tailored OS deployments. This section is essential for those who need flexibility in setting up their development environment or customizing the OS to specific requirements.
-
-   - **LingmoOS** (build configuration)
-   - **manifest**
-   - **lingmo-base-common**
-   - **lingmo-live**
-
-## Core Components
-
-
-
-
-
-
+  **License:**  
+  lingmo-calculator is licensed under the **GPLv3** license.
 
 - [**lingmo-filemanager**](lingmo-filemanager.md)
   - Path: `shell/CoreComponents/Filemanager`
@@ -396,6 +383,262 @@ The Build and Configuration category is dedicated to developers who want to comp
 
   **License:**  
   lingmo-filemanager is licensed under the **GPLv3** license.
+
+- **lingmo-settings**  
+  - Path: `shell/BasicComponents/Settings`  
+  - Revision: `helium`  
+  - URL: [https://github.com/LingmoOS/lingmo-settings](https://github.com/LingmoOS/lingmo-settings)  
+
+  **Description:**  
+  The system settings application for LingmoOS, providing a centralized interface for configuring system preferences. It utilizes LingmoUI as the interface style, offering a modern and user-friendly experience.  
+
+  **Dependencies:**  
+  - **Arch/Manjaro:**  
+
+    ```bash  
+    sudo pacman -S extra-cmake-modules qt5-base qt5-quickcontrols2 freetype2 fontconfig networkmanager-qt modemmanager-qt  
+    ```  
+
+  - **Debian/Ubuntu:**  
+
+    ```bash  
+    sudo apt install cmake debhelper extra-cmake-modules libicu-dev libcrypt-dev libfreetype6-dev libfontconfig1-dev libkf5networkmanagerqt-dev libkf5config-dev modemmanager-qt-dev qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev qttools5-dev qttools5-dev-tools qml-module-qtquick-controls2 qml-module-qtquick2 qml-module-qtquick-layouts qml-module-qt-labs-platform qml-module-qt-labs-settings qml-module-qtqml qml-module-qtquick-window2 qml-module-qtquick-shapes qml-module-qtquick-dialogs qml-module-qtquick-particles2  
+    ```  
+
+  **Build Instructions:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
+  make  
+  sudo make install  
+  ```  
+
+  **License:**  
+  lingmo-settings is licensed under the **GPLv3** license.
+
+- [**lingmo-terminal**](lingmo-terminal.md)
+  - Path: `shell/BasicComponents/Terminal`  
+  - URL: [https://github.com/LingmoOS/lingmo-terminal](https://github.com/LingmoOS/lingmo-terminal)  
+
+  **Description:**  
+  A terminal emulator for LingmoOS, using LingmoUI as the interface style to provide a modern and user-friendly terminal experience.  
+
+  **Third-Party Code:**  
+  - [**qmltermwidget**](https://github.com/Swordfish90/qmltermwidget)
+
+  **Dependencies:**  
+  - **Debian/Ubuntu:**  
+
+    ```bash  
+    sudo apt install extra-cmake-modules qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev qttools5-dev  
+    ```  
+
+  **Build and Install:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake ..  
+  make  
+  sudo make install  
+  ```  
+
+  **License:**  
+  lingmo-terminal is licensed under the **GPLv3** license.
+
+- **lingmo-texteditor**  
+  - Path: `shell/BasicComponents/Texteditor`  
+  - URL: [https://github.com/LingmoOS/lingmo-texteditor](https://github.com/LingmoOS/lingmo-texteditor)  
+
+  **Description:**  
+  An elegant and lightweight text editor for LingmoOS, designed for simplicity and ease of use while providing essential text editing features.  
+
+  **Dependencies:**  
+  - **Debian/Ubuntu:**  
+
+    ```bash  
+    sudo apt install equivs curl git devscripts lintian build-essential automake autotools-dev --no-install-recommends
+    ```  
+
+  **Build:**  
+
+  ```bash  
+    mkdir build  
+    cd build  
+    cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
+    make
+    sudo make install  
+  ```  
+
+  **License:**  
+  lingmo-texteditor is licensed under the **GPLv3** license.
+
+- **lingmo-updator**  
+  - Path: `shell/BasicComponents/UpdateTool`  
+  - URL: [https://github.com/LingmoOS/lingmo-updator](https://github.com/LingmoOS/lingmo-updator)  
+
+  **Description:**  
+  The official system update tool for LingmoOS, designed to provide a seamless and user-friendly experience for managing system updates.  
+
+  **Dependencies:**  
+  - **Debian/Ubuntu:**  
+
+    ```bash  
+    sudo apt install cmake libqapt-dev
+    ```  
+
+  **Build:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
+  make  
+  sudo make install  
+  ```  
+
+  **License:**  
+  lingmo-updator is licensed under the **GPLv3** license.
+
+- **lingmo-videoplayer**  
+  - Path: `shell/BasicComponents/VideoPlayer`  
+  - URL: [https://github.com/LingmoOS/lingmo-videoplayer](https://github.com/LingmoOS/lingmo-videoplayer)  
+
+  **Description:**  
+  An open-source video player for LingmoOS, built using Qt/QML and libmpv, providing a smooth and feature-rich video playback experience.  
+
+  **Third-Party Code:**  
+  - [**haruna:**](https://invent.kde.org/multimedia/haruna)
+
+  **Dependencies:**  
+  - **Debian/Ubuntu:**  
+
+    ```bash  
+    sudo apt install extra-cmake-modules qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev libmpv-dev
+    ```  
+
+  **Build:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
+  make
+  sudo make install  
+  ```  
+
+  **License:**  
+  lingmo-videoplayer is licensed under the **GPLv3** license.
+
+- **lingmo-launcher**  
+  - Path: `shell/BasicComponents/Launcher`  
+  - URL: [https://github.com/LingmoOS/lingmo-launcher](https://github.com/LingmoOS/lingmo-launcher)  
+
+  **Description:**  
+  A full-screen application launcher for LingmoOS, designed to provide quick and intuitive access to installed applications, enhancing productivity and user experience.  
+
+  **Dependencies:**  
+  - **Arch Linux/Manjaro:**  
+
+    ```bash  
+    sudo pacman -S gcc cmake qt5-base qt5-quickcontrols2 kwindowsystem  
+    ```  
+
+  - **Debian/Ubuntu:**  
+
+    ```bash  
+    sudo apt install gcc cmake qtbase5-dev qml-module-qtquick-controls2 qml-module-org-kde-kwindowsystem qtdeclarative5-dev qtquickcontrols2-5-dev qttools5-dev libkf5windowsystem-dev  
+    ```  
+
+  **Build Instructions:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
+  make  
+  sudo make install  
+  ```  
+
+  **License:**  
+  lingmo-launcher is licensed under the **GPLv3** license.
+  
+- **lingmo-screenlocker**  
+  - Path: `shell/BasicComponents/ScreenLocker`  
+  - URL: [https://github.com/LingmoOS/lingmo-screenlocker](https://github.com/LingmoOS/lingmo-screenlocker)  
+
+  **Description:**  
+  A screen locker for LingmoOS, designed to secure the system by locking the screen when inactive. It integrates with the system's authentication mechanisms and provides a seamless locking experience.  
+
+  **Third-Party Code:**  
+  - **kcheckpass:** Used for authentication.  
+
+  **Dependencies:**  
+  - **Debian/Ubuntu:**  
+
+    ```bash  
+    sudo apt install libpam0g-dev libx11-dev cmake extra-cmake-modules qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev  
+    ```  
+
+  - **Arch Linux:**  
+
+    ```bash  
+    sudo pacman -S pam libx11 extra-cmake-modules qt5-base qt5-declarative qt5-quickcontrols2  
+    ```  
+
+  **Build Instructions:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
+  make  
+  sudo make install  
+  ```  
+
+  **License:**  
+  lingmo-screenlocker is licensed under the **GPLv3** license.
+
+## Development Libraries
+
+**Introduction:**
+Development Libraries are the building blocks for developers, offering essential functions, styles, and tools to create applications that seamlessly integrate with Lingmo OS. Libraries like lib_lingmo, LingmoUI, and others simplify the development process, ensuring consistency and ease of use across applications. This section is a must-read for developers aiming to create high-quality, integrated software.
+
+   - **lib_lingmo**
+   - **LingmoUI**
+   - **lingmo-qt-plugins**
+   - **libqtxdg**
+
+## System Tools
+
+**Introduction:**
+System Tools encompass utilities that aid in managing and maintaining Lingmo OS. This includes setup tools, screenlockers, and other system-wide utilities. Whether you're a power user looking to tweak system settings or a developer automating tasks, this category provides the necessary tools to enhance your experience with Lingmo OS.
+
+   - **lingmo-first-setup**
+   - **lingmo-ocr**
+   - **lingmo-screenshots** (if tool-related)
+
+## Build and Configuration
+
+**Introduction:**
+The Build and Configuration category is dedicated to developers who want to compile and customize Lingmo OS from source. It includes build scripts, manifests, and configuration files that allow for tailored OS deployments. This section is essential for those who need flexibility in setting up their development environment or customizing the OS to specific requirements.
+
+   - **LingmoOS** (build configuration)
+   - **manifest**
+   - **lingmo-base-common**
+   - **lingmo-live**
+
+## Core Components
+
+
+
+
+
+
+
+
 
 - **lingmo-kwin-plugins**
   - Path: `shell/CoreComponents/KWinPlugins`
@@ -521,39 +764,7 @@ The Build and Configuration category is dedicated to developers who want to comp
 
 ## Basic Components
 
-- **lingmo-calculator**  
-  - Path: `shell/BasicComponents/Calculator`  
-  - Revision: `refs/tags/0.6.3`  
-  - URL: [https://github.com/LingmoOS/lingmo-calculator](https://github.com/LingmoOS/lingmo-calculator)  
 
-  **Description:**  
-  A simple and intuitive calculator application for LingmoOS, designed for basic arithmetic operations with a clean and user-friendly interface.  
-
-  **Dependencies:**  
-  - **Ubuntu/Debian:**  
-
-    ```bash  
-    sudo apt install cmake gcc qtbase5-dev qtdeclarative5-dev qml-module-qtquick2 qml-module-qtquick-controls2  
-    ```  
-
-  - **Arch Linux:**  
-
-    ```bash  
-    sudo pacman -S cmake gcc qt5-base qt5-declarative qt5-quickcontrols2  
-    ```  
-
-  **Build Instructions:**  
-
-  ```bash  
-  mkdir build  
-  cd build  
-  cmake ..  
-  make  
-  sudo make install  
-  ```  
-
-  **License:**  
-  lingmo-calculator is licensed under the **GPLv3** license.
 
 
 
@@ -592,38 +803,7 @@ The Build and Configuration category is dedicated to developers who want to comp
      sudo make install
      ```
 
-- **lingmo-launcher**  
-  - Path: `shell/BasicComponents/Launcher`  
-  - URL: [https://github.com/LingmoOS/lingmo-launcher](https://github.com/LingmoOS/lingmo-launcher)  
 
-  **Description:**  
-  A full-screen application launcher for LingmoOS, designed to provide quick and intuitive access to installed applications, enhancing productivity and user experience.  
-
-  **Dependencies:**  
-  - **Arch Linux/Manjaro:**  
-
-    ```bash  
-    sudo pacman -S gcc cmake qt5-base qt5-quickcontrols2 kwindowsystem  
-    ```  
-
-  - **Debian/Ubuntu:**  
-
-    ```bash  
-    sudo apt install gcc cmake qtbase5-dev qml-module-qtquick-controls2 qml-module-org-kde-kwindowsystem qtdeclarative5-dev qtquickcontrols2-5-dev qttools5-dev libkf5windowsystem-dev  
-    ```  
-
-  **Build Instructions:**  
-
-  ```bash  
-  mkdir build  
-  cd build  
-  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
-  make  
-  sudo make install  
-  ```  
-
-  **License:**  
-  lingmo-gtk-themes is licensed under the **GPLv3** license.
 
 - **lingmo-ocr**  
   - Path: `shell/BasicComponents/OCRServer`  
@@ -661,40 +841,6 @@ The Build and Configuration category is dedicated to developers who want to comp
 
 
 
-- **lingmo-settings**  
-  - Path: `shell/BasicComponents/Settings`  
-  - Revision: `helium`  
-  - URL: [https://github.com/LingmoOS/lingmo-settings](https://github.com/LingmoOS/lingmo-settings)  
-
-  **Description:**  
-  The system settings application for LingmoOS, providing a centralized interface for configuring system preferences. It utilizes LingmoUI as the interface style, offering a modern and user-friendly experience.  
-
-  **Dependencies:**  
-  - **Arch/Manjaro:**  
-
-    ```bash  
-    sudo pacman -S extra-cmake-modules qt5-base qt5-quickcontrols2 freetype2 fontconfig networkmanager-qt modemmanager-qt  
-    ```  
-
-  - **Debian/Ubuntu:**  
-
-    ```bash  
-    sudo apt install cmake debhelper extra-cmake-modules libicu-dev libcrypt-dev libfreetype6-dev libfontconfig1-dev libkf5networkmanagerqt-dev libkf5config-dev modemmanager-qt-dev qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev qttools5-dev qttools5-dev-tools qml-module-qtquick-controls2 qml-module-qtquick2 qml-module-qtquick-layouts qml-module-qt-labs-platform qml-module-qt-labs-settings qml-module-qtqml qml-module-qtquick-window2 qml-module-qtquick-shapes qml-module-qtquick-dialogs qml-module-qtquick-particles2  
-    ```  
-
-  **Build Instructions:**  
-
-  ```bash  
-  mkdir build  
-  cd build  
-  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
-  make  
-  sudo make install  
-  ```  
-
-  **License:**  
-  lingmo-settings is licensed under the **GPLv3** license.
-
 
 - **lingmo-screenshots**  
   - Path: `shell/BasicComponents/ScreenShots`  
@@ -729,155 +875,13 @@ The Build and Configuration category is dedicated to developers who want to comp
   **License:**  
   lingmo-screenshots is licensed under the **GPLv3** license.
 
-- **lingmo-screenlocker**  
-  - Path: `shell/BasicComponents/ScreenLocker`  
-  - URL: [https://github.com/LingmoOS/lingmo-screenlocker](https://github.com/LingmoOS/lingmo-screenlocker)  
 
-  **Description:**  
-  A screen locker for LingmoOS, designed to secure the system by locking the screen when inactive. It integrates with the system's authentication mechanisms and provides a seamless locking experience.  
 
-  **Third-Party Code:**  
-  - **kcheckpass:** Used for authentication.  
 
-  **Dependencies:**  
-  - **Debian/Ubuntu:**  
 
-    ```bash  
-    sudo apt install libpam0g-dev libx11-dev cmake extra-cmake-modules qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev  
-    ```  
 
-  - **Arch Linux:**  
 
-    ```bash  
-    sudo pacman -S pam libx11 extra-cmake-modules qt5-base qt5-declarative qt5-quickcontrols2  
-    ```  
 
-  **Build Instructions:**  
-
-  ```bash  
-  mkdir build  
-  cd build  
-  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
-  make  
-  sudo make install  
-  ```  
-
-  **License:**  
-  lingmo-screenlocker is licensed under the **GPLv3** license.
-
-- [**lingmo-terminal**](lingmo-terminal.md)
-  - Path: `shell/BasicComponents/Terminal`  
-  - URL: [https://github.com/LingmoOS/lingmo-terminal](https://github.com/LingmoOS/lingmo-terminal)  
-
-  **Description:**  
-  A terminal emulator for LingmoOS, using LingmoUI as the interface style to provide a modern and user-friendly terminal experience.  
-
-  **Third-Party Code:**  
-  - [**qmltermwidget**](https://github.com/Swordfish90/qmltermwidget)
-
-  **Dependencies:**  
-  - **Debian/Ubuntu:**  
-
-    ```bash  
-    sudo apt install extra-cmake-modules qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev qttools5-dev  
-    ```  
-
-  **Build and Install:**  
-
-  ```bash  
-  mkdir build  
-  cd build  
-  cmake ..  
-  make  
-  sudo make install  
-  ```  
-
-  **License:**  
-  lingmo-terminal is licensed under the **GPLv3** license.
-
-- **lingmo-texteditor**  
-  - Path: `shell/BasicComponents/Texteditor`  
-  - URL: [https://github.com/LingmoOS/lingmo-texteditor](https://github.com/LingmoOS/lingmo-texteditor)  
-
-  **Description:**  
-  An elegant and lightweight text editor for LingmoOS, designed for simplicity and ease of use while providing essential text editing features.  
-
-  **Dependencies:**  
-  - **Debian/Ubuntu:**  
-
-    ```bash  
-    sudo apt install equivs curl git devscripts lintian build-essential automake autotools-dev --no-install-recommends
-    ```  
-
-  **Build:**  
-
-  ```bash  
-    mkdir build  
-    cd build  
-    cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
-    make
-    sudo make install  
-  ```  
-
-  **License:**  
-  lingmo-texteditor is licensed under the **GPLv3** license.
-
-- **lingmo-updator**  
-  - Path: `shell/BasicComponents/UpdateTool`  
-  - URL: [https://github.com/LingmoOS/lingmo-updator](https://github.com/LingmoOS/lingmo-updator)  
-
-  **Description:**  
-  The official system update tool for LingmoOS, designed to provide a seamless and user-friendly experience for managing system updates.  
-
-  **Dependencies:**  
-  - **Debian/Ubuntu:**  
-
-    ```bash  
-    sudo apt install cmake libqapt-dev
-    ```  
-
-  **Build:**  
-
-  ```bash  
-  mkdir build  
-  cd build  
-  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
-  make  
-  sudo make install  
-  ```  
-
-  **License:**  
-  lingmo-updator is licensed under the **GPLv3** license.
-
-- **lingmo-videoplayer**  
-  - Path: `shell/BasicComponents/VideoPlayer`  
-  - URL: [https://github.com/LingmoOS/lingmo-videoplayer](https://github.com/LingmoOS/lingmo-videoplayer)  
-
-  **Description:**  
-  An open-source video player for LingmoOS, built using Qt/QML and libmpv, providing a smooth and feature-rich video playback experience.  
-
-  **Third-Party Code:**  
-  - [**haruna:**](https://invent.kde.org/multimedia/haruna)
-
-  **Dependencies:**  
-  - **Debian/Ubuntu:**  
-
-    ```bash  
-    sudo apt install extra-cmake-modules qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev libmpv-dev
-    ```  
-
-  **Build:**  
-
-  ```bash  
-  mkdir build  
-  cd build  
-  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
-  make
-  sudo make install  
-  ```  
-
-  **License:**  
-  lingmo-videoplayer is licensed under the **GPLv3** license.
 
 
 
