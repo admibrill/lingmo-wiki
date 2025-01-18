@@ -564,7 +564,7 @@ User Applications are the tools that users interact with daily, providing essent
 
   **License:**  
   lingmo-launcher is licensed under the **GPLv3** license.
-  
+
 - **lingmo-screenlocker**  
   - Path: `shell/BasicComponents/ScreenLocker`  
   - URL: [https://github.com/LingmoOS/lingmo-screenlocker](https://github.com/LingmoOS/lingmo-screenlocker)  
@@ -606,19 +606,258 @@ User Applications are the tools that users interact with daily, providing essent
 **Introduction:**
 Development Libraries are the building blocks for developers, offering essential functions, styles, and tools to create applications that seamlessly integrate with Lingmo OS. Libraries like lib_lingmo, LingmoUI, and others simplify the development process, ensuring consistency and ease of use across applications. This section is a must-read for developers aiming to create high-quality, integrated software.
 
-   - **lib_lingmo**
-   - **LingmoUI**
-   - **lingmo-qt-plugins**
-   - **libqtxdg**
+- **lib_lingmo**  
+  - Path: `lib/SystemLibrary`  
+  - Revision: `qt5`  
+  - URL: [https://github.com/LingmoOS/lib_lingmo](https://github.com/LingmoOS/lib_lingmo)  
+
+  **Description:**  
+  A core system library for LingmoOS, providing essential functionalities and integrations for system management.  
+
+  **Dependencies:**  
+  - **Arch Linux:**  
+
+    ```bash  
+    sudo pacman -S gcc cmake qt5-base qt5-quickcontrols2 networkmanager-qt modemmanager-qt
+    ```  
+
+  - **Debian/Ubuntu:**  
+
+    ```bash  
+    sudo apt install qtbase5-dev qtquickcontrols2-5-dev modemmanager-qt-dev libqt5sensors5-dev libkf5networkmanagerqt-dev libkf5screen-dev libkf5bluezqt-dev libkf5kio-dev cmake qtdeclarative5-dev libcanberra-dev libpulse-dev libcanberra-pulse extra-cmake-modules qttools5-dev qttools5-dev-tools
+    ```  
+
+  **Build and Install:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake ..  
+  make  
+  sudo make install  
+  ```  
+
+  **License:**  
+  lib_lingmo is licensed under the **GPLv3** license.
+
+- **LingmoUI**  
+  - Path: `lib/SystemUI_Library`  
+  - Revision: `refs/tags/2.3.0`  
+  - URL: [https://github.com/LingmoOS/LingmoUI](https://github.com/LingmoOS/LingmoUI)  
+
+  **Description:**  
+  LingmoUI is a GUI library based on QQC (Qt Quick Controls) and Qt 6, providing a unified and modern user interface for all LingmoOS applications. It includes features like light and dark mode, borderless windows, blurred windows, window shadows, and desktop-level menus.  
+
+  **Features:**  
+  - Light and Dark Mode  
+  - Borderless window (Wayland & XCB Window move & resize)  
+  - Blurred window  
+  - Window shadow  
+  - Desktop-level menu  
+  - QQC Style  
+  - ...  
+
+  **Structures:**  
+  - **Compatible:** This folder stores the old version of LingmoUI 1.0 (will be removed in the future).  
+
+  **Dependencies:**  
+  - **Debian/Ubuntu:** (Outdated, needs update here)
+
+    ```bash  
+    sudo apt install libqt5x11extras5-dev libkf5windowsystem-dev qtbase5-private-dev libxcb1-dev libxcb-shape0-dev libxcb-icccm4-dev -y
+    ```  
+
+  **Build:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
+  make  
+  sudo make install  
+  ```  
+
+  **Packaging (Debian/Ubuntu):**  
+  - Install compile dependencies:  
+
+    ```bash  
+    sudo apt install equivs devscripts --no-install-recommends  
+    sudo mk-build-deps -i -t "apt --yes" -r  
+    ```  
+
+  - Start packaging:  
+
+    ```bash  
+    dpkg-buildpackage -b -uc -us -tc  
+    ```  
+
+  **License:**  
+  LingmoUI is licensed under the **GPLv3** license.
+
+- **lingmo-qt-plugins**  
+  - Path: `lib/SystemLibrary_Qt`  
+  - URL: [https://github.com/LingmoOS/lingmo-qt-plugins](https://github.com/LingmoOS/lingmo-qt-plugins)  
+
+  **Description:**  
+  A collection of Qt plugins designed to unify the style and behavior of Qt applications on LingmoOS, ensuring a consistent and seamless user experience across the system.  
+
+  **Dependencies:**  
+  - **Arch Linux:**  
+
+    ```bash  
+    sudo pacman -S gcc extra-cmake-modules qt5-base qt5-tools qt5-x11extras libqtxdg libdbusmenu-qt5 libxcb
+    ```  
+
+  **Build:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake ..  
+  make  
+  sudo make install  
+  ```  
+
+  **License:**  
+  lingmo-qt-plugins is licensed under the **GPLv3** license.
+
+- **libqtxdg**  
+  - Path: `lib/SystemLibrary_QtXdg`  
+  - Remote: nebula  
+  - URL: [https://nebula.lingmo.org/lingmo-os/libqtxdg](https://nebula.lingmo.org/lingmo-os/libqtxdg)  
+
+  **Description:**  
+  libqtxdg is a Qt 5 implementation of freedesktop.org XDG specifications. It is maintained by the LXQt project and is used by nearly all LXQt components. However, it can also be used independently of the LXQt desktop environment. The library supports GTK+ icon theme caches for faster icon lookup, with fallback to normal lookup if the cache is missing or outdated.  
+
+  **Installation:**  
+  - **Runtime Dependencies:**  
+    - `qtbase`  
+    - (Optional) `gtk-update-icon-cache` for faster icon lookup.  
+
+  - **Build Dependencies:**  
+    - `CMake`  
+    - `qtsvg`  
+    - `qttools`  
+    - `lxqt-build-tools`  
+    - (Optional) `Git` for pulling the latest VCS checkouts.  
+
+  **Build Instructions:**  
+  - Configure the build using CMake. Specific CMake variables include:  
+    - `BUILD_TESTS`: Enable building tests (default: `OFF`).  
+    - `BUILD_DEV_UTILS`: Enable building and installing development utilities (default: `OFF`).  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake ..  
+  make  
+  sudo make install  
+  ```  
+
+  **Binary Packages:**  
+  The library is available in major Linux distributions such as Arch Linux, Debian, Fedora, and openSUSE. Use your distribution's package manager to install it by searching for `libqtxdg`.  
+
+  **License:**  
+  libqtxdg is licensed under the **LGPLv2.1** license.  
 
 ## System Tools
 
 **Introduction:**
 System Tools encompass utilities that aid in managing and maintaining Lingmo OS. This includes setup tools, screenlockers, and other system-wide utilities. Whether you're a power user looking to tweak system settings or a developer automating tasks, this category provides the necessary tools to enhance your experience with Lingmo OS.
 
-   - **lingmo-first-setup**
-   - **lingmo-ocr**
-   - **lingmo-screenshots** (if tool-related)
+- **lingmo-first-setup**  
+  - Path: `guide`  
+  - URL: [https://github.com/LingmoOS/lingmo-first-setup](https://github.com/LingmoOS/lingmo-first-setup)
+
+  **Description:**  
+  An application designed to guide users through the initial setup and configuration of Lingmo OS, including user account creation and system customization.
+
+  **Dependencies:**  
+  - **Ubuntu/Debian:**  
+
+    ```bash  
+    sudo apt install cmake libqapt-dev qtbase5-dev qtdeclarative5-dev qml-module-qtwebview qtquickcontrols2-5-dev qttools5-dev qttools5-dev-tools debhelper
+    ```
+
+  **Build Instructions:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake ..  
+  make  
+  sudo make install
+  ```
+
+  **License:**  
+  lingmo-first-setup is licensed under the **GPLv3** license.
+
+- **lingmo-ocr**  
+  - Path: `shell/BasicComponents/OCRServer`  
+  - Revision: `refs/tags/v1.2.4`  
+  - URL: [https://github.com/LingmoOS/lingmo-ocr](https://github.com/LingmoOS/lingmo-ocr)  
+
+  **Description:**  
+  An OCR (Optical Character Recognition) server developed for LingmoOS, designed to accurately recognize text from images and support multiple languages.
+
+  **Dependencies:**  
+  - **Ubuntu/Debian:**  
+
+    ```bash  
+    sudo apt install equivs curl git devscripts lintian build-essential automake autotools-dev cmake g++  
+    ```  
+
+  - **Arch Linux:**  
+
+    ```bash  
+    sudo pacman -S base-devel cmake  
+    ```  
+
+  **Build Instructions:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake ..
+  make
+  sudo make install
+  ```  
+
+  **License:**  
+  lingmo-ocr is licensed under the **GPLv3** license.
+
+- **lingmo-screenshots**  
+  - Path: `shell/BasicComponents/ScreenShots`  
+  - URL: [https://github.com/LingmoOS/lingmo-screenshots](https://github.com/LingmoOS/lingmo-screenshots)  
+
+  **Description:**  
+  A screenshot tool for LingmoOS, designed to capture and save screen images with ease. It provides a simple and intuitive interface for taking full-screen, window, or region-based screenshots.  
+
+  **Dependencies:**  
+  - **Arch/Manjaro:**  
+
+    ```bash  
+    sudo pacman -S extra-cmake-modules qt5-base qt5-quickcontrols2  
+    ```  
+
+  - **Debian/Ubuntu:**  
+
+    ```bash  
+    sudo apt install cmake qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev qttools5-dev qttools5-dev-tools qml-module-qtquick-controls2 qml-module-qtquick2 qml-module-qtquick-layouts qml-module-qt-labs-platform qml-module-qt-labs-settings qml-module-qtqml qml-module-qtquick-window2 qml-module-qtquick-shapes qml-module-qtquick-dialogs qml-module-qtquick-particles2  
+    ```  
+
+  **Build Instructions:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
+  make  
+  sudo make install  
+  ```  
+
+  **License:**  
+  lingmo-screenshots is licensed under the **GPLv3** license.
 
 ## Build and Configuration
 
@@ -631,14 +870,6 @@ The Build and Configuration category is dedicated to developers who want to comp
    - **lingmo-live**
 
 ## Core Components
-
-
-
-
-
-
-
-
 
 - **lingmo-kwin-plugins**
   - Path: `shell/CoreComponents/KWinPlugins`
@@ -805,75 +1036,12 @@ The Build and Configuration category is dedicated to developers who want to comp
 
 
 
-- **lingmo-ocr**  
-  - Path: `shell/BasicComponents/OCRServer`  
-  - Revision: `refs/tags/v1.2.4`  
-  - URL: [https://github.com/LingmoOS/lingmo-ocr](https://github.com/LingmoOS/lingmo-ocr)  
-
-  **Description:**  
-  An OCR (Optical Character Recognition) server developed for LingmoOS, designed to accurately recognize text from images and support multiple languages.
-
-  **Dependencies:**  
-  - **Ubuntu/Debian:**  
-
-    ```bash  
-    sudo apt install equivs curl git devscripts lintian build-essential automake autotools-dev cmake g++  
-    ```  
-
-  - **Arch Linux:**  
-
-    ```bash  
-    sudo pacman -S base-devel cmake  
-    ```  
-
-  **Build Instructions:**  
-
-  ```bash  
-  mkdir build  
-  cd build  
-  cmake ..
-  make
-  sudo make install
-  ```  
-
-  **License:**  
-  lingmo-ocr is licensed under the **GPLv3** license.
 
 
 
 
-- **lingmo-screenshots**  
-  - Path: `shell/BasicComponents/ScreenShots`  
-  - URL: [https://github.com/LingmoOS/lingmo-screenshots](https://github.com/LingmoOS/lingmo-screenshots)  
 
-  **Description:**  
-  A screenshot tool for LingmoOS, designed to capture and save screen images with ease. It provides a simple and intuitive interface for taking full-screen, window, or region-based screenshots.  
 
-  **Dependencies:**  
-  - **Arch/Manjaro:**  
-
-    ```bash  
-    sudo pacman -S extra-cmake-modules qt5-base qt5-quickcontrols2  
-    ```  
-
-  - **Debian/Ubuntu:**  
-
-    ```bash  
-    sudo apt install cmake qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev qttools5-dev qttools5-dev-tools qml-module-qtquick-controls2 qml-module-qtquick2 qml-module-qtquick-layouts qml-module-qt-labs-platform qml-module-qt-labs-settings qml-module-qtqml qml-module-qtquick-window2 qml-module-qtquick-shapes qml-module-qtquick-dialogs qml-module-qtquick-particles2  
-    ```  
-
-  **Build Instructions:**  
-
-  ```bash  
-  mkdir build  
-  cd build  
-  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
-  make  
-  sudo make install  
-  ```  
-
-  **License:**  
-  lingmo-screenshots is licensed under the **GPLv3** license.
 
 
 
@@ -887,159 +1055,12 @@ The Build and Configuration category is dedicated to developers who want to comp
 
 ## Libraries
 
-- **lib_lingmo**  
-  - Path: `lib/SystemLibrary`  
-  - Revision: `qt5`  
-  - URL: [https://github.com/LingmoOS/lib_lingmo](https://github.com/LingmoOS/lib_lingmo)  
 
-  **Description:**  
-  A core system library for LingmoOS, providing essential functionalities and integrations for system management.  
 
-  **Dependencies:**  
-  - **Arch Linux:**  
 
-    ```bash  
-    sudo pacman -S gcc cmake qt5-base qt5-quickcontrols2 networkmanager-qt modemmanager-qt
-    ```  
 
-  - **Debian/Ubuntu:**  
 
-    ```bash  
-    sudo apt install qtbase5-dev qtquickcontrols2-5-dev modemmanager-qt-dev libqt5sensors5-dev libkf5networkmanagerqt-dev libkf5screen-dev libkf5bluezqt-dev libkf5kio-dev cmake qtdeclarative5-dev libcanberra-dev libpulse-dev libcanberra-pulse extra-cmake-modules qttools5-dev qttools5-dev-tools
-    ```  
 
-  **Build and Install:**  
-
-  ```bash  
-  mkdir build  
-  cd build  
-  cmake ..  
-  make  
-  sudo make install  
-  ```  
-
-  **License:**  
-  lib_lingmo is licensed under the **GPLv3** license.
-
-- **LingmoUI**  
-  - Path: `lib/SystemUI_Library`  
-  - Revision: `refs/tags/2.3.0`  
-  - URL: [https://github.com/LingmoOS/LingmoUI](https://github.com/LingmoOS/LingmoUI)  
-
-  **Description:**  
-  LingmoUI is a GUI library based on QQC (Qt Quick Controls) and Qt 6, providing a unified and modern user interface for all LingmoOS applications. It includes features like light and dark mode, borderless windows, blurred windows, window shadows, and desktop-level menus.  
-
-  **Features:**  
-  - Light and Dark Mode  
-  - Borderless window (Wayland & XCB Window move & resize)  
-  - Blurred window  
-  - Window shadow  
-  - Desktop-level menu  
-  - QQC Style  
-  - ...  
-
-  **Structures:**  
-  - **Compatible:** This folder stores the old version of LingmoUI 1.0 (will be removed in the future).  
-
-  **Dependencies:**  
-  - **Debian/Ubuntu:** (Outdated, needs update here)
-
-    ```bash  
-    sudo apt install libqt5x11extras5-dev libkf5windowsystem-dev qtbase5-private-dev libxcb1-dev libxcb-shape0-dev libxcb-icccm4-dev -y
-    ```  
-
-  **Build:**  
-
-  ```bash  
-  mkdir build  
-  cd build  
-  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
-  make  
-  sudo make install  
-  ```  
-
-  **Packaging (Debian/Ubuntu):**  
-  - Install compile dependencies:  
-
-    ```bash  
-    sudo apt install equivs devscripts --no-install-recommends  
-    sudo mk-build-deps -i -t "apt --yes" -r  
-    ```  
-
-  - Start packaging:  
-
-    ```bash  
-    dpkg-buildpackage -b -uc -us -tc  
-    ```  
-
-  **License:**  
-  LingmoUI is licensed under the **GPLv3** license.
-
-- **lingmo-qt-plugins**  
-  - Path: `lib/SystemLibrary_Qt`  
-  - URL: [https://github.com/LingmoOS/lingmo-qt-plugins](https://github.com/LingmoOS/lingmo-qt-plugins)  
-
-  **Description:**  
-  A collection of Qt plugins designed to unify the style and behavior of Qt applications on LingmoOS, ensuring a consistent and seamless user experience across the system.  
-
-  **Dependencies:**  
-  - **Arch Linux:**  
-
-    ```bash  
-    sudo pacman -S gcc extra-cmake-modules qt5-base qt5-tools qt5-x11extras libqtxdg libdbusmenu-qt5 libxcb
-    ```  
-
-  **Build:**  
-
-  ```bash  
-  mkdir build  
-  cd build  
-  cmake ..  
-  make  
-  sudo make install  
-  ```  
-
-  **License:**  
-  lingmo-qt-plugins is licensed under the **GPLv3** license.
-
-- **libqtxdg**  
-  - Path: `lib/SystemLibrary_QtXdg`  
-  - Remote: nebula  
-  - URL: [https://nebula.lingmo.org/lingmo-os/libqtxdg](https://nebula.lingmo.org/lingmo-os/libqtxdg)  
-
-  **Description:**  
-  libqtxdg is a Qt 5 implementation of freedesktop.org XDG specifications. It is maintained by the LXQt project and is used by nearly all LXQt components. However, it can also be used independently of the LXQt desktop environment. The library supports GTK+ icon theme caches for faster icon lookup, with fallback to normal lookup if the cache is missing or outdated.  
-
-  **Installation:**  
-  - **Runtime Dependencies:**  
-    - `qtbase`  
-    - (Optional) `gtk-update-icon-cache` for faster icon lookup.  
-
-  - **Build Dependencies:**  
-    - `CMake`  
-    - `qtsvg`  
-    - `qttools`  
-    - `lxqt-build-tools`  
-    - (Optional) `Git` for pulling the latest VCS checkouts.  
-
-  **Build Instructions:**  
-  - Configure the build using CMake. Specific CMake variables include:  
-    - `BUILD_TESTS`: Enable building tests (default: `OFF`).  
-    - `BUILD_DEV_UTILS`: Enable building and installing development utilities (default: `OFF`).  
-
-  ```bash  
-  mkdir build  
-  cd build  
-  cmake ..  
-  make  
-  sudo make install  
-  ```  
-
-  **Binary Packages:**  
-  The library is available in major Linux distributions such as Arch Linux, Debian, Fedora, and openSUSE. Use your distribution's package manager to install it by searching for `libqtxdg`.  
-
-  **License:**  
-  libqtxdg is licensed under the **LGPLv2.1** license.  
 
 ## Plugins
 
@@ -1138,32 +1159,6 @@ The Build and Configuration category is dedicated to developers who want to comp
   **License:**  
   lingmo-live is licensed under the **ISC** License, which permits use, copying, modification, and distribution with the condition of including the copyright notice and permission notice in all copies.
 
-- **lingmo-first-setup**  
-  - Path: `guide`  
-  - URL: [https://github.com/LingmoOS/lingmo-first-setup](https://github.com/LingmoOS/lingmo-first-setup)
-
-  **Description:**  
-  An application designed to guide users through the initial setup and configuration of Lingmo OS, including user account creation and system customization.
-
-  **Dependencies:**  
-  - **Ubuntu/Debian:**  
-
-    ```bash  
-    sudo apt install cmake libqapt-dev qtbase5-dev qtdeclarative5-dev qml-module-qtwebview qtquickcontrols2-5-dev qttools5-dev qttools5-dev-tools debhelper
-    ```
-
-  **Build Instructions:**  
-
-  ```bash  
-  mkdir build  
-  cd build  
-  cmake ..  
-  make  
-  sudo make install
-  ```
-
-  **License:**  
-  lingmo-first-setup is licensed under the **GPLv3** license.
 
 ## Tools
 
