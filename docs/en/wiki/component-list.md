@@ -139,12 +139,167 @@ The Kernel and System Services category forms the foundation of Lingmo OS, manag
 **Introduction:**
 The User Interface category focuses on the visual and interactive elements that users engage with. It includes components such as docks, status bars, themes, and cursor designs. These elements contribute to the overall look and feel of the OS, enhancing user experience. Both developers looking to customize the interface and users seeking a visually appealing environment will find this section informative.
 
-   - **lingmo-dock**
-   - **lingmo-statusbar**
-   - **lingmo-cursor-themes**
-   - **lingmo-gtk-themes**
-   - **lingmo-wallpapers**
-   - **lingmo-sddm-theme**
+- **lingmo-dock**  
+  - Path: `shell/BasicComponents/DockPanel`  
+  - Revision: `helium_dev`  
+  - URL: [https://github.com/LingmoOS/lingmo-dock](https://github.com/LingmoOS/lingmo-dock)  
+
+  **Description:**  
+  The LingmoOS application dock provides a sleek and functional panel for quick access to frequently used applications, enhancing the desktop experience with intuitive navigation.  
+
+  **Dependencies:**  
+  - **Arch Linux:**  
+
+    ```bash  
+    sudo pacman -S gcc cmake qt5-base qt5-quickcontrols2 kwindowsystem  
+    ```  
+
+  - **Ubuntu/Debian:**  
+
+    ```bash  
+    sudo apt install gcc cmake qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev libkf5windowsystem-dev  
+    ```  
+
+  - **Additional Dependencies:**  
+    - LingmoUI  
+    - liblingmo  
+
+  **Build Instructions:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
+  make  
+  sudo make install  
+  ```  
+
+  **License:**  
+  lingmo-dock is licensed under the **GPLv3** license.
+
+- **lingmo-statusbar**  
+  - Path: `shell/BasicComponents/StatusBar`  
+  - Revision: `refs/tags/2.0.1`  
+  - URL: [https://github.com/LingmoOS/lingmo-statusbar](https://github.com/LingmoOS/lingmo-statusbar)  
+
+  **Description:**  
+  The status bar at the top of the LingmoOS desktop displays the current status of the system, including time, system tray, and other essential information. It provides a clean and intuitive interface for monitoring system activities.  
+
+  **Dependencies:**  
+  - **Ubuntu/Debian:**  
+
+    ```bash  
+    sudo apt install libkf5windowsystem-dev
+    ```  
+
+  **Build Instructions:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
+  make  
+  sudo make install  
+  ```  
+
+  **License:**  
+  lingmo-statusbar is licensed under the **GPLv3** license.
+
+- **lingmo-cursor-themes**  
+  - Path: `shell/BasicComponents/Cursor`  
+  - URL: [https://github.com/LingmoOS/lingmo-cursor-themes](https://github.com/LingmoOS/lingmo-cursor-themes)  
+
+  **Description:**  
+  A collection of cursor themes for LingmoOS, forked from the popular Bibata Cursor project. These themes provide a modern, customizable, and visually appealing cursor experience for users.  
+
+  **Build:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
+  make
+  sudo make install  
+  ```  
+
+  **License:**  
+  lingmo-cursor-themes is licensed under the **GPLv3** license.
+
+- **lingmo-gtk-themes**  
+  - Path: `shell/BasicComponents/GtkStyle`  
+  - URL: [https://github.com/LingmoOS/lingmo-gtk-themes](https://github.com/LingmoOS/lingmo-gtk-themes)  
+
+  **Description:**  
+  A collection of GTK themes designed for LingmoOS, providing a consistent and visually appealing look across applications. These themes enhance the user interface by offering modern and customizable styling options.  
+
+  **Dependencies:**  
+  - **Build Tools:**  
+    - `cmake`  
+    - `gcc`  
+
+  **Build Instructions:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
+  make  
+  sudo make install  
+  ```  
+
+  **License:**  
+  lingmo-gtk-themes is licensed under the **GPLv3** license.
+  
+- **lingmo-wallpapers**  
+  - Path: `shell/BasicComponents/Wallpapers`  
+  - URL: [https://github.com/LingmoOS/lingmo-wallpapers](https://github.com/LingmoOS/lingmo-wallpapers)
+
+  **Build:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
+  make
+  sudo make install  
+  ```  
+
+  **License:**  
+  lingmo-wallpapers is licensed under the [**Unsplash**](https://unsplash.com/license) license.
+
+- **lingmo-sddm-theme**  
+  - Path: `shell/BasicComponents/LoginManagerStyle`  
+  - Revision: `refs/tags/2.7.0`  
+  - URL: [https://github.com/LingmoOS/lingmo-sddm-theme](https://github.com/LingmoOS/lingmo-sddm-theme)  
+
+  **Description:**  
+  A modern and visually appealing SDDM (Simple Desktop Display Manager) theme designed specifically for LingmoOS, providing a seamless and elegant login experience.  
+
+  **Dependencies:**  
+  - **Ubuntu/Debian:**  
+
+    ```bash  
+    sudo apt install build-essential cmake extra-cmake-modules qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev qttools5-dev qttools5-dev-tools  
+    ```  
+
+  - **Arch Linux:**  
+
+    ```bash  
+    sudo pacman -S base-devel cmake extra-cmake-modules qt5-base qt5-declarative qt5-quickcontrols2 qt5-tools  
+    ```  
+
+  **Build Instructions:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake ..  
+  make  
+  sudo make install  
+  ```  
+
+  **License:**  
+  lingmo-sddm-theme is licensed under the **GPLv3** license.
 
 ## User Applications
 
@@ -400,88 +555,10 @@ The Build and Configuration category is dedicated to developers who want to comp
   **License:**  
   lingmo-calculator is licensed under the **GPLv3** license.
 
-- **lingmo-cursor-themes**  
-  - Path: `shell/BasicComponents/Cursor`  
-  - URL: [https://github.com/LingmoOS/lingmo-cursor-themes](https://github.com/LingmoOS/lingmo-cursor-themes)  
 
-  **Description:**  
-  A collection of cursor themes for LingmoOS, forked from the popular Bibata Cursor project. These themes provide a modern, customizable, and visually appealing cursor experience for users.  
 
-  **Build:**  
 
-  ```bash  
-  mkdir build  
-  cd build  
-  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
-  make
-  sudo make install  
-  ```  
 
-  **License:**  
-  lingmo-cursor-themes is licensed under the **GPLv3** license.
-
-- **lingmo-dock**  
-  - Path: `shell/BasicComponents/DockPanel`  
-  - Revision: `helium_dev`  
-  - URL: [https://github.com/LingmoOS/lingmo-dock](https://github.com/LingmoOS/lingmo-dock)  
-
-  **Description:**  
-  The LingmoOS application dock provides a sleek and functional panel for quick access to frequently used applications, enhancing the desktop experience with intuitive navigation.  
-
-  **Dependencies:**  
-  - **Arch Linux:**  
-
-    ```bash  
-    sudo pacman -S gcc cmake qt5-base qt5-quickcontrols2 kwindowsystem  
-    ```  
-
-  - **Ubuntu/Debian:**  
-
-    ```bash  
-    sudo apt install gcc cmake qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev libkf5windowsystem-dev  
-    ```  
-
-  - **Additional Dependencies:**  
-    - LingmoUI  
-    - liblingmo  
-
-  **Build Instructions:**  
-
-  ```bash  
-  mkdir build  
-  cd build  
-  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
-  make  
-  sudo make install  
-  ```  
-
-  **License:**  
-  lingmo-dock is licensed under the **GPLv3** license.
-
-- **lingmo-gtk-themes**  
-  - Path: `shell/BasicComponents/GtkStyle`  
-  - URL: [https://github.com/LingmoOS/lingmo-gtk-themes](https://github.com/LingmoOS/lingmo-gtk-themes)  
-
-  **Description:**  
-  A collection of GTK themes designed for LingmoOS, providing a consistent and visually appealing look across applications. These themes enhance the user interface by offering modern and customizable styling options.  
-
-  **Dependencies:**  
-  - **Build Tools:**  
-    - `cmake`  
-    - `gcc`  
-
-  **Build Instructions:**  
-
-  ```bash  
-  mkdir build  
-  cd build  
-  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
-  make  
-  sudo make install  
-  ```  
-
-  **License:**  
-  lingmo-gtk-themes is licensed under the **GPLv3** license.
 
 - **lingmo-grub-config**  
   - Path: `shell/BasicComponents/GrubBoot`  
@@ -582,39 +659,7 @@ The Build and Configuration category is dedicated to developers who want to comp
   **License:**  
   lingmo-ocr is licensed under the **GPLv3** license.
 
-- **lingmo-sddm-theme**  
-  - Path: `shell/BasicComponents/LoginManagerStyle`  
-  - Revision: `refs/tags/2.7.0`  
-  - URL: [https://github.com/LingmoOS/lingmo-sddm-theme](https://github.com/LingmoOS/lingmo-sddm-theme)  
 
-  **Description:**  
-  A modern and visually appealing SDDM (Simple Desktop Display Manager) theme designed specifically for LingmoOS, providing a seamless and elegant login experience.  
-
-  **Dependencies:**  
-  - **Ubuntu/Debian:**  
-
-    ```bash  
-    sudo apt install build-essential cmake extra-cmake-modules qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev qttools5-dev qttools5-dev-tools  
-    ```  
-
-  - **Arch Linux:**  
-
-    ```bash  
-    sudo pacman -S base-devel cmake extra-cmake-modules qt5-base qt5-declarative qt5-quickcontrols2 qt5-tools  
-    ```  
-
-  **Build Instructions:**  
-
-  ```bash  
-  mkdir build  
-  cd build  
-  cmake ..  
-  make  
-  sudo make install  
-  ```  
-
-  **License:**  
-  lingmo-sddm-theme is licensed under the **GPLv3** license.
 
 - **lingmo-settings**  
   - Path: `shell/BasicComponents/Settings`  
@@ -650,33 +695,6 @@ The Build and Configuration category is dedicated to developers who want to comp
   **License:**  
   lingmo-settings is licensed under the **GPLv3** license.
 
-- **lingmo-statusbar**  
-  - Path: `shell/BasicComponents/StatusBar`  
-  - Revision: `refs/tags/2.0.1`  
-  - URL: [https://github.com/LingmoOS/lingmo-statusbar](https://github.com/LingmoOS/lingmo-statusbar)  
-
-  **Description:**  
-  The status bar at the top of the LingmoOS desktop displays the current status of the system, including time, system tray, and other essential information. It provides a clean and intuitive interface for monitoring system activities.  
-
-  **Dependencies:**  
-  - **Ubuntu/Debian:**  
-
-    ```bash  
-    sudo apt install libkf5windowsystem-dev
-    ```  
-
-  **Build Instructions:**  
-
-  ```bash  
-  mkdir build  
-  cd build  
-  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
-  make  
-  sudo make install  
-  ```  
-
-  **License:**  
-  lingmo-statusbar is licensed under the **GPLv3** license.
 
 - **lingmo-screenshots**  
   - Path: `shell/BasicComponents/ScreenShots`  
@@ -861,22 +879,7 @@ The Build and Configuration category is dedicated to developers who want to comp
   **License:**  
   lingmo-videoplayer is licensed under the **GPLv3** license.
 
-- **lingmo-wallpapers**  
-  - Path: `shell/BasicComponents/Wallpapers`  
-  - URL: [https://github.com/LingmoOS/lingmo-wallpapers](https://github.com/LingmoOS/lingmo-wallpapers)
 
-  **Build:**  
-
-  ```bash  
-  mkdir build  
-  cd build  
-  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
-  make
-  sudo make install  
-  ```  
-
-  **License:**  
-  lingmo-wallpapers is licensed under the [**Unsplash**](https://unsplash.com/license) license.
 
 ## Libraries
 
