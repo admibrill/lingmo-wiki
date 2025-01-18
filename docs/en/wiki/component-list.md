@@ -9,77 +9,92 @@ To optimize the category organization for the Lingmo OS documentation, we propos
 **Introduction:**
 The Kernel and System Services category forms the foundation of Lingmo OS, managing hardware interactions and providing essential services. This includes components like the Linux kernel, core system services, and background processes (daemons) that ensure the OS runs smoothly. Developers interested in low-level operations, system performance, and core functionality enhancements will find this section crucial.
 
-- **linux**  
-  - Path: `kernel`  
-  - URL: [https://github.com/LingmoOS/linux](https://github.com/LingmoOS/linux)  
+### **linux**  
+
+- Path: `kernel`  
+- URL: [https://github.com/LingmoOS/linux](https://github.com/LingmoOS/linux)  
 
   **Description:**  
   The Linux kernel is the core of the LingmoOS operating system, responsible for managing system resources, hardware communication, and providing essential services for applications.  
 
   **Documentation:**  
-  - The formatted documentation can be read online at:  
+
+- The formatted documentation can be read online at:  
     [https://www.kernel.org/doc/html/latest/](https://www.kernel.org/doc/html/latest/)  
 
   **License:**  
   The Linux Kernel is provided under:  
-  - **SPDX-License-Identifier:** `GPL-2.0 WITH Linux-syscall-note`  
-  - The kernel is licensed under the terms of the GNU General Public License version 2 (`GPL-2.0`), with an explicit syscall exception as stated in `LICENSES/exceptions/Linux-syscall-note`.  
+
+- **SPDX-License-Identifier:** `GPL-2.0 WITH Linux-syscall-note`  
+- The kernel is licensed under the terms of the GNU General Public License version 2 (`GPL-2.0`), with an explicit syscall exception as stated in `LICENSES/exceptions/Linux-syscall-note`.  
 
   **Notes:**  
-  - For build instructions, please refer to the official documentation.
 
-- **linux-package**  
-  - Path: `kernel/debian`  
-  - URL: [https://github.com/LingmoOS/linux-package](https://github.com/LingmoOS/linux-package)  
+- For build instructions, please refer to the official documentation.
+
+### **linux-package**  
+
+- Path: `kernel/debian`  
+- URL: [https://github.com/LingmoOS/linux-package](https://github.com/LingmoOS/linux-package)  
 
   **Description:**  
   The Linux kernel package for Debian, including patches, configuration files, and tools for building and customizing the kernel.  
 
   **Patches:**  
-  - Debian applies small changes to the kernel source, split into individual patches.  
-  - Patches can be found in the source package or at:  
+
+- Debian applies small changes to the kernel source, split into individual patches.  
+- Patches can be found in the source package or at:  
     `https://sources.debian.org/src/linux/<version>/debian/patches/`
 
   **Config Files:**  
-  - The `.config` files used to build various `linux-image` packages are dynamically generated during the build process.  
-  - Each `linux-image-*` package provides the complete `.config` file used for its build, installed in `/boot`.  
+
+- The `.config` files used to build various `linux-image` packages are dynamically generated during the build process.  
+- Each `linux-image-*` package provides the complete `.config` file used for its build, installed in `/boot`.  
 
   **Scope of Security Support:**  
-  - Security support is provided for both binary builds and the full source package.  
-  - Kernel options not enabled in official Debian builds are given lower priority for security support.  
+
+- Security support is provided for both binary builds and the full source package.  
+- Kernel options not enabled in official Debian builds are given lower priority for security support.  
 
   **Notes:**  
-  - For build instructions, please refer to the official documentation.
+
+- For build instructions, please refer to the official documentation.
 
   **Non-Free Bits Removed:**  
-  - See the `Files-Excluded` field in `debian/copyright`. (note: I can't find it 😅)  
+
+- See the `Files-Excluded` field in `debian/copyright`. (note: I can't find it 😅)  
 
   **Changelog:**  
-  - Older Debian changelog entries are no longer included in binary packages but can be found in `debian/changelog.old` in the source package.  
+
+- Older Debian changelog entries are no longer included in binary packages but can be found in `debian/changelog.old` in the source package.  
 
   **Further Information:**  
-  - Debian Linux Kernel Handbook:  
+
+- Debian Linux Kernel Handbook:  
     [https://kernel-team.pages.debian.net/kernel-handbook/](https://kernel-team.pages.debian.net/kernel-handbook/)  
-  - Debian Wiki:  
+- Debian Wiki:  
     [https://wiki.debian.org/DebianKernel](https://wiki.debian.org/DebianKernel)  
 
   **License:**  
-  - Format: [https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/](https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/)  
-  - Upstream-Name: Linux kernel  
-  - Source: [https://www.kernel.org/pub/linux/kernel/](https://www.kernel.org/pub/linux/kernel/)  
-  - Files-Excluded: See `debian/copyright`.  
-  - License Texts:  
-    - `GPL-2`: [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)  
-    - `LGPL-2.1`: [https://www.gnu.org/licenses/lgpl-2.1.html](https://www.gnu.org/licenses/lgpl-2.1.html)  
-    - `BSD-2-clause`: [https://opensource.org/licenses/BSD-2-Clause](https://opensource.org/licenses/BSD-2-Clause)  
+
+- Format: [https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/](https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/)  
+- Upstream-Name: Linux kernel  
+- Source: [https://www.kernel.org/pub/linux/kernel/](https://www.kernel.org/pub/linux/kernel/)  
+- Files-Excluded: See `debian/copyright`.  
+- License Texts:  
+  - `GPL-2`: [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)  
+  - `LGPL-2.1`: [https://www.gnu.org/licenses/lgpl-2.1.html](https://www.gnu.org/licenses/lgpl-2.1.html)  
+  - `BSD-2-clause`: [https://opensource.org/licenses/BSD-2-Clause](https://opensource.org/licenses/BSD-2-Clause)  
 
   **Notes:**  
-  - For build instructions, refer to the official documentation.  
+
+- For build instructions, refer to the official documentation.  
   
-- **lingmo-core**
-  - Path: `shell/CoreComponents/CoreServer`
-  - Revision: `refs/tags/2.0.2`
-  - URL: [https://github.com/LingmoOS/lingmo-core](https://github.com/LingmoOS/lingmo-core)
+### **lingmo-core**
+
+- Path: `shell/CoreComponents/CoreServer`
+- Revision: `refs/tags/2.0.2`
+- URL: [https://github.com/LingmoOS/lingmo-core](https://github.com/LingmoOS/lingmo-core)
   
   **Description:**  
   Core system backend responsible for managing system sessions and providing essential services in Lingmo OS.
@@ -125,9 +140,10 @@ The Kernel and System Services category forms the foundation of Lingmo OS, manag
   **License:**  
   lingmo-core is licensed under the **GPLv3** license.
 
-- **lingmo-daemon**
-  - Path: `shell/CoreComponents/Daemon`
-  - URL: [https://github.com/LingmoOS/lingmo-daemon](https://github.com/LingmoOS/lingmo-daemon)
+### **lingmo-daemon**
+
+- Path: `shell/CoreComponents/Daemon`
+- URL: [https://github.com/LingmoOS/lingmo-daemon](https://github.com/LingmoOS/lingmo-daemon)
   
   **Description:**
   LingmoOS backend.
@@ -152,9 +168,10 @@ The Kernel and System Services category forms the foundation of Lingmo OS, manag
   **License:**  
   lingmo-daemon is licensed under the **GPLv3** license.
 
-- **lingmo-appmotor**
-  - Path: `shell/CoreComponents/Appmotor`
-  - URL: [https://github.com/LingmoOS/lingmo-appmotor](https://github.com/LingmoOS/lingmo-appmotor)
+### **lingmo-appmotor**
+
+- Path: `shell/CoreComponents/Appmotor`
+- URL: [https://github.com/LingmoOS/lingmo-appmotor](https://github.com/LingmoOS/lingmo-appmotor)
   
   **Description:**  
   Enhances application launch speed in Lingmo OS by preloading libraries and caching resources using a daemon (applauncherd). It improves performance by enabling shared resources among applications.
@@ -182,21 +199,23 @@ The Kernel and System Services category forms the foundation of Lingmo OS, manag
   **License:**  
   lingmo-appmotor is licensed under the **LGPL-2.1** license.
 
-- **lingmo-kwin-plugins**
-  - Path: `shell/CoreComponents/KWinPlugins`
-  - URL: [https://github.com/LingmoOS/lingmo-kwin-plugins](https://github.com/LingmoOS/lingmo-kwin-plugins)
+### **lingmo-kwin-plugins**
+
+- Path: `shell/CoreComponents/KWinPlugins`
+- URL: [https://github.com/LingmoOS/lingmo-kwin-plugins](https://github.com/LingmoOS/lingmo-kwin-plugins)
   
   **Description:**  
   A collection of KWin plugins tailored for LingmoOS, enhancing window management and desktop experience,which is a necessary component of LingmoOS.
   
   **Dependencies:**  
-  - **Arch Linux:**
+
+- **Arch Linux:**
 
     ```bash
     sudo pacman -S extra-cmake-modules qt5-base qt5-declarative kconfig5 kdecoration5 kguiaddons5 kcoreaddons5 kconfigwidgets5 kwindowsystem5 kwayland kwin
     ```
 
-  - **Ubuntu/Debian:**
+- **Ubuntu/Debian:**
 
     ```bash
     sudo apt install extra-cmake-modules qtbase5-dev qtdeclarative5-dev kconfig5 kdecoration5 kguiaddons5 kcoreaddons5 kconfigwidgets5 kwindowsystem5 kwayland kwin
@@ -215,22 +234,24 @@ The Kernel and System Services category forms the foundation of Lingmo OS, manag
   **License:**  
   lingmo-kwin-plugins is licensed under the **GPLv3** license.
 
-- **lingmo-kwin-plugins-roundedwindow**  
-  - Path: `shell/CoreComponents/KWinRoundedWindow`  
-  - Revision: `refs/tags/1.0.2`  
-  - URL: [https://github.com/LingmoOS/lingmo-kwin-plugins-roundedwindow](https://github.com/LingmoOS/lingmo-kwin-plugins-roundedwindow)  
+### **lingmo-kwin-plugins-roundedwindow**  
+
+- Path: `shell/CoreComponents/KWinRoundedWindow`  
+- Revision: `refs/tags/1.0.2`  
+- URL: [https://github.com/LingmoOS/lingmo-kwin-plugins-roundedwindow](https://github.com/LingmoOS/lingmo-kwin-plugins-roundedwindow)  
 
   **Description:**  
   A KWin plugin for LingmoOS that adds rounded corners to application windows, enhancing the visual aesthetics of the desktop environment.  
 
   **Dependencies:**  
-  - **Arch Linux:**  
+
+- **Arch Linux:**  
 
     ```bash  
     sudo pacman -S extra-cmake-modules qt5-base qt5-declarative kconfig5 kdecoration5 kguiaddons5 kcoreaddons5 kconfigwidgets5 kwindowsystem5 kwayland kwin  
     ```  
 
-  - **Ubuntu/Debian:**  
+- **Ubuntu/Debian:**  
 
     ```bash  
     sudo apt install extra-cmake-modules qtbase5-dev qtdeclarative5-dev kconfig5 kdecoration5 kguiaddons5 kcoreaddons5 kconfigwidgets5 kwindowsystem5 kwayland kwin  
@@ -247,13 +268,14 @@ The Kernel and System Services category forms the foundation of Lingmo OS, manag
   ```  
 
   **Load & Unload:**  
-  - To activate the effect:  
+
+- To activate the effect:  
 
     ```bash  
     sh ../tools/load.sh  
     ```  
 
-  - To uninstall the effect:  
+- To uninstall the effect:  
 
     ```bash  
     sh ../tools/unload.sh  
@@ -270,18 +292,19 @@ The Kernel and System Services category forms the foundation of Lingmo OS, manag
   This adds a desktop file to the autorun directory, ensuring the plugin is rebuilt and reinstalled if necessary.  
 
   **Tips:**  
-  - **Disable Conflicting Native Window Outline:**  
-    To avoid visual glitches with Breeze window decorations:  
-    - Go to `System settings -> Themes -> Window Decorations -> Breeze -> Edit icon -> Shadows and Outline tab -> Outline intensity (Off)`.  
 
-  - **Add Shadow to Windows Without Decoration (e.g., Steam):**  
+- **Disable Conflicting Native Window Outline:**  
+    To avoid visual glitches with Breeze window decorations:  
+  - Go to `System settings -> Themes -> Window Decorations -> Breeze -> Edit icon -> Shadows and Outline tab -> Outline intensity (Off)`.  
+
+- **Add Shadow to Windows Without Decoration (e.g., Steam):**  
     Use the following steps:  
     1. In `System settings -> Window management -> Window rules -> Appearance & Fixes`:  
        - Add `[steam]` and set `No titlebar` and frame to `No`.  
     2. In `System settings -> Application Style -> Window decoration -> Breeze theme setting -> Window specific overrides`:  
        - Add `[steam]` and set `Hide Window title bar` to `Yes`.  
 
-  - **Add Debug Messages:**  
+- **Add Debug Messages:**  
     For troubleshooting, enable debug logs during build:  
 
     ```bash  
@@ -304,9 +327,10 @@ The Kernel and System Services category forms the foundation of Lingmo OS, manag
   **License:**  
   lingmo-kwin-plugins-roundedwindow is licensed under the **GPLv3** license.
 
-- **lingmo-grub-config**  
-  - Path: `shell/BasicComponents/GrubBoot`  
-  - URL: [https://github.com/LingmoOS/lingmo-grub-config](https://github.com/LingmoOS/lingmo-grub-config)
+### **lingmo-grub-config**  
+
+- Path: `shell/BasicComponents/GrubBoot`  
+- URL: [https://github.com/LingmoOS/lingmo-grub-config](https://github.com/LingmoOS/lingmo-grub-config)
 
   **Description:**  
   This repository contains the configuration files and resources for customizing the GRUB bootloader in Lingmo OS. It includes themes, background images, and scripts to enhance the bootloader's appearance and functionality.
@@ -325,30 +349,32 @@ The Kernel and System Services category forms the foundation of Lingmo OS, manag
 **Introduction:**
 The User Interface category focuses on the visual and interactive elements that users engage with. It includes components such as docks, status bars, themes, and cursor designs. These elements contribute to the overall look and feel of the OS, enhancing user experience. Both developers looking to customize the interface and users seeking a visually appealing environment will find this section informative.
 
-- **lingmo-dock**  
-  - Path: `shell/BasicComponents/DockPanel`  
-  - Revision: `helium_dev`  
-  - URL: [https://github.com/LingmoOS/lingmo-dock](https://github.com/LingmoOS/lingmo-dock)  
+### **lingmo-dock**  
+
+- Path: `shell/BasicComponents/DockPanel`  
+- Revision: `helium_dev`  
+- URL: [https://github.com/LingmoOS/lingmo-dock](https://github.com/LingmoOS/lingmo-dock)  
 
   **Description:**  
   The LingmoOS application dock provides a sleek and functional panel for quick access to frequently used applications, enhancing the desktop experience with intuitive navigation.  
 
   **Dependencies:**  
-  - **Arch Linux:**  
+
+- **Arch Linux:**  
 
     ```bash  
     sudo pacman -S gcc cmake qt5-base qt5-quickcontrols2 kwindowsystem  
     ```  
 
-  - **Ubuntu/Debian:**  
+- **Ubuntu/Debian:**  
 
     ```bash  
     sudo apt install gcc cmake qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev libkf5windowsystem-dev  
     ```  
 
-  - **Additional Dependencies:**  
-    - LingmoUI  
-    - liblingmo  
+- **Additional Dependencies:**  
+  - LingmoUI  
+  - liblingmo  
 
   **Build Instructions:**  
 
@@ -363,16 +389,18 @@ The User Interface category focuses on the visual and interactive elements that 
   **License:**  
   lingmo-dock is licensed under the **GPLv3** license.
 
-- **lingmo-statusbar**  
-  - Path: `shell/BasicComponents/StatusBar`  
-  - Revision: `refs/tags/2.0.1`  
-  - URL: [https://github.com/LingmoOS/lingmo-statusbar](https://github.com/LingmoOS/lingmo-statusbar)  
+### **lingmo-statusbar**  
+
+- Path: `shell/BasicComponents/StatusBar`  
+- Revision: `refs/tags/2.0.1`  
+- URL: [https://github.com/LingmoOS/lingmo-statusbar](https://github.com/LingmoOS/lingmo-statusbar)  
 
   **Description:**  
   The status bar at the top of the LingmoOS desktop displays the current status of the system, including time, system tray, and other essential information. It provides a clean and intuitive interface for monitoring system activities.  
 
   **Dependencies:**  
-  - **Ubuntu/Debian:**  
+
+- **Ubuntu/Debian:**  
 
     ```bash  
     sudo apt install libkf5windowsystem-dev
@@ -391,9 +419,10 @@ The User Interface category focuses on the visual and interactive elements that 
   **License:**  
   lingmo-statusbar is licensed under the **GPLv3** license.
 
-- **lingmo-cursor-themes**  
-  - Path: `shell/BasicComponents/Cursor`  
-  - URL: [https://github.com/LingmoOS/lingmo-cursor-themes](https://github.com/LingmoOS/lingmo-cursor-themes)  
+### **lingmo-cursor-themes**  
+
+- Path: `shell/BasicComponents/Cursor`  
+- URL: [https://github.com/LingmoOS/lingmo-cursor-themes](https://github.com/LingmoOS/lingmo-cursor-themes)  
 
   **Description:**  
   A collection of cursor themes for LingmoOS, forked from the popular Bibata Cursor project. These themes provide a modern, customizable, and visually appealing cursor experience for users.  
@@ -411,17 +440,19 @@ The User Interface category focuses on the visual and interactive elements that 
   **License:**  
   lingmo-cursor-themes is licensed under the **GPLv3** license.
 
-- **lingmo-gtk-themes**  
-  - Path: `shell/BasicComponents/GtkStyle`  
-  - URL: [https://github.com/LingmoOS/lingmo-gtk-themes](https://github.com/LingmoOS/lingmo-gtk-themes)  
+### **lingmo-gtk-themes**  
+
+- Path: `shell/BasicComponents/GtkStyle`  
+- URL: [https://github.com/LingmoOS/lingmo-gtk-themes](https://github.com/LingmoOS/lingmo-gtk-themes)  
 
   **Description:**  
   A collection of GTK themes designed for LingmoOS, providing a consistent and visually appealing look across applications. These themes enhance the user interface by offering modern and customizable styling options.  
 
   **Dependencies:**  
-  - **Build Tools:**  
-    - `cmake`  
-    - `gcc`  
+
+- **Build Tools:**  
+  - `cmake`  
+  - `gcc`  
 
   **Build Instructions:**  
 
@@ -436,9 +467,10 @@ The User Interface category focuses on the visual and interactive elements that 
   **License:**  
   lingmo-gtk-themes is licensed under the **GPLv3** license.
   
-- **lingmo-wallpapers**  
-  - Path: `shell/BasicComponents/Wallpapers`  
-  - URL: [https://github.com/LingmoOS/lingmo-wallpapers](https://github.com/LingmoOS/lingmo-wallpapers)
+### **lingmo-wallpapers**  
+
+- Path: `shell/BasicComponents/Wallpapers`  
+- URL: [https://github.com/LingmoOS/lingmo-wallpapers](https://github.com/LingmoOS/lingmo-wallpapers)
 
   **Build:**  
 
@@ -453,22 +485,24 @@ The User Interface category focuses on the visual and interactive elements that 
   **License:**  
   lingmo-wallpapers is licensed under the [**Unsplash**](https://unsplash.com/license) license.
 
-- **lingmo-sddm-theme**  
-  - Path: `shell/BasicComponents/LoginManagerStyle`  
-  - Revision: `refs/tags/2.7.0`  
-  - URL: [https://github.com/LingmoOS/lingmo-sddm-theme](https://github.com/LingmoOS/lingmo-sddm-theme)  
+### **lingmo-sddm-theme**  
+
+- Path: `shell/BasicComponents/LoginManagerStyle`  
+- Revision: `refs/tags/2.7.0`  
+- URL: [https://github.com/LingmoOS/lingmo-sddm-theme](https://github.com/LingmoOS/lingmo-sddm-theme)  
 
   **Description:**  
   A modern and visually appealing SDDM (Simple Desktop Display Manager) theme designed specifically for LingmoOS, providing a seamless and elegant login experience.  
 
   **Dependencies:**  
-  - **Ubuntu/Debian:**  
+
+- **Ubuntu/Debian:**  
 
     ```bash  
     sudo apt install build-essential cmake extra-cmake-modules qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev qttools5-dev qttools5-dev-tools  
     ```  
 
-  - **Arch Linux:**  
+- **Arch Linux:**  
 
     ```bash  
     sudo pacman -S base-devel cmake extra-cmake-modules qt5-base qt5-declarative qt5-quickcontrols2 qt5-tools  
@@ -487,9 +521,10 @@ The User Interface category focuses on the visual and interactive elements that 
   **License:**  
   lingmo-sddm-theme is licensed under the **GPLv3** license.
 
-- **lingmo-systemicons**  
-  - Path: `shell/BasicComponents/Icons`  
-  - URL: [https://github.com/LingmoOS/lingmo-systemicons](https://github.com/LingmoOS/lingmo-systemicons)
+### **lingmo-systemicons**  
+
+- Path: `shell/BasicComponents/Icons`  
+- URL: [https://github.com/LingmoOS/lingmo-systemicons](https://github.com/LingmoOS/lingmo-systemicons)
 
   **Description:**  
   A collection of icon themes for Lingmo OS, including Crule and Crule-dark themes, designed to provide a consistent and aesthetically pleasing user interface.
@@ -508,22 +543,24 @@ The User Interface category focuses on the visual and interactive elements that 
 **Introduction:**
 User Applications are the tools that users interact with daily, providing essential functionalities like file management, text editing, and system settings. This category includes applications such as calculators, file managers, terminals, and more. It is designed to meet the everyday needs of users, while also offering developers insights into how these applications are built and integrated into Lingmo OS.
 
-- **lingmo-calculator**  
-  - Path: `shell/BasicComponents/Calculator`  
-  - Revision: `refs/tags/0.6.3`  
-  - URL: [https://github.com/LingmoOS/lingmo-calculator](https://github.com/LingmoOS/lingmo-calculator)  
+### **lingmo-calculator**  
+
+- Path: `shell/BasicComponents/Calculator`  
+- Revision: `refs/tags/0.6.3`  
+- URL: [https://github.com/LingmoOS/lingmo-calculator](https://github.com/LingmoOS/lingmo-calculator)  
 
   **Description:**  
   A simple and intuitive calculator application for LingmoOS, designed for basic arithmetic operations with a clean and user-friendly interface.  
 
   **Dependencies:**  
-  - **Ubuntu/Debian:**  
+
+- **Ubuntu/Debian:**  
 
     ```bash  
     sudo apt install cmake gcc qtbase5-dev qtdeclarative5-dev qml-module-qtquick2 qml-module-qtquick-controls2  
     ```  
 
-  - **Arch Linux:**  
+- **Arch Linux:**  
 
     ```bash  
     sudo pacman -S cmake gcc qt5-base qt5-declarative qt5-quickcontrols2  
@@ -542,29 +579,31 @@ User Applications are the tools that users interact with daily, providing essent
   **License:**  
   lingmo-calculator is licensed under the **GPLv3** license.
 
-- [**lingmo-filemanager**](lingmo-filemanager.md)
-  - Path: `shell/CoreComponents/Filemanager`
-  - Revision: `dev`
-  - URL: [https://github.com/LingmoOS/lingmo-filemanager](https://github.com/LingmoOS/lingmo-filemanager)
+### [**lingmo-filemanager**](lingmo-filemanager.md)
+
+- Path: `shell/CoreComponents/Filemanager`
+- Revision: `dev`
+- URL: [https://github.com/LingmoOS/lingmo-filemanager](https://github.com/LingmoOS/lingmo-filemanager)
   
   **Description:**  
   Lingmo File Manager is a simple, beautiful file manager that retains the classic PC interactive design, offering a familiar and intuitive experience for users.
 
   **Dependencies:**  
-  - **Ubuntu:**
+
+- **Ubuntu:**
 
     ```bash
     sudo apt install equivs curl git devscripts lintian build-essential automake autotools-dev --no-install-recommends
     sudo mk-build-deps -i -t "apt-get --yes" -r
     ```
 
-  - **Debian:**
+- **Debian:**
 
     ```bash
     sudo apt install build-essential cmake extra-cmake-modules libkf5kio-dev libkf5solid-dev libkf5windowsystem-dev libkf5config-dev qtbase5-dev qtbase5-private-dev qtdeclarative5-dev qtquickcontrols2-5-dev qttools5-dev qttools5-dev-tools
     ```
 
-  - **ArchLinux:**
+- **ArchLinux:**
 
     ```bash
     sudo pacman -S extra-cmake-modules qt5-base qt5-quickcontrols2 taglib kio
@@ -581,27 +620,30 @@ User Applications are the tools that users interact with daily, providing essent
   ```
   
   **Notes:**  
-  - The 'mk-build-deps' command might require the 'devscripts' package.
+
+- The 'mk-build-deps' command might require the 'devscripts' package.
 
   **License:**  
   lingmo-filemanager is licensed under the **GPLv3** license.
 
-- **lingmo-settings**  
-  - Path: `shell/BasicComponents/Settings`  
-  - Revision: `helium`  
-  - URL: [https://github.com/LingmoOS/lingmo-settings](https://github.com/LingmoOS/lingmo-settings)  
+### **lingmo-settings**  
+
+- Path: `shell/BasicComponents/Settings`  
+- Revision: `helium`  
+- URL: [https://github.com/LingmoOS/lingmo-settings](https://github.com/LingmoOS/lingmo-settings)  
 
   **Description:**  
   The system settings application for LingmoOS, providing a centralized interface for configuring system preferences. It utilizes LingmoUI as the interface style, offering a modern and user-friendly experience.  
 
   **Dependencies:**  
-  - **Arch/Manjaro:**  
+
+- **Arch/Manjaro:**  
 
     ```bash  
     sudo pacman -S extra-cmake-modules qt5-base qt5-quickcontrols2 freetype2 fontconfig networkmanager-qt modemmanager-qt  
     ```  
 
-  - **Debian/Ubuntu:**  
+- **Debian/Ubuntu:**  
 
     ```bash  
     sudo apt install cmake debhelper extra-cmake-modules libicu-dev libcrypt-dev libfreetype6-dev libfontconfig1-dev libkf5networkmanagerqt-dev libkf5config-dev modemmanager-qt-dev qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev qttools5-dev qttools5-dev-tools qml-module-qtquick-controls2 qml-module-qtquick2 qml-module-qtquick-layouts qml-module-qt-labs-platform qml-module-qt-labs-settings qml-module-qtqml qml-module-qtquick-window2 qml-module-qtquick-shapes qml-module-qtquick-dialogs qml-module-qtquick-particles2  
@@ -620,18 +662,21 @@ User Applications are the tools that users interact with daily, providing essent
   **License:**  
   lingmo-settings is licensed under the **GPLv3** license.
 
-- [**lingmo-terminal**](lingmo-terminal.md)
-  - Path: `shell/BasicComponents/Terminal`  
-  - URL: [https://github.com/LingmoOS/lingmo-terminal](https://github.com/LingmoOS/lingmo-terminal)  
+### [**lingmo-terminal**](lingmo-terminal.md)
+
+- Path: `shell/BasicComponents/Terminal`  
+- URL: [https://github.com/LingmoOS/lingmo-terminal](https://github.com/LingmoOS/lingmo-terminal)  
 
   **Description:**  
   A terminal emulator for LingmoOS, using LingmoUI as the interface style to provide a modern and user-friendly terminal experience.  
 
   **Third-Party Code:**  
-  - [**qmltermwidget**](https://github.com/Swordfish90/qmltermwidget)
+
+- [**qmltermwidget**](https://github.com/Swordfish90/qmltermwidget)
 
   **Dependencies:**  
-  - **Debian/Ubuntu:**  
+
+- **Debian/Ubuntu:**  
 
     ```bash  
     sudo apt install extra-cmake-modules qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev qttools5-dev  
@@ -650,15 +695,17 @@ User Applications are the tools that users interact with daily, providing essent
   **License:**  
   lingmo-terminal is licensed under the **GPLv3** license.
 
-- **lingmo-texteditor**  
-  - Path: `shell/BasicComponents/Texteditor`  
-  - URL: [https://github.com/LingmoOS/lingmo-texteditor](https://github.com/LingmoOS/lingmo-texteditor)  
+### **lingmo-texteditor**  
+
+- Path: `shell/BasicComponents/Texteditor`  
+- URL: [https://github.com/LingmoOS/lingmo-texteditor](https://github.com/LingmoOS/lingmo-texteditor)  
 
   **Description:**  
   An elegant and lightweight text editor for LingmoOS, designed for simplicity and ease of use while providing essential text editing features.  
 
   **Dependencies:**  
-  - **Debian/Ubuntu:**  
+
+- **Debian/Ubuntu:**  
 
     ```bash  
     sudo apt install equivs curl git devscripts lintian build-essential automake autotools-dev --no-install-recommends
@@ -677,15 +724,17 @@ User Applications are the tools that users interact with daily, providing essent
   **License:**  
   lingmo-texteditor is licensed under the **GPLv3** license.
 
-- **lingmo-updator**  
-  - Path: `shell/BasicComponents/UpdateTool`  
-  - URL: [https://github.com/LingmoOS/lingmo-updator](https://github.com/LingmoOS/lingmo-updator)  
+### **lingmo-updator**  
+
+- Path: `shell/BasicComponents/UpdateTool`  
+- URL: [https://github.com/LingmoOS/lingmo-updator](https://github.com/LingmoOS/lingmo-updator)  
 
   **Description:**  
   The official system update tool for LingmoOS, designed to provide a seamless and user-friendly experience for managing system updates.  
 
   **Dependencies:**  
-  - **Debian/Ubuntu:**  
+
+- **Debian/Ubuntu:**  
 
     ```bash  
     sudo apt install cmake libqapt-dev
@@ -704,18 +753,21 @@ User Applications are the tools that users interact with daily, providing essent
   **License:**  
   lingmo-updator is licensed under the **GPLv3** license.
 
-- **lingmo-videoplayer**  
-  - Path: `shell/BasicComponents/VideoPlayer`  
-  - URL: [https://github.com/LingmoOS/lingmo-videoplayer](https://github.com/LingmoOS/lingmo-videoplayer)  
+### **lingmo-videoplayer**  
+
+- Path: `shell/BasicComponents/VideoPlayer`  
+- URL: [https://github.com/LingmoOS/lingmo-videoplayer](https://github.com/LingmoOS/lingmo-videoplayer)  
 
   **Description:**  
   An open-source video player for LingmoOS, built using Qt/QML and libmpv, providing a smooth and feature-rich video playback experience.  
 
   **Third-Party Code:**  
-  - [**haruna:**](https://invent.kde.org/multimedia/haruna)
+
+- [**haruna:**](https://invent.kde.org/multimedia/haruna)
 
   **Dependencies:**  
-  - **Debian/Ubuntu:**  
+
+- **Debian/Ubuntu:**  
 
     ```bash  
     sudo apt install extra-cmake-modules qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev libmpv-dev
@@ -734,21 +786,23 @@ User Applications are the tools that users interact with daily, providing essent
   **License:**  
   lingmo-videoplayer is licensed under the **GPLv3** license.
 
-- **lingmo-launcher**  
-  - Path: `shell/BasicComponents/Launcher`  
-  - URL: [https://github.com/LingmoOS/lingmo-launcher](https://github.com/LingmoOS/lingmo-launcher)  
+### **lingmo-launcher**  
+
+- Path: `shell/BasicComponents/Launcher`  
+- URL: [https://github.com/LingmoOS/lingmo-launcher](https://github.com/LingmoOS/lingmo-launcher)  
 
   **Description:**  
   A full-screen application launcher for LingmoOS, designed to provide quick and intuitive access to installed applications, enhancing productivity and user experience.  
 
   **Dependencies:**  
-  - **Arch Linux/Manjaro:**  
+
+- **Arch Linux/Manjaro:**  
 
     ```bash  
     sudo pacman -S gcc cmake qt5-base qt5-quickcontrols2 kwindowsystem  
     ```  
 
-  - **Debian/Ubuntu:**  
+- **Debian/Ubuntu:**  
 
     ```bash  
     sudo apt install gcc cmake qtbase5-dev qml-module-qtquick-controls2 qml-module-org-kde-kwindowsystem qtdeclarative5-dev qtquickcontrols2-5-dev qttools5-dev libkf5windowsystem-dev  
@@ -767,24 +821,27 @@ User Applications are the tools that users interact with daily, providing essent
   **License:**  
   lingmo-launcher is licensed under the **GPLv3** license.
 
-- **lingmo-screenlocker**  
-  - Path: `shell/BasicComponents/ScreenLocker`  
-  - URL: [https://github.com/LingmoOS/lingmo-screenlocker](https://github.com/LingmoOS/lingmo-screenlocker)  
+### **lingmo-screenlocker**  
+
+- Path: `shell/BasicComponents/ScreenLocker`  
+- URL: [https://github.com/LingmoOS/lingmo-screenlocker](https://github.com/LingmoOS/lingmo-screenlocker)  
 
   **Description:**  
   A screen locker for LingmoOS, designed to secure the system by locking the screen when inactive. It integrates with the system's authentication mechanisms and provides a seamless locking experience.  
 
   **Third-Party Code:**  
-  - **kcheckpass:** Used for authentication.  
+
+- **kcheckpass:** Used for authentication.  
 
   **Dependencies:**  
-  - **Debian/Ubuntu:**  
+
+- **Debian/Ubuntu:**  
 
     ```bash  
     sudo apt install libpam0g-dev libx11-dev cmake extra-cmake-modules qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev  
     ```  
 
-  - **Arch Linux:**  
+- **Arch Linux:**  
 
     ```bash  
     sudo pacman -S pam libx11 extra-cmake-modules qt5-base qt5-declarative qt5-quickcontrols2  
@@ -808,22 +865,24 @@ User Applications are the tools that users interact with daily, providing essent
 **Introduction:**
 Development Libraries are the building blocks for developers, offering essential functions, styles, and tools to create applications that seamlessly integrate with Lingmo OS. Libraries like lib_lingmo, LingmoUI, and others simplify the development process, ensuring consistency and ease of use across applications. This section is a must-read for developers aiming to create high-quality, integrated software.
 
-- **lib_lingmo**  
-  - Path: `lib/SystemLibrary`  
-  - Revision: `qt5`  
-  - URL: [https://github.com/LingmoOS/lib_lingmo](https://github.com/LingmoOS/lib_lingmo)  
+### **lib_lingmo**  
+
+- Path: `lib/SystemLibrary`  
+- Revision: `qt5`  
+- URL: [https://github.com/LingmoOS/lib_lingmo](https://github.com/LingmoOS/lib_lingmo)  
 
   **Description:**  
   A core system library for LingmoOS, providing essential functionalities and integrations for system management.  
 
   **Dependencies:**  
-  - **Arch Linux:**  
+
+- **Arch Linux:**  
 
     ```bash  
     sudo pacman -S gcc cmake qt5-base qt5-quickcontrols2 networkmanager-qt modemmanager-qt
     ```  
 
-  - **Debian/Ubuntu:**  
+- **Debian/Ubuntu:**  
 
     ```bash  
     sudo apt install qtbase5-dev qtquickcontrols2-5-dev modemmanager-qt-dev libqt5sensors5-dev libkf5networkmanagerqt-dev libkf5screen-dev libkf5bluezqt-dev libkf5kio-dev cmake qtdeclarative5-dev libcanberra-dev libpulse-dev libcanberra-pulse extra-cmake-modules qttools5-dev qttools5-dev-tools
@@ -842,28 +901,32 @@ Development Libraries are the building blocks for developers, offering essential
   **License:**  
   lib_lingmo is licensed under the **GPLv3** license.
 
-- **LingmoUI**  
-  - Path: `lib/SystemUI_Library`  
-  - Revision: `refs/tags/2.3.0`  
-  - URL: [https://github.com/LingmoOS/LingmoUI](https://github.com/LingmoOS/LingmoUI)  
+### **LingmoUI**  
+
+- Path: `lib/SystemUI_Library`  
+- Revision: `refs/tags/2.3.0`  
+- URL: [https://github.com/LingmoOS/LingmoUI](https://github.com/LingmoOS/LingmoUI)  
 
   **Description:**  
   LingmoUI is a GUI library based on QQC (Qt Quick Controls) and Qt 6, providing a unified and modern user interface for all LingmoOS applications. It includes features like light and dark mode, borderless windows, blurred windows, window shadows, and desktop-level menus.  
 
   **Features:**  
-  - Light and Dark Mode  
-  - Borderless window (Wayland & XCB Window move & resize)  
-  - Blurred window  
-  - Window shadow  
-  - Desktop-level menu  
-  - QQC Style  
-  - ...  
+
+- Light and Dark Mode  
+- Borderless window (Wayland & XCB Window move & resize)  
+- Blurred window  
+- Window shadow  
+- Desktop-level menu  
+- QQC Style  
+- ...  
 
   **Structures:**  
-  - **Compatible:** This folder stores the old version of LingmoUI 1.0 (will be removed in the future).  
+
+- **Compatible:** This folder stores the old version of LingmoUI 1.0 (will be removed in the future).  
 
   **Dependencies:**  
-  - **Debian/Ubuntu:** (Outdated, needs update here)
+
+- **Debian/Ubuntu:** (Outdated, needs update here)
 
     ```bash  
     sudo apt install libqt5x11extras5-dev libkf5windowsystem-dev qtbase5-private-dev libxcb1-dev libxcb-shape0-dev libxcb-icccm4-dev -y
@@ -880,14 +943,15 @@ Development Libraries are the building blocks for developers, offering essential
   ```  
 
   **Packaging (Debian/Ubuntu):**  
-  - Install compile dependencies:  
+
+- Install compile dependencies:  
 
     ```bash  
     sudo apt install equivs devscripts --no-install-recommends  
     sudo mk-build-deps -i -t "apt --yes" -r  
     ```  
 
-  - Start packaging:  
+- Start packaging:  
 
     ```bash  
     dpkg-buildpackage -b -uc -us -tc  
@@ -896,15 +960,17 @@ Development Libraries are the building blocks for developers, offering essential
   **License:**  
   LingmoUI is licensed under the **GPLv3** license.
 
-- **lingmo-qt-plugins**  
-  - Path: `lib/SystemLibrary_Qt`  
-  - URL: [https://github.com/LingmoOS/lingmo-qt-plugins](https://github.com/LingmoOS/lingmo-qt-plugins)  
+### **lingmo-qt-plugins**  
+
+- Path: `lib/SystemLibrary_Qt`  
+- URL: [https://github.com/LingmoOS/lingmo-qt-plugins](https://github.com/LingmoOS/lingmo-qt-plugins)  
 
   **Description:**  
   A collection of Qt plugins designed to unify the style and behavior of Qt applications on LingmoOS, ensuring a consistent and seamless user experience across the system.  
 
   **Dependencies:**  
-  - **Arch Linux:**  
+
+- **Arch Linux:**  
 
     ```bash  
     sudo pacman -S gcc extra-cmake-modules qt5-base qt5-tools qt5-x11extras libqtxdg libdbusmenu-qt5 libxcb
@@ -923,30 +989,33 @@ Development Libraries are the building blocks for developers, offering essential
   **License:**  
   lingmo-qt-plugins is licensed under the **GPLv3** license.
 
-- **libqtxdg**  
-  - Path: `lib/SystemLibrary_QtXdg`  
-  - Remote: nebula  
-  - URL: [https://nebula.lingmo.org/lingmo-os/libqtxdg](https://nebula.lingmo.org/lingmo-os/libqtxdg)  
+### **libqtxdg**  
+
+- Path: `lib/SystemLibrary_QtXdg`  
+- Remote: nebula  
+- URL: [https://nebula.lingmo.org/lingmo-os/libqtxdg](https://nebula.lingmo.org/lingmo-os/libqtxdg)  
 
   **Description:**  
   libqtxdg is a Qt 5 implementation of freedesktop.org XDG specifications. It is maintained by the LXQt project and is used by nearly all LXQt components. However, it can also be used independently of the LXQt desktop environment. The library supports GTK+ icon theme caches for faster icon lookup, with fallback to normal lookup if the cache is missing or outdated.  
 
   **Installation:**  
-  - **Runtime Dependencies:**  
-    - `qtbase`  
-    - (Optional) `gtk-update-icon-cache` for faster icon lookup.  
 
-  - **Build Dependencies:**  
-    - `CMake`  
-    - `qtsvg`  
-    - `qttools`  
-    - `lxqt-build-tools`  
-    - (Optional) `Git` for pulling the latest VCS checkouts.  
+- **Runtime Dependencies:**  
+  - `qtbase`  
+  - (Optional) `gtk-update-icon-cache` for faster icon lookup.  
+
+- **Build Dependencies:**  
+  - `CMake`  
+  - `qtsvg`  
+  - `qttools`  
+  - `lxqt-build-tools`  
+  - (Optional) `Git` for pulling the latest VCS checkouts.  
 
   **Build Instructions:**  
-  - Configure the build using CMake. Specific CMake variables include:  
-    - `BUILD_TESTS`: Enable building tests (default: `OFF`).  
-    - `BUILD_DEV_UTILS`: Enable building and installing development utilities (default: `OFF`).  
+
+- Configure the build using CMake. Specific CMake variables include:  
+  - `BUILD_TESTS`: Enable building tests (default: `OFF`).  
+  - `BUILD_DEV_UTILS`: Enable building and installing development utilities (default: `OFF`).  
 
   ```bash  
   mkdir build  
@@ -967,15 +1036,17 @@ Development Libraries are the building blocks for developers, offering essential
 **Introduction:**
 System Tools encompass utilities that aid in managing and maintaining Lingmo OS. This includes setup tools, screenlockers, and other system-wide utilities. Whether you're a power user looking to tweak system settings or a developer automating tasks, this category provides the necessary tools to enhance your experience with Lingmo OS.
 
-- **lingmo-first-setup**  
-  - Path: `guide`  
-  - URL: [https://github.com/LingmoOS/lingmo-first-setup](https://github.com/LingmoOS/lingmo-first-setup)
+### **lingmo-first-setup**  
+
+- Path: `guide`  
+- URL: [https://github.com/LingmoOS/lingmo-first-setup](https://github.com/LingmoOS/lingmo-first-setup)
 
   **Description:**  
   An application designed to guide users through the initial setup and configuration of Lingmo OS, including user account creation and system customization.
 
   **Dependencies:**  
-  - **Ubuntu/Debian:**  
+
+- **Ubuntu/Debian:**  
 
     ```bash  
     sudo apt install cmake libqapt-dev qtbase5-dev qtdeclarative5-dev qml-module-qtwebview qtquickcontrols2-5-dev qttools5-dev qttools5-dev-tools debhelper
@@ -994,22 +1065,24 @@ System Tools encompass utilities that aid in managing and maintaining Lingmo OS.
   **License:**  
   lingmo-first-setup is licensed under the **GPLv3** license.
 
-- **lingmo-ocr**  
-  - Path: `shell/BasicComponents/OCRServer`  
-  - Revision: `refs/tags/v1.2.4`  
-  - URL: [https://github.com/LingmoOS/lingmo-ocr](https://github.com/LingmoOS/lingmo-ocr)  
+### **lingmo-ocr**  
+
+- Path: `shell/BasicComponents/OCRServer`  
+- Revision: `refs/tags/v1.2.4`  
+- URL: [https://github.com/LingmoOS/lingmo-ocr](https://github.com/LingmoOS/lingmo-ocr)  
 
   **Description:**  
   An OCR (Optical Character Recognition) server developed for LingmoOS, designed to accurately recognize text from images and support multiple languages.
 
   **Dependencies:**  
-  - **Ubuntu/Debian:**  
+
+- **Ubuntu/Debian:**  
 
     ```bash  
     sudo apt install equivs curl git devscripts lintian build-essential automake autotools-dev cmake g++  
     ```  
 
-  - **Arch Linux:**  
+- **Arch Linux:**  
 
     ```bash  
     sudo pacman -S base-devel cmake  
@@ -1028,21 +1101,23 @@ System Tools encompass utilities that aid in managing and maintaining Lingmo OS.
   **License:**  
   lingmo-ocr is licensed under the **GPLv3** license.
 
-- **lingmo-screenshots**  
-  - Path: `shell/BasicComponents/ScreenShots`  
-  - URL: [https://github.com/LingmoOS/lingmo-screenshots](https://github.com/LingmoOS/lingmo-screenshots)  
+### **lingmo-screenshots**  
+
+- Path: `shell/BasicComponents/ScreenShots`  
+- URL: [https://github.com/LingmoOS/lingmo-screenshots](https://github.com/LingmoOS/lingmo-screenshots)  
 
   **Description:**  
   A screenshot tool for LingmoOS, designed to capture and save screen images with ease. It provides a simple and intuitive interface for taking full-screen, window, or region-based screenshots.  
 
   **Dependencies:**  
-  - **Arch/Manjaro:**  
+
+- **Arch/Manjaro:**  
 
     ```bash  
     sudo pacman -S extra-cmake-modules qt5-base qt5-quickcontrols2  
     ```  
 
-  - **Debian/Ubuntu:**  
+- **Debian/Ubuntu:**  
 
     ```bash  
     sudo apt install cmake qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev qttools5-dev qttools5-dev-tools qml-module-qtquick-controls2 qml-module-qtquick2 qml-module-qtquick-layouts qml-module-qt-labs-platform qml-module-qt-labs-settings qml-module-qtqml qml-module-qtquick-window2 qml-module-qtquick-shapes qml-module-qtquick-dialogs qml-module-qtquick-particles2  
@@ -1066,18 +1141,20 @@ System Tools encompass utilities that aid in managing and maintaining Lingmo OS.
 **Introduction:**
 The Build and Configuration category is dedicated to developers who want to compile and customize Lingmo OS from source. It includes build scripts, manifests, and configuration files that allow for tailored OS deployments. This section is essential for those who need flexibility in setting up their development environment or customizing the OS to specific requirements.
 
-- **LingmoOS**  
-  - Path: `build`  
-  - URL: [https://github.com/LingmoOS/LingmoOS](https://github.com/LingmoOS/LingmoOS)
+### **LingmoOS**  
+
+- Path: `build`  
+- URL: [https://github.com/LingmoOS/LingmoOS](https://github.com/LingmoOS/LingmoOS)
 
   **Description:**  
   This repository contains the build configuration and scripts for Lingmo OS. It utilizes the `repo` tool to manage multiple submodules and dependencies.
 
   **Build Requirements:**  
-  - **Operating System:** Debian GNU/Linux 12 (Bookworm), 13 (Trixie), or later
-  - **Disk Space:** > 50GB
-  - **Processor:** Multi-core multi-threaded
-  - **Memory:** Minimum 8GB RAM
+
+- **Operating System:** Debian GNU/Linux 12 (Bookworm), 13 (Trixie), or later
+- **Disk Space:** > 50GB
+- **Processor:** Multi-core multi-threaded
+- **Memory:** Minimum 8GB RAM
 
   **Tool Preparation:**
 
@@ -1123,19 +1200,20 @@ The Build and Configuration category is dedicated to developers who want to comp
 
   **Dependencies:**
 
-  - **Build Tools:**
-    - `git`
-    - `python3` (for repo)
+- **Build Tools:**
+  - `git`
+  - `python3` (for repo)
 
-  - **Install Dependencies:**
+- **Install Dependencies:**
 
     ```bash
     sudo apt install git python3
     ```
 
-- **manifest**  
-  - Path: `tools`  
-  - URL: [https://github.com/LingmoOS/manifest](https://github.com/LingmoOS/manifest)
+### **manifest**  
+
+- Path: `tools`  
+- URL: [https://github.com/LingmoOS/manifest](https://github.com/LingmoOS/manifest)
 
   **Description:**  
   This repository contains the manifest files used by the `repo` tool to manage multiple submodules and dependencies for Lingmo OS. It defines the structure and versions of the repositories required to build Lingmo OS.
@@ -1145,18 +1223,21 @@ The Build and Configuration category is dedicated to developers who want to comp
   Refer to the `Tools/LingmoOS/Initialize and Sync the Repo` for more information.
 
   **Notes:**
-  - The manifest is essential for setting up the build environment for Lingmo OS.
-  - It ensures that all necessary components are fetched and synchronized correctly before the build process begins.
 
-- **lingmo-base-common**  
-  - Path: `init`  
-  - URL: [https://github.com/LingmoOS/lingmo-base-common](https://github.com/LingmoOS/lingmo-base-common)
+- The manifest is essential for setting up the build environment for Lingmo OS.
+- It ensures that all necessary components are fetched and synchronized correctly before the build process begins.
+
+### **lingmo-base-common**  
+
+- Path: `init`  
+- URL: [https://github.com/LingmoOS/lingmo-base-common](https://github.com/LingmoOS/lingmo-base-common)
 
   **Description:**  
   This package contains the basic filesystem hierarchy and miscellaneous files for Lingmo OS. It includes essential configuration files and directories necessary for the proper functioning of the operating system.  
 
   **Dependencies:**  
-  - **Debian/Ubuntu:**  
+
+- **Debian/Ubuntu:**  
 
     ```bash  
     sudo apt install debhelper-compat debhelper dpkg-dev
@@ -1168,16 +1249,18 @@ The Build and Configuration category is dedicated to developers who want to comp
   dpkg-buildpackage -us -uc
   ```  
 
-- **lingmo-live**  
-  - Path: `system/installer`  
-  - Revision: `helium`  
-  - URL: [https://github.com/LingmoOS/lingmo-live](https://github.com/LingmoOS/lingmo-live)  
+### **lingmo-live**  
+
+- Path: `system/installer`  
+- Revision: `helium`  
+- URL: [https://github.com/LingmoOS/lingmo-live](https://github.com/LingmoOS/lingmo-live)  
 
   **Description:**  
   A repository containing configurations and settings for the Lingmo OS live image, including Calamares installer configurations to streamline the installation process.
 
   **Dependencies:**  
-  - **Debian/Ubuntu:**  
+
+- **Debian/Ubuntu:**  
 
     ```bash  
     sudo apt install build-essential debhelper dpkg-dev
