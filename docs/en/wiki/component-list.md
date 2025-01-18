@@ -9,99 +9,25 @@ To optimize the category organization for the Lingmo OS documentation, we propos
 **Introduction:**
 The Kernel and System Services category forms the foundation of Lingmo OS, managing hardware interactions and providing essential services. This includes components like the Linux kernel, core system services, and background processes (daemons) that ensure the OS runs smoothly. Developers interested in low-level operations, system performance, and core functionality enhancements will find this section crucial.
 
-   - **linux** (kernel)
-   - **lingmo-core**
-   - **lingmo-daemon**
-   - **lingmo-appmotor**
-   - **lingmo-sddm-theme** (if considered a system service)
+- **linux**  
+  - Path: `kernel`  
+  - URL: [https://github.com/LingmoOS/linux](https://github.com/LingmoOS/linux)  
 
-## User Interface
-
-**Introduction:**
-The User Interface category focuses on the visual and interactive elements that users engage with. It includes components such as docks, status bars, themes, and cursor designs. These elements contribute to the overall look and feel of the OS, enhancing user experience. Both developers looking to customize the interface and users seeking a visually appealing environment will find this section informative.
-
-   - **lingmo-dock**
-   - **lingmo-statusbar**
-   - **lingmo-cursor-themes**
-   - **lingmo-gtk-themes**
-   - **lingmo-wallpapers**
-
-## User Applications
-
-**Introduction:**
-User Applications are the tools that users interact with daily, providing essential functionalities like file management, text editing, and system settings. This category includes applications such as calculators, file managers, terminals, and more. It is designed to meet the everyday needs of users, while also offering developers insights into how these applications are built and integrated into Lingmo OS.
-
-   - **lingmo-calculator**
-   - **lingmo-filemanager**
-   - **lingmo-settings**
-   - **lingmo-terminal**
-   - **lingmo-texteditor**
-   - **lingmo-updator**
-   - **lingmo-videoplayer**
-   - **lingmo-launcher**
-   - **lingmo-screenlocker**
-
-## Development Libraries
-
-**Introduction:**
-Development Libraries are the building blocks for developers, offering essential functions, styles, and tools to create applications that seamlessly integrate with Lingmo OS. Libraries like lib_lingmo, LingmoUI, and others simplify the development process, ensuring consistency and ease of use across applications. This section is a must-read for developers aiming to create high-quality, integrated software.
-
-   - **lib_lingmo**
-   - **LingmoUI**
-   - **lingmo-qt-plugins**
-   - **libqtxdg**
-
-## System Tools
-
-**Introduction:**
-System Tools encompass utilities that aid in managing and maintaining Lingmo OS. This includes setup tools, screenlockers, and other system-wide utilities. Whether you're a power user looking to tweak system settings or a developer automating tasks, this category provides the necessary tools to enhance your experience with Lingmo OS.
-
-   - **lingmo-first-setup**
-   - **lingmo-ocr**
-   - **lingmo-screenshots** (if tool-related)
-
-## Build and Configuration
-
-**Introduction:**
-The Build and Configuration category is dedicated to developers who want to compile and customize Lingmo OS from source. It includes build scripts, manifests, and configuration files that allow for tailored OS deployments. This section is essential for those who need flexibility in setting up their development environment or customizing the OS to specific requirements.
-
-   - **LingmoOS** (build configuration)
-   - **manifest**
-   - **lingmo-base-common**
-   - **lingmo-live**
-
-## Core Components
-
-- **lingmo-appmotor**
-  - Path: `shell/CoreComponents/Appmotor`
-  - URL: [https://github.com/LingmoOS/lingmo-appmotor](https://github.com/LingmoOS/lingmo-appmotor)
-  
   **Description:**  
-  Enhances application launch speed in Lingmo OS by preloading libraries and caching resources using a daemon (applauncherd). It improves performance by enabling shared resources among applications.
-  
-  **Dependencies:**  
-  For Debian/Ubuntu:
+  The Linux kernel is the core of the LingmoOS operating system, responsible for managing system resources, hardware communication, and providing essential services for applications.  
 
-  ```bash
-  sudo apt install cmake qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev libsystemd-dev libcap-dev libdbus-1-dev
-  ```
-  
-  **Build Instructions:**  
-
-  ```bash
-  mkdir build
-  cd build
-  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
-  make
-  sudo make install
-  ```
-  
-  **Note:**  
-  Applications must be compiled as position-independent executables (PIE) or shared libraries with an exported `main()` function.
+  **Documentation:**  
+  - The formatted documentation can be read online at:  
+    [https://www.kernel.org/doc/html/latest/](https://www.kernel.org/doc/html/latest/)  
 
   **License:**  
-  lingmo-appmotor is licensed under the **LGPL-2.1** license.
+  The Linux Kernel is provided under:  
+  - **SPDX-License-Identifier:** `GPL-2.0 WITH Linux-syscall-note`  
+  - The kernel is licensed under the terms of the GNU General Public License version 2 (`GPL-2.0`), with an explicit syscall exception as stated in `LICENSES/exceptions/Linux-syscall-note`.  
 
+  **Notes:**  
+  - For build instructions, please refer to the official documentation.
+  
 - **lingmo-core**
   - Path: `shell/CoreComponents/CoreServer`
   - Revision: `refs/tags/2.0.2`
@@ -177,6 +103,100 @@ The Build and Configuration category is dedicated to developers who want to comp
 
   **License:**  
   lingmo-daemon is licensed under the **GPLv3** license.
+
+- **lingmo-appmotor**
+  - Path: `shell/CoreComponents/Appmotor`
+  - URL: [https://github.com/LingmoOS/lingmo-appmotor](https://github.com/LingmoOS/lingmo-appmotor)
+  
+  **Description:**  
+  Enhances application launch speed in Lingmo OS by preloading libraries and caching resources using a daemon (applauncherd). It improves performance by enabling shared resources among applications.
+  
+  **Dependencies:**  
+  For Debian/Ubuntu:
+
+  ```bash
+  sudo apt install cmake qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev libsystemd-dev libcap-dev libdbus-1-dev
+  ```
+  
+  **Build Instructions:**  
+
+  ```bash
+  mkdir build
+  cd build
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
+  make
+  sudo make install
+  ```
+  
+  **Note:**  
+  Applications must be compiled as position-independent executables (PIE) or shared libraries with an exported `main()` function.
+
+  **License:**  
+  lingmo-appmotor is licensed under the **LGPL-2.1** license.
+
+## User Interface
+
+**Introduction:**
+The User Interface category focuses on the visual and interactive elements that users engage with. It includes components such as docks, status bars, themes, and cursor designs. These elements contribute to the overall look and feel of the OS, enhancing user experience. Both developers looking to customize the interface and users seeking a visually appealing environment will find this section informative.
+
+   - **lingmo-dock**
+   - **lingmo-statusbar**
+   - **lingmo-cursor-themes**
+   - **lingmo-gtk-themes**
+   - **lingmo-wallpapers**
+   - **lingmo-sddm-theme**
+
+## User Applications
+
+**Introduction:**
+User Applications are the tools that users interact with daily, providing essential functionalities like file management, text editing, and system settings. This category includes applications such as calculators, file managers, terminals, and more. It is designed to meet the everyday needs of users, while also offering developers insights into how these applications are built and integrated into Lingmo OS.
+
+   - **lingmo-calculator**
+   - **lingmo-filemanager**
+   - **lingmo-settings**
+   - **lingmo-terminal**
+   - **lingmo-texteditor**
+   - **lingmo-updator**
+   - **lingmo-videoplayer**
+   - **lingmo-launcher**
+   - **lingmo-screenlocker**
+
+## Development Libraries
+
+**Introduction:**
+Development Libraries are the building blocks for developers, offering essential functions, styles, and tools to create applications that seamlessly integrate with Lingmo OS. Libraries like lib_lingmo, LingmoUI, and others simplify the development process, ensuring consistency and ease of use across applications. This section is a must-read for developers aiming to create high-quality, integrated software.
+
+   - **lib_lingmo**
+   - **LingmoUI**
+   - **lingmo-qt-plugins**
+   - **libqtxdg**
+
+## System Tools
+
+**Introduction:**
+System Tools encompass utilities that aid in managing and maintaining Lingmo OS. This includes setup tools, screenlockers, and other system-wide utilities. Whether you're a power user looking to tweak system settings or a developer automating tasks, this category provides the necessary tools to enhance your experience with Lingmo OS.
+
+   - **lingmo-first-setup**
+   - **lingmo-ocr**
+   - **lingmo-screenshots** (if tool-related)
+
+## Build and Configuration
+
+**Introduction:**
+The Build and Configuration category is dedicated to developers who want to compile and customize Lingmo OS from source. It includes build scripts, manifests, and configuration files that allow for tailored OS deployments. This section is essential for those who need flexibility in setting up their development environment or customizing the OS to specific requirements.
+
+   - **LingmoOS** (build configuration)
+   - **manifest**
+   - **lingmo-base-common**
+   - **lingmo-live**
+
+## Core Components
+
+
+
+
+
+
 
 - [**lingmo-filemanager**](lingmo-filemanager.md)
   - Path: `shell/CoreComponents/Filemanager`
@@ -1018,24 +1038,6 @@ The Build and Configuration category is dedicated to developers who want to comp
 
 ## System
 
-- **linux**  
-  - Path: `kernel`  
-  - URL: [https://github.com/LingmoOS/linux](https://github.com/LingmoOS/linux)  
-
-  **Description:**  
-  The Linux kernel is the core of the LingmoOS operating system, responsible for managing system resources, hardware communication, and providing essential services for applications.  
-
-  **Documentation:**  
-  - The formatted documentation can be read online at:  
-    [https://www.kernel.org/doc/html/latest/](https://www.kernel.org/doc/html/latest/)  
-
-  **License:**  
-  The Linux Kernel is provided under:  
-  - **SPDX-License-Identifier:** `GPL-2.0 WITH Linux-syscall-note`  
-  - The kernel is licensed under the terms of the GNU General Public License version 2 (`GPL-2.0`), with an explicit syscall exception as stated in `LICENSES/exceptions/Linux-syscall-note`.  
-
-  **Notes:**  
-  - For build instructions, please refer to the official documentation.
 
 - **linux-package**  
   - Path: `kernel/debian`  
