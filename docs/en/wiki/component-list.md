@@ -319,68 +319,15 @@ This index provides a structured overview of the components of Lingmo OS, organi
   **Description:**  
   A collection of cursor themes for LingmoOS, forked from the popular Bibata Cursor project. These themes provide a modern, customizable, and visually appealing cursor experience for users.  
 
-  **Dependencies:**  
-  - **Build Tools:**  
-    - Python 3.7 or higher  
-    - `clickgen>=2.1.8` (install via `pip install clickgen`)  
-    - `yarn`  
-
-  **Installation:**  
-  - **Linux (X11/Wayland):**  
-
-    ```bash  
-    tar -xvf Bibata.tar.gz
-    sudo mv Bibata-* /usr/share/icons/
-    ```  
-
-  **Build from Source:**  
+  **Build:**  
 
   ```bash  
-  git clone https://github.com/ful1e5/Bibata_Cursor  
-  cd Bibata_Cursor  
-  yarn install  
-  yarn generate  
+  mkdir build  
+  cd build  
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
+  make
+  sudo make install  
   ```  
-
-  **Customization:**  
-  - **Colors:**  
-    Use `cbmp` to customize base, outline, and background colors:  
-
-    ```bash  
-    npx cbmp -d 'svg/modern' -o 'bitmaps/Bibata-Hacker' -bc '#00FE00' -oc '#000000'  
-    ```  
-
-  - **Sizes:**  
-    Use `ctgen` to build cursors with custom sizes:  
-
-    ```bash  
-    ctgen build.toml -s 16 -p windows -d 'bitmaps/Bibata-Modern-Ice' -n 'Bibata-Modern-Ice' -c 'White and rounded edge Bibata cursors with size 16'  
-    ```  
-
-  **Variants:**  
-  - **Normal:**  
-    - Bibata Original Amber: Yellowish with sharp edges.  
-    - Bibata Modern Amber: Yellowish with rounded edges.  
-    - Bibata Original Classic: Black with sharp edges.  
-    - Bibata Modern Classic: Black with rounded edges.  
-    - Bibata Original Ice: White with sharp edges.  
-    - Bibata Modern Ice: White with rounded edges.  
-  - **Right-Hand:**  
-    - Bibata Original Amber Right: Yellowish with sharp edges (right-handed).  
-    - Bibata Modern Amber Right: Yellowish with rounded edges (right-handed).  
-    - Bibata Original Classic Right: Black with sharp edges (right-handed).  
-    - Bibata Modern Classic Right: Black with rounded edges (right-handed).  
-    - Bibata Original Ice Right: White with sharp edges (right-handed).  
-    - Bibata Modern Ice Right: White with rounded edges (right-handed).  
-
-  **Cursor Sizes:**  
-  - **Xcursor Sizes:** 16, 20, 22, 24, 28, 32, 40, 48, 56, 64, 72, 80, 88, 96.  
-  - **Windows Cursor Sizes:** 16x16 (Small), 24x24 (Regular), 32x32 (Large), 48x48 (Extra Large).  
-
-  **Notes:**  
-  - For troubleshooting or customization, refer to the [Bibata Cursor documentation](https://github.com/ful1e5/Bibata_Cursor).  
-  - Test cursor behavior using tools like [Cursor-Test](https://cursor-test.netlify.app/) or [Mozilla CSS Cursor](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor).  
-  - For package installations, check the [Bibata Cursor Release Page](https://github.com/ful1e5/Bibata_Cursor/releases) or platform-specific repositories (e.g., AUR for Arch Linux).
 
   **License:**  
   lingmo-cursor-themes is licensed under the **GPLv3** license.
