@@ -830,6 +830,16 @@ This index provides a structured overview of the components of Lingmo OS, organi
   - Path: `shell/BasicComponents/Wallpapers`  
   - URL: [https://github.com/LingmoOS/lingmo-wallpapers](https://github.com/LingmoOS/lingmo-wallpapers)
 
+  **Build:**  
+
+  ```bash  
+  mkdir build  
+  cd build  
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..  
+  make
+  sudo make install  
+  ```  
+
   **License:**  
   lingmo-wallpapers is licensed under the [**Unsplash**](https://unsplash.com/license) license.
 
