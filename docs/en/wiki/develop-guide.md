@@ -44,6 +44,7 @@ repo sync
 We have a [`lingmo-build`](https://github.com/LingmoOS/lingmo-build) script which automates the build process. However, you can still compile them by yourself.
 > [!Note]
 > This tool clone repositories elsewhere, so it's still necessary to compile manually if you make any modifications to repositories in the  `lingmowork` directory.
+
 > [!Important]
 > This script only works on Debian.
 We assume that [PowerShell](https://github.com/PowerShell/PowerShell) is installed on your system.

@@ -43,9 +43,10 @@ repo sync
 
 我们有一个 [`lingmo-build`](https://github.com/LingmoOS/lingmo-build) 脚本，它自动化了构建过程。当然，您仍然可以自行编译它们。
 
-> [!注意]
+> [!Note]
 > 该工具会在其他地方克隆仓库，因此如果您对 `lingmowork` 目录中的仓库进行了任何修改，仍然需要手动编译。
-> [!重要]
+
+> [!Important]
 > 该脚本仅在 Debian 系统上运行。
 
 我们假设您的系统中已安装[PowerShell](https://github.com/PowerShell/PowerShell)。
@@ -83,7 +84,7 @@ Lingmo OS 的翻译托管于 [Weblate](https://hosted.weblate.org/)。访问 <ht
 
 ### 2.3 行为准则
 
-请查阅我们的[贡献者公约](code-of-conduct.md)，以了解社区中期望的行为标准。参与即表示您同意遵守这些准则。
+请查阅我们的[贡献者公约](code-of-conduct.md) (Contributor Covenant，在1.4译为参与者公约)，以了解社区中期望的行为标准。参与即表示您同意遵守这些准则。
 
 ## 3 报告 Bug
 
