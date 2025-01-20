@@ -44,7 +44,7 @@ repo sync
 我们有一个 [`lingmo-build`](https://github.com/LingmoOS/lingmo-build) 脚本，它自动化了构建过程。当然，您仍然可以自行编译它们。
 
 > [!Note]
-> 该工具会在其他地方克隆仓库，因此如果您对 `lingmowork` 目录中的仓库进行了任何修改，仍然需要手动编译。
+> 该工具使用从Github克隆的仓库，因此如果您对 `lingmowork` 目录中的仓库进行了任何修改，仍然需要手动编译。
 
 > [!Important]
 > 该脚本仅在 Debian 系统上运行。
