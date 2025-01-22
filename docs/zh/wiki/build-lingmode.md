@@ -1,6 +1,6 @@
 # 构建LingmoDE (WIP)
 ## 使用自动`lingmo-build`脚本 (仅适用于Debian)
-我们假设[PowerShell](https://github.com/PowerShell/PowerShell)已经安装到了你的系统中 
+此处假设[PowerShell](https://github.com/PowerShell/PowerShell)已经安装。
 ```console
 # apt-get update -y
 # apt-get upgrade -y

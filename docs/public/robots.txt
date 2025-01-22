@@ -1,0 +1,15 @@
+# robots.txt Configuration File
+
+# Basic rules applicable to all web crawlers
+User-agent: *
+# Allowed paths
+Allow: /  
+Allow: /zh/  
+Allow: /wiki/ 
+
+# Disallowed paths
+Disallow: /assets/ 
+
+# General sitemap applicable to all crawlers (may be overridden by specific crawler rules)
+# Note: Some crawlers may prioritize rules set specifically for them over general rules
+Sitemap: https://wiki.lingmo.org/sitemap.xml  # Provide general sitemap

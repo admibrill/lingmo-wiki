@@ -1,5 +1,7 @@
 # List of LingmoDE Applications
+
 Here's a list of applications that LingmoDE provides.
+
 - lingmo-core
 - lingmoui
 - liblingmo
@@ -23,6 +25,7 @@ Here's a list of applications that LingmoDE provides.
 - lingmo-plymouth-theme
 
 Here're required components to provide a basic LingmoDE desktop.
+
 - lingmo-core
 - lingmoui
 - liblingmo
